@@ -25,3 +25,6 @@ C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildpr
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.pdb
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache

@@ -8,15 +8,16 @@ namespace Madspildprojekt
 {
     public class Varer
     {
-        string _navn;
-        int _stk;
-        double _vaegt;
+        public string _Navn;
+        public int _Stk;
+        public double _Vaegt;
 
         public Varer(string navn, int stk, double vaegt)
         {
-            _navn = navn;
-            _stk = stk;
-            _vaegt = vaegt;
+            _Navn = navn;
+            _Stk = stk;
+            _Vaegt = vaegt;
         }
+
     }
 }
