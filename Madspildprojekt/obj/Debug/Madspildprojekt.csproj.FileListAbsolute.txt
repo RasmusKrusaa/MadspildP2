@@ -1,9 +1,0 @@
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\bin\Debug\Madspildprojekt.exe
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\bin\Debug\Madspildprojekt.pdb
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\obj\Debug\Madspildprojekt.exe
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
-C:\Users\Bilgram\Desktop\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
-C:\Users\Bilgram\Desktop\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\obj\Debug\Madspildprojekt.exe
-C:\Users\Bilgram\Desktop\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
