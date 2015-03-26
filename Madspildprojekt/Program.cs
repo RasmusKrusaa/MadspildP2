@@ -13,6 +13,7 @@ namespace Madspildprojekt
             Console.WriteLine("pølse!");
             Console.Writeline("Jeg har skrevet noget andet end pølse");
             Console.WriteLine("pølse!");
+            Console.WriteLine("Rasmus er en dør pilgrim");
         }
     }
 }

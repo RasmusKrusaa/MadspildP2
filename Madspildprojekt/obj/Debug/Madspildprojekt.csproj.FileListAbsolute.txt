@@ -22,3 +22,6 @@ C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildpr
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
 >>>>>>> origin/master
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
