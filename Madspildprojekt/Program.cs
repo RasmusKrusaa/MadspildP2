@@ -11,7 +11,12 @@ namespace Madspildprojekt
         static void Main(string[] args)
         {
             Console.WriteLine("pølse!");
+<<<<<<< HEAD
             Console.Writeline("Jeg har skrevet noget andet end pølse");
+=======
+            Console.WriteLine("pølse!");
+
+>>>>>>> origin/master
         }
     }
 }
