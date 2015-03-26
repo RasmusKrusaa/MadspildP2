@@ -16,7 +16,6 @@ namespace Madspildprojekt
             Console.WriteLine("Hej Mark");
             Console.WriteLine("Hej Mark");
             Console.WriteLine("hejdu");
-            Console.WriteLine("Penis!");
             Console.ReadKey();
         }
     }
