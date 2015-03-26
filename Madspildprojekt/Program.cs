@@ -11,6 +11,7 @@ namespace Madspildprojekt
         static void Main(string[] args)
         {
             Console.WriteLine("pølse!");
+            Console.WriteLine("pølse!");
 
         }
     }
