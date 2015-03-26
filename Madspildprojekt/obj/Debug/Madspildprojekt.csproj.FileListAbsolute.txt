@@ -1,33 +1,5 @@
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\bin\Debug\Madspildprojekt.exe
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\bin\Debug\Madspildprojekt.pdb
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\obj\Debug\Madspildprojekt.exe
-C:\Users\Mark\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
-C:\Users\Bilgram\Desktop\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
-C:\Users\Bilgram\Desktop\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\obj\Debug\Madspildprojekt.exe
-C:\Users\Bilgram\Desktop\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
-<<<<<<< HEAD
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
-=======
-C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
-C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
-C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
-C:\Users\Jam\Desktop\program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
-C:\Users\Jam\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
-C:\Users\Jam\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
-C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
-C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
->>>>>>> origin/master
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.pdb
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
-C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.pdb
+C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
+C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
