@@ -10,9 +10,8 @@ namespace Madspildprojekt
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hej svanser!");
-            Console.WriteLine("hejhejhej");
-            Console.ReadKey();
+            Console.WriteLine("pølse!");
+
         }
     }
 }

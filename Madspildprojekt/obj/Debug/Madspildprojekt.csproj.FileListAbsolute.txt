@@ -10,3 +10,6 @@ C:\Users\Bilgram\Desktop\Dropbox\P2\Program\Madspild\Madspildprojekt\Madspildpro
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
+C:\Users\Jam\Desktop\program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
+C:\Users\Jam\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
+C:\Users\Jam\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
