@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace Madspildprojekt
@@ -10,7 +11,7 @@ namespace Madspildprojekt
     {
         static void Main(string[] args)
         {
-            Menu startmenu = new Menu("Startmenu");
+           /* Menu startmenu = new Menu("Startmenu");
             Menu beholdning = new Menu("Beholdning");
             Menu indkoeb = new Menu("Indkøb");
             Menu opskrifter = new Menu("Opskrifter");
@@ -18,6 +19,10 @@ namespace Madspildprojekt
             startmenu.addMenuItem(indkoeb);
             startmenu.addMenuItem(opskrifter);
             startmenu.displayMenu();
+            */
+            Varer.Read_file_varer();
+            Console.ReadKey();
         }
+
     }
 }

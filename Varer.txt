@@ -1,0 +1,3 @@
+Bacon 47,03
+Ost 120,66
+Vikter 5,03
