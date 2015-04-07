@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Madspildprojekt
 {
-    interface Istk
+    interface IStk
     {
     }
 }

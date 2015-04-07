@@ -42,11 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Beholdning.cs" />
-    <Compile Include="Imh.cs" />
+    <Compile Include="IMh.cs" />
     <Compile Include="Indkøb.cs" />
-    <Compile Include="Isa.cs" />
-    <Compile Include="Istk.cs" />
-    <Compile Include="Ivaegt.cs" />
+    <Compile Include="ISa.cs" />
+    <Compile Include="IStk.cs" />
+    <Compile Include="IVaegt.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="MenuItem.cs" />
     <Compile Include="Opskrifter.cs" />
