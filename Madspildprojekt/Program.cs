@@ -20,7 +20,9 @@ namespace Madspildprojekt
             startmenu.addMenuItem(opskrifter);
             startmenu.displayMenu();
             */
-            Varer.Read_file_varer();
+            Varer v = new Varer("title", 1337);
+            v.Read_file_varer();
+            v.Print_varer_list();
             Console.ReadKey();
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Madspildprojekt
 {
-    interface Isidste_anvendelsesdato
+    interface ISidste_anvendelsesdato
     {
     }
 }

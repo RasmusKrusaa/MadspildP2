@@ -7,32 +7,38 @@ using System.Threading.Tasks;
 
 namespace Madspildprojekt
 {
-    public partial class Varer
+    public class Varer
     {
         public string _Navn;
-        public string _Pris;
+        public decimal _Pris;
 
-        public Varer(string navn, string pris)
+        public Varer(string navn, decimal pris)
         {
             _Navn = navn;
             _Pris = pris;
         }
-        public static void Read_file_varer()
+
+        protected List<Varer> madliste = new List<Varer>();
+
+        public void Read_file_varer()
         {
-         /*   string[] lines = System.IO.File.ReadAllLines(@"D:\\Sample.txt");
-            foreach (string line in lines)
-            {
-                Console.WriteLine(line);
-            }
-          */
-            foreach (string line in File.ReadAllLines(@"D:\\Sample.txt"))
+            foreach (string line in File.ReadAllLines(@"C:\\Users\\Mark\\Documents\\GitHub\\MadspildP2\\Varer.txt"))
             {
                 int i = 0;
                 int j = 1;
+
                 string[] benny = line.Split(' ');
-                     Varer v = new Varer(benny[i], benny[j]); 
+                madliste.Add(new Varer(benny[i], decimal.Parse(benny[j])));
                 i += 2;
                 j += 2;
+            }
+        }
+        public void Print_varer_list()
+        {
+            foreach (Varer v in madliste)
+            {
+                
+                Console.WriteLine("{0} {1}", v._Navn, v._Pris);
             }
         }
     }

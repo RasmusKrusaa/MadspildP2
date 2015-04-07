@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Madspildprojekt
 {
-    class Beholdning : Imindst_Holdbar_Til, Isidste_anvendelsesdato, IStk, IVaegt
+    class Beholdning : IMindst_Holdbar_Til, ISidste_anvendelsesdato, IStk, IVaegt
     {
 
     }
