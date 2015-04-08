@@ -1,7 +1,7 @@
-Bacon 47,03
+Bacon 47.03
 Lasse 69
-Vikter 50,8
-Ost 120,66
-Mark 45,9
-Rasmus 12,4
+Vikter 50.8
+Ost 12.66
+Mark 45.9
+Rasmus 12.4
 RasmusB 23

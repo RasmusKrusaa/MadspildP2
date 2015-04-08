@@ -13,7 +13,7 @@ namespace Madspildprojekt
 
         public void Read_file_vareliste()
         {
-            foreach (string line in File.ReadAllLines(@"C:\\Users\\Bilgram\\Desktop\\Program\\MadspildP2\\Varer.txt"))
+            foreach (string line in File.ReadAllLines(@"C:\\Users\\Rasmus Krusaa\\Documents\\GitHub\\MadspildP2\\Varer.txt"))
             {
                 int i = 0;
                 int j = 1;

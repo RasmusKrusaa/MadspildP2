@@ -8,6 +8,7 @@ namespace Madspildprojekt
 {
     public class Vare
     {
+        
         string _Navn;
         decimal _Pris;
 
@@ -15,6 +16,16 @@ namespace Madspildprojekt
         {
             _Navn = Navn;
             _Pris = Pris;
+        }
+
+        public string vare_navn
+        {
+            get { return _Navn; }
+        }
+
+        public decimal vare_pris
+        {
+            get { return _Pris; }
         }
     }
 }
