@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Madspildprojekt
 {
-    public interface IMindst_Holdbar_Til : Varer
+    public interface IMindst_Holdbar_Til 
     {
-        public MH(string title, decimal pris) : base();
-	    {
-	    }
     }
 }

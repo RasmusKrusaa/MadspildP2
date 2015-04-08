@@ -11,20 +11,18 @@ namespace Madspildprojekt
     {
         static void Main(string[] args)
         {
-           /* Menu startmenu = new Menu("Startmenu");
-            Menu beholdning = new Menu("Beholdning");
+            Vareliste Vl = new Vareliste();
+            Vl.Read_file_vareliste();
+            Beholdning Bl = new Beholdning("Beholdning");
+            Bl.Read_file_beholdning();
+
+            Menu startmenu = new Menu("Startmenu");
             Menu indkoeb = new Menu("Indkøb");
             Menu opskrifter = new Menu("Opskrifter");
-            startmenu.addMenuItem(beholdning);
             startmenu.addMenuItem(indkoeb);
             startmenu.addMenuItem(opskrifter);
+            startmenu.addMenuItem(Bl);
             startmenu.displayMenu();
-            */
-            Varer v = new Varer("title", 1337);
-            v.Read_file_varer();
-            v.Print_varer_list();
-            Console.ReadKey();
         }
-
     }
 }

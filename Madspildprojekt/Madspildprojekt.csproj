@@ -50,7 +50,9 @@
     <Compile Include="Menu.cs" />
     <Compile Include="MenuItem.cs" />
     <Compile Include="Opskrifter.cs" />
-    <Compile Include="Varer.cs" />
+    <Compile Include="Vareliste.cs" />
+    <Compile Include="Vare.cs" />
+    <Compile Include="Varer_gammel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
