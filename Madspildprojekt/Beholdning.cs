@@ -16,7 +16,7 @@ namespace Madspildprojekt
 
         public void Read_file_beholdning()
         {
-            foreach (string line in File.ReadAllLines(@"C:\\Users\\Rasmus Krusaa\\Documents\\GitHub\\MadspildP2\\Beholdning.txt"))
+            foreach (string line in File.ReadAllLines(@"C:\\Users\\Bilgram\\Desktop\\Program\\MadspildP2\\Beholdning.txt"))
             {
                 int i = 0;
                 int j = 1;
@@ -30,7 +30,7 @@ namespace Madspildprojekt
         {
             foreach (Vare v in Beholdningsliste)
             {
-                Beholdning BV = new Beholdning("" + v.vare_navn);
+                Beholdning BV = new Beholdning("" + v._Navn);
                 menuItems.Add(BV);
             }
             stack.Push(this);
