@@ -42,22 +42,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Beholdning.cs" />
+    <Compile Include="Beholdning1.cs" />
+    <Compile Include="Husholdning.cs" />
     <Compile Include="IMh.cs" />
     <Compile Include="Indkøb.cs" />
+    <Compile Include="Indkøb1.cs" />
     <Compile Include="ISa.cs" />
     <Compile Include="IStk.cs" />
     <Compile Include="IVaegt.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="MenuItem.cs" />
     <Compile Include="Opskrifter.cs" />
+    <Compile Include="Opskrifter1.cs" />
+    <Compile Include="Supermarked.cs" />
+    <Compile Include="Vare1.cs" />
     <Compile Include="Vareliste.cs" />
     <Compile Include="Vare.cs" />
     <Compile Include="Varer_gammel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VareStkMH.cs" />
+    <Compile Include="VareStkSA.cs" />
+    <Compile Include="VareVægtMH.cs" />
+    <Compile Include="VareVægtSA.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

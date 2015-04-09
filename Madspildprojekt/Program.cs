@@ -22,7 +22,7 @@ namespace Madspildprojekt
             startmenu.addMenuItem(indkoeb);
             startmenu.addMenuItem(opskrifter);
             startmenu.addMenuItem(Bl);
-            startmenu.displayMenu();
+            startmenu.displayMenu();        
         }
     }
 }
