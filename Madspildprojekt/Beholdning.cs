@@ -18,11 +18,9 @@ namespace Madspildprojekt
         {
             foreach (string line in File.ReadAllLines(@"C:\\Users\\Bilgram\\Desktop\\Program\\MadspildP2\\Beholdning.txt"))
             {
-                int i = 0;
-                int j = 1;
-
+                
                 string[] Varer_str = line.Split(' ');
-                Vare v = new Vare(Varer_str[i], decimal.Parse(Varer_str[j]));
+                Vare v = new Vare(Varer_str[0], decimal.Parse(Varer_str[1]));
                 Beholdningsliste.Add(v);
             }
         }
@@ -30,8 +28,8 @@ namespace Madspildprojekt
         {
             foreach (Vare v in Beholdningsliste)
             {
-                Beholdning BV = new Beholdning("" + v._Navn);
-                menuItems.Add(BV);
+                Menupunkt mp = new Menupunkt("" + v._Navn); 
+                menuItems.Add(mp);
             }
             stack.Push(this);
             displayMenu();

@@ -49,6 +49,7 @@
     <Compile Include="IVaegt.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="MenuItem.cs" />
+    <Compile Include="Menupunkt.cs" />
     <Compile Include="Opskrifter.cs" />
     <Compile Include="Vareliste.cs" />
     <Compile Include="Vare.cs" />
