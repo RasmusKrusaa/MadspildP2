@@ -10,11 +10,9 @@ namespace Madspildprojekt
         const int navnIndex = 0, prisIndex = 1, stkIndex = 2, vægtIndex = 3,
             mindstHoldbarIndex = 4, sidsteAnvendelseIndex = 5;
 
-        protected List<VareStkMH> ListVareStkMH = new List<VareStkMH>();
-        protected List<VareStkSA> ListVareStkSA = new List<VareStkSA>();
-        protected List<VareVægtMH> ListVareVægtMH = new List<VareVægtMH>();
-        protected List<VareVægtSA> ListVareVægtSA = new List<VareVægtSA>();
+        protected List<Vare> Beholdningsliste = new List<Vare>();
 
+        #region Properties
         //public VareVægtSA VareVægtS
         //{
         //    get { }
@@ -38,8 +36,9 @@ namespace Madspildprojekt
         //    get { }
         //    set { }
         //}
+        #endregion
 
-        public void VareTypeOpdeling() 
+        public void VareTilføjelse() 
         {
             // Test om en linje både har stk, vægt, mh og SA 
             // Enten stk eller vægt og mh eller sa!
@@ -64,28 +63,28 @@ namespace Madspildprojekt
                     VareStkMH v = new VareStkMH(str[navnIndex], decimal.Parse(str[prisIndex]));
                     v.MindstHoldbar = int.Parse(str[mindstHoldbarIndex]);
                     v.Stk = decimal.Parse(str[stkIndex]);
-                    ListVareStkMH.Add(v);
+                    Beholdningsliste.Add(v);
                 }
                 if (str[vægtIndex] != "0" && str[mindstHoldbarIndex] != "0")
                 {
                     VareVægtMH v = new VareVægtMH(str[navnIndex], decimal.Parse(str[prisIndex]));
                     v.MindstHoldbar = int.Parse(str[mindstHoldbarIndex]);
                     v.Vægt = decimal.Parse(str[vægtIndex]);
-                    ListVareVægtMH.Add(v);
+                    Beholdningsliste.Add(v);
                 }
                 if (str[stkIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
                 {
                     VareStkSA v = new VareStkSA(str[navnIndex], decimal.Parse(str[prisIndex]));
                     v.SidsteAnvendelse = int.Parse(str[sidsteAnvendelseIndex]);
                     v.Stk = decimal.Parse(str[stkIndex]);
-                    ListVareStkSA.Add(v);
+                    Beholdningsliste.Add(v);
                 }
                 if (str[vægtIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
                 {
                     VareVægtSA v = new VareVægtSA(str[navnIndex], decimal.Parse(str[prisIndex]));
                     v.SidsteAnvendelse = int.Parse(str[sidsteAnvendelseIndex]);
                     v.Vægt = decimal.Parse(str[vægtIndex]);
-                    ListVareVægtSA.Add(v);
+                    Beholdningsliste.Add(v);
                 }
             }
         }
@@ -99,25 +98,25 @@ namespace Madspildprojekt
                     VareStkMH v1 = new VareStkMH(navn, pris);
                     v1.Stk = stk_Vægt;
                     v1.MindstHoldbar = MH_SA;
-                    ListVareStkMH.Add(v1);
+                    Beholdningsliste.Add(v1);
                     break;
                 case "VareVægtMH":
                     VareVægtMH v2 = new VareVægtMH(navn, pris);
                     v2.Vægt = stk_Vægt;
                     v2.MindstHoldbar = MH_SA;
-                    ListVareVægtMH.Add(v2);
+                    Beholdningsliste.Add(v2);
                     break;
                 case "VareStkSA":
                     VareStkSA v3 = new VareStkSA(navn, pris);
                     v3.Stk = stk_Vægt;
                     v3.SidsteAnvendelse = MH_SA;
-                    ListVareStkSA.Add(v3);
+                    Beholdningsliste.Add(v3);
                     break;
                 case "VareVægtSA":
                     VareVægtSA v4 = new VareVægtSA(navn, pris);
                     v4.Vægt = stk_Vægt;
                     v4.SidsteAnvendelse = MH_SA;
-                    ListVareVægtSA.Add(v4);
+                    Beholdningsliste.Add(v4);
                     break;
                 default:
                     // Kast en exception : varetype ikke fundet.
@@ -125,14 +124,21 @@ namespace Madspildprojekt
             }
         }
 
-        protected void SletVare(string varenavn)
-        {
-            throw new System.NotImplementedException();
+        protected void SletVare(List<Vare> liste, string varenavn)
+        {   
+            for (int i = 0; i <= liste.Count; i++)
+			{
+                if (varenavn == liste.ElementAt(i)._Navn)
+                {
+                    liste.Remove(liste.ElementAt(i));
+                    break;
+                } //SletVare(Beholdningsliste, "Kylling");
+			}
         }
 
         protected void SorterBeholdning()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

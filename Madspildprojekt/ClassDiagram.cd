@@ -1,58 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Madspildprojekt.VareVægtMH">
-    <Position X="2.75" Y="2.25" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Properties" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+    <Position X="6" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAABAAAAAAAAAAAAQAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>VareVægtMH.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.VareVægtSA">
-    <Position X="1" Y="2.25" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Properties" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+    <Position X="3.75" Y="9.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAAAAAAIAQAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>VareVægtSA.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.VareStkMH">
-    <Position X="4.5" Y="2.25" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Properties" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+    <Position X="8.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAAAAACAAAAAAAAAIAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>VareStkMH.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.VareStkSA">
-    <Position X="6.25" Y="2.25" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Properties" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+    <Position X="10.5" Y="9.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAAAAAAAIAIAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>VareStkSA.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.Vare">
-    <Position X="3.75" Y="0.5" Width="1.5" />
+    <Position X="7" Y="7.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="true" />
-      <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
       <HashCode>AAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -60,32 +39,23 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.Beholdning">
-    <Position X="3.75" Y="4.75" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
+    <Position X="4" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAACAAAAAAQAAAQAAAAgEAAAAAAAAAAAAACAgA=</HashCode>
+      <HashCode>CAAEAAAQCAAAAAAACAIQAAAApEAAAAAAAAAAAAACggA=</HashCode>
       <FileName>Beholdning.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.Opskrift">
-    <Position X="1" Y="7" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+    <Position X="0.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAABMAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Opskrifter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.Indkøb">
-    <Position X="2.75" Y="7" Width="1.5" />
+    <Position X="3" Y="5" Width="2" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -93,10 +63,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.Husholdning">
-    <Position X="4.5" Y="7" Width="1.5" />
+    <Position X="5.25" Y="5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -104,10 +73,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.Supermarked">
-    <Position X="6.25" Y="7" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
+    <Position X="7.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Supermarked.cs</FileName>

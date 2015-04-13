@@ -16,10 +16,9 @@ namespace Madspildprojekt
             //v.SidsteAnvendelse = 5;
             //Console.WriteLine(v._Navn + " " + v.Vægt + " " + v._Pris + " " + v.SidsteAnvendelse);
             Beholdning b = new Beholdning();
-            b.VareTypeOpdeling();
+            b.VareTilføjelse();
             b.TilføjVare("VareVægtMH", "Kylling", 50.5m, 200m, 10);
-            
-
+            b.SorterBeholdning();
             Console.ReadKey();
         }
     }
