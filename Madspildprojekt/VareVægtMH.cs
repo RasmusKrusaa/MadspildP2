@@ -5,20 +5,27 @@ using System.Text;
 
 namespace Madspildprojekt
 {
-    public class VareVægtMH : Vare1
+    public class VareVægtMH : Vare
     {
         private decimal _Vægt;
         private int _MindstHoldbar;
 
-        public void VægtMHprop
+        public VareVægtMH(string navn, decimal pris)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            _Navn = navn;
+            _Pris = pris;
+        }
+
+        public int MindstHoldbar
+        {
+            get { return _MindstHoldbar; }
+            set { _MindstHoldbar = value; }
+        }
+
+        public decimal Vægt
+        {
+            get { return _Vægt; }
+            set { _Vægt = value; }
         }
     }
 }

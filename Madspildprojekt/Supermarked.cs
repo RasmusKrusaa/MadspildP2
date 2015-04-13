@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Madspildprojekt
 {
-    public class Supermarked : Beholdning1
+    public class Supermarked : Beholdning
     {
-        public List<Vare1> Varekatalog;
+        public List<Vare> Varekatalog;
     }
 }

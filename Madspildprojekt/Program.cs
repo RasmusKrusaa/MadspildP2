@@ -11,18 +11,16 @@ namespace Madspildprojekt
     {
         static void Main(string[] args)
         {
-            Vareliste Vl = new Vareliste();
-            Vl.Read_file_vareliste();
-            Beholdning Bl = new Beholdning("Beholdning");
-            Bl.Read_file_beholdning();
+            //VareVægtSA v = new VareVægtSA("bacon", 5.9m);
+            //v.Vægt = 2.3m;
+            //v.SidsteAnvendelse = 5;
+            //Console.WriteLine(v._Navn + " " + v.Vægt + " " + v._Pris + " " + v.SidsteAnvendelse);
+            Beholdning b = new Beholdning();
+            b.VareTypeOpdeling();
+            b.TilføjVare("VareVægtMH", "Kylling", 50.5m, 200m, 10);
+            
 
-            Menu startmenu = new Menu("Startmenu");
-            Menu indkoeb = new Menu("Indkøb");
-            Menu opskrifter = new Menu("Opskrifter");
-            startmenu.addMenuItem(indkoeb);
-            startmenu.addMenuItem(opskrifter);
-            startmenu.addMenuItem(Bl);
-            startmenu.displayMenu();        
+            Console.ReadKey();
         }
     }
 }

@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Madspildprojekt
 {
-    class Indkøb
+    public class Indkøb : Beholdning
     {
+       // public list<> Indkøbskurv;
+
+        private List<Vare> IndkøbskurvUdfraOpskrift(Opskrift opskrift)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Madspildprojekt
 {
-    public class Husholdning : Beholdning1
+    public class Husholdning : Beholdning
     {
-        public List<Vare1> Husholdning;
+       // public List<Vare1> Husholdning;
 
         public void DatoAdvarsel()
         {
