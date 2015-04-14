@@ -136,9 +136,9 @@ namespace Madspildprojekt
 			}
         }
 
-        protected void SorterBeholdning()
-        {
+        //protected void SorterBeholdning()
+        //{
             
-        }
+        //}
     }
 }
