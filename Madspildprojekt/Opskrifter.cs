@@ -10,8 +10,8 @@ namespace Madspildprojekt
     {
         protected string retNavn;
         public List<Vare> Ingredienser = new List<Vare>();
-        
-        /// <summary>
+        private List<string> Instruktioner = new List<string>();
+         /// <summary>
         /// BrugerValg. Med husholdning eller efter valgte varer
         /// </summary>
         /// 
