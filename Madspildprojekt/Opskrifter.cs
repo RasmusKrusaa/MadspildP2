@@ -8,10 +8,9 @@ namespace Madspildprojekt
 {
     public class Opskrift : Beholdning
     {
-        protected string[] ingredienser, instruktioner; 
         protected string retNavn;
-        public List<Opskrift> Opskrifter = new List<Opskrift>();
- 
+        public List<Vare> Ingredienser = new List<Vare>();
+        
         /// <summary>
         /// BrugerValg. Med husholdning eller efter valgte varer
         /// </summary>
@@ -22,9 +21,9 @@ namespace Madspildprojekt
             
             foreach (string line in File.ReadAllLines(@"C:\\Users\\Bilgram\\Desktop\\Program\\MadspildP2\\Opskrifter.txt"))
             {
-
+                VareStkMH v = new VareStkMH("Kød", 123m);
                 string[] str = line.Split('_', '$', '@');
-               
+                v.Stk = 10;
             }  
         }
 

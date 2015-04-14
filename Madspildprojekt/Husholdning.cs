@@ -7,7 +7,7 @@ namespace Madspildprojekt
 {
     public class Husholdning : Beholdning
     {
-       // public List<Vare1> Husholdning;
+        public List<Vare> Husholdning;
 
         public void DatoAdvarsel()
         {
