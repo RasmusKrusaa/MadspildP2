@@ -10,10 +10,10 @@ namespace Madspildprojekt
         private decimal _Stk;
         private int _MindstHoldbar;
         
-        public VareStkMH(string navn, decimal pris)
+        public VareStkMH(string navn)
         {
             _Navn = navn;
-            _Pris = pris;
+           // _Pris = pris;
         }
         public int MindstHoldbar
         {

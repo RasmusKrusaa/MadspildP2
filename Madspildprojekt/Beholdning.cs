@@ -7,11 +7,11 @@ namespace Madspildprojekt
 {
     public class Beholdning
     {
-        const int navnIndex = 0, prisIndex = 1, stkIndex = 2, vægtIndex = 3,
-            mindstHoldbarIndex = 4, sidsteAnvendelseIndex = 5;
+        const int navnIndex = 0, stkIndex = 1, vægtIndex = 2,
+            mindstHoldbarIndex = 3, sidsteAnvendelseIndex = 4;
 
         protected List<Vare> Beholdningsliste = new List<Vare>();
-
+        
         #region Properties
         //public VareVægtSA VareVægtS
         //{
@@ -43,10 +43,10 @@ namespace Madspildprojekt
             // Test om en linje både har stk, vægt, mh og SA 
             // Enten stk eller vægt og mh eller sa!
 
-            string v1 = "Æg 5,5 10 0 7 0";
-            string v2 = "Bacon 30,2 0 300 0 5";
-            string v3 = "Ost 25,4 0 200 8 0";
-            string v4 = "Banan 2,3 4 0 0 6";
+            string v1 = "Æg 10 0 7 0";
+            string v2 = "Bacon 0 300 0 5";
+            string v3 = "Ost 0 200 8 0";
+            string v4 = "Banan 4 0 0 6";
 
             List<string> varer = new List<string>();
             varer.Add(v1);
@@ -60,28 +60,28 @@ namespace Madspildprojekt
 
                 if (str[stkIndex] != "0" && str[mindstHoldbarIndex] != "0")
                 {
-                    VareStkMH v = new VareStkMH(str[navnIndex], decimal.Parse(str[prisIndex]));
+                    VareStkMH v = new VareStkMH(str[navnIndex]);
                     v.MindstHoldbar = int.Parse(str[mindstHoldbarIndex]);
                     v.Stk = decimal.Parse(str[stkIndex]);
                     Beholdningsliste.Add(v);
                 }
                 if (str[vægtIndex] != "0" && str[mindstHoldbarIndex] != "0")
                 {
-                    VareVægtMH v = new VareVægtMH(str[navnIndex], decimal.Parse(str[prisIndex]));
+                    VareVægtMH v = new VareVægtMH(str[navnIndex]);
                     v.MindstHoldbar = int.Parse(str[mindstHoldbarIndex]);
                     v.Vægt = decimal.Parse(str[vægtIndex]);
                     Beholdningsliste.Add(v);
                 }
                 if (str[stkIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
                 {
-                    VareStkSA v = new VareStkSA(str[navnIndex], decimal.Parse(str[prisIndex]));
+                    VareStkSA v = new VareStkSA(str[navnIndex]);
                     v.SidsteAnvendelse = int.Parse(str[sidsteAnvendelseIndex]);
                     v.Stk = decimal.Parse(str[stkIndex]);
                     Beholdningsliste.Add(v);
                 }
                 if (str[vægtIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
                 {
-                    VareVægtSA v = new VareVægtSA(str[navnIndex], decimal.Parse(str[prisIndex]));
+                    VareVægtSA v = new VareVægtSA(str[navnIndex]);
                     v.SidsteAnvendelse = int.Parse(str[sidsteAnvendelseIndex]);
                     v.Vægt = decimal.Parse(str[vægtIndex]);
                     Beholdningsliste.Add(v);
@@ -95,25 +95,25 @@ namespace Madspildprojekt
             switch (vareType)
             {
                 case "VareStkMH":
-                    VareStkMH v1 = new VareStkMH(navn, pris);
+                    VareStkMH v1 = new VareStkMH(navn);
                     v1.Stk = stk_Vægt;
                     v1.MindstHoldbar = MH_SA;
                     Beholdningsliste.Add(v1);
                     break;
                 case "VareVægtMH":
-                    VareVægtMH v2 = new VareVægtMH(navn, pris);
+                    VareVægtMH v2 = new VareVægtMH(navn);
                     v2.Vægt = stk_Vægt;
                     v2.MindstHoldbar = MH_SA;
                     Beholdningsliste.Add(v2);
                     break;
                 case "VareStkSA":
-                    VareStkSA v3 = new VareStkSA(navn, pris);
+                    VareStkSA v3 = new VareStkSA(navn);
                     v3.Stk = stk_Vægt;
                     v3.SidsteAnvendelse = MH_SA;
                     Beholdningsliste.Add(v3);
                     break;
                 case "VareVægtSA":
-                    VareVægtSA v4 = new VareVægtSA(navn, pris);
+                    VareVægtSA v4 = new VareVægtSA(navn);
                     v4.Vægt = stk_Vægt;
                     v4.SidsteAnvendelse = MH_SA;
                     Beholdningsliste.Add(v4);

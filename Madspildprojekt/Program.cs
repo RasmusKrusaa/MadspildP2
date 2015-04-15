@@ -18,7 +18,8 @@ namespace Madspildprojekt
             Beholdning b = new Beholdning();
             b.VareTilføjelse();
             b.TilføjVare("VareVægtMH", "Kylling", 50.5m, 200m, 10);
-            b.SorterBeholdning();
+            Opskrift o = new Opskrift();
+            o.IndlæsOpskrifter();
             Console.ReadKey();
         }
     }

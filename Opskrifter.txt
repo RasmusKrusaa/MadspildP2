@@ -1,11 +1,35 @@
-Kødsovs
-$
-1_løg
-2_fed hvidløg
-500g_hakket oksekød
-450g_hakkede tomater
-1_dåse tomatpure
-@
-Svits løg og hvidløg. 
-Tilsæt kød. 
-Tilføj hakkede tomater og tomatpure.
+$_Kødsovs
+@_1_løg
+@_2_fed hvidløg
+@_500_g_hakket oksekød
+@_450_g_hakkede tomater
+@_1_dåse tomatpure
+#_Svits løg og hvidløg
+#_Tilsæt kød
+#_Tilføj hakkede tomater og tomatpure
+#_Lad kødsovsen simre i 10 minutter
+---
+$_Forloren hare
+@_250_g_hakket svinekød
+@_250_g_hakket oksekød
+@_1_æg
+@_1_bacon
+@_1_løg
+#_Tænd oven på 200 grader
+#_Hak løget 
+#_Rør kød, løg og æg sammen
+#_Form farsen til et brød og læg det i et ildfast fad
+#_Læg baconskiverne over farsbrødet
+#_Sæt farsbrødet i ovnen på midterhylden og lad "haren" stege i en time
+---
+$_Æggekage
+@_8_æg
+@_1_bacon
+@_5_tomater
+#_Steg baconen sprød og læg det til afdrypning
+#_Pisk æggene sammen med salt, peber og mælk
+#_Hæld æggemassen på panden
+#_Steg æggemassen på lav varme til den er stivnet 
+#_Skær tomaterne i skiver og fordel dem sammen med baconen over æggekagen
+#_Drys eventuelt med frisk purløg og servér med rugbrød
+---

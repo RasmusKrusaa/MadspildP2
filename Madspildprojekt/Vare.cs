@@ -8,6 +8,6 @@ namespace Madspildprojekt
     public abstract class Vare
     {
         public string _Navn;
-        public decimal _Pris;
+       // public decimal _Pris;
     }
 }

@@ -10,10 +10,10 @@ namespace Madspildprojekt
         private decimal _Stk;
         private int _SidsteAnvendelse;
 
-        public VareStkSA(string navn, decimal pris)
+        public VareStkSA(string navn)
         {
             _Navn = navn;
-            _Pris = pris;
+          //  _Pris = pris;
         }
         public int SidsteAnvendelse
         {
