@@ -34,22 +34,22 @@
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Vare.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.Beholdning">
     <Position X="4" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>CAAEAAAQCAAAAAAACAIAAAAABABAAAAAAIAAAAAAgAA=</HashCode>
+      <HashCode>CAAEAAAQCAAAAAAACAIAAAAABABAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>Beholdning.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.Opskrift">
     <Position X="0.75" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAAAAAAAAAAANEAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Opskrifter.cs</FileName>
+      <HashCode>EAAAAAAAAACAAAAAARAAAAAEAAAAAAAACAAAAAAAgAA=</HashCode>
+      <FileName>Opskrift.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.Indkøb">
@@ -58,7 +58,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Indkøb.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -68,15 +68,15 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Husholdning.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Madspildprojekt.Supermarked">
+  <Class Name="Madspildprojekt.Producent">
     <Position X="7.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Supermarked.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Producent.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

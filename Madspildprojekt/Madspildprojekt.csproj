@@ -44,8 +44,8 @@
     <Compile Include="Beholdning.cs" />
     <Compile Include="Husholdning.cs" />
     <Compile Include="Indkøb.cs" />
-    <Compile Include="Opskrifter.cs" />
-    <Compile Include="Supermarked.cs" />
+    <Compile Include="Opskrift.cs" />
+    <Compile Include="Producent.cs" />
     <Compile Include="Vare.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

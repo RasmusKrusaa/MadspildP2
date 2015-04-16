@@ -11,15 +11,11 @@ namespace Madspildprojekt
     {
         static void Main(string[] args)
         {
-            //VareVægtSA v = new VareVægtSA("bacon", 5.9m);
-            //v.Vægt = 2.3m;
-            //v.SidsteAnvendelse = 5;
-            //Console.WriteLine(v._Navn + " " + v.Vægt + " " + v._Pris + " " + v.SidsteAnvendelse);
-            Beholdning b = new Beholdning();
-            b.VareTilføjelse();
-            b.TilføjVare("VareVægtMH", "Kylling", 50.5m, 200m, 10);
+            Producent p = new Producent();
+            p.Varedannelse("C:\\Users\\Bilgram\\Desktop\\Program\\MadspildP2\\Varer.txt");
             Opskrift o = new Opskrift();
-            o.IndlæsOpskrifter();
+            o.Indlæs();
+            o.ForeslåEfterListe(p.ProduktKatalog);
             Console.ReadKey();
         }
     }

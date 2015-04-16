@@ -1,5 +1,0 @@
-Vikter 50,8
-Mark 45,9
-Lasse 69
-Rasmus 12,4
-RasmusB 2,3

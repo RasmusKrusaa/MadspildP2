@@ -1,35 +1,35 @@
-$_Kødsovs
-@_1_løg
-@_2_fed hvidløg
-@_500_g_hakket oksekød
-@_450_g_hakkede tomater
-@_1_dåse tomatpure
-#_Svits løg og hvidløg
-#_Tilsæt kød
-#_Tilføj hakkede tomater og tomatpure
-#_Lad kødsovsen simre i 10 minutter
----
-$_Forloren hare
-@_250_g_hakket svinekød
-@_250_g_hakket oksekød
-@_1_æg
+ï»¿$_Forloren hare
+@_250_g_hakket svinekÃ¸d
+@_250_g_hakket oksekÃ¸d
+@_1_Ã¦g
 @_1_bacon
-@_1_løg
-#_Tænd oven på 200 grader
-#_Hak løget 
-#_Rør kød, løg og æg sammen
-#_Form farsen til et brød og læg det i et ildfast fad
-#_Læg baconskiverne over farsbrødet
-#_Sæt farsbrødet i ovnen på midterhylden og lad "haren" stege i en time
+@_1_lÃ¸g
+#_TÃ¦nd oven pÃ¥ 200 grader
+#_Hak lÃ¸get 
+#_RÃ¸r kÃ¸d, lÃ¸g og Ã¦g sammen
+#_Form farsen til et brÃ¸d og lÃ¦g det i et ildfast fad
+#_LÃ¦g baconskiverne over farsbrÃ¸det
+#_SÃ¦t farsbrÃ¸det i ovnen pÃ¥ midterhylden og lad "haren" stege i en time
 ---
-$_Æggekage
-@_8_æg
+$_Ã†ggekage
+@_8_Ã¦g
 @_1_bacon
 @_5_tomater
-#_Steg baconen sprød og læg det til afdrypning
-#_Pisk æggene sammen med salt, peber og mælk
-#_Hæld æggemassen på panden
-#_Steg æggemassen på lav varme til den er stivnet 
-#_Skær tomaterne i skiver og fordel dem sammen med baconen over æggekagen
-#_Drys eventuelt med frisk purløg og servér med rugbrød
+#_Steg baconen sprÃ¸d og lÃ¦g det til afdrypning
+#_Pisk Ã¦ggene sammen med salt, peber og mÃ¦lk
+#_HÃ¦ld Ã¦ggemassen pÃ¥ panden
+#_Steg Ã¦ggemassen pÃ¥ lav varme til den er stivnet 
+#_SkÃ¦r tomaterne i skiver og fordel dem sammen med baconen over Ã¦ggekagen
+#_Drys eventuelt med frisk purlÃ¸g og servÃ©r med rugbrÃ¸d
+---
+$_KÃ¸dsovs
+@_1_lÃ¸g
+@_2_fed hvidlÃ¸g
+@_500_g_hakket oksekÃ¸d
+@_450_g_hakkede tomater
+@_1_dÃ¥se tomatpure
+#_Svits lÃ¸g og hvidlÃ¸g
+#_TilsÃ¦t kÃ¸d
+#_TilfÃ¸j hakkede tomater og tomatpure
+#_Lad kÃ¸dsovsen simre i 10 minutter
 ---

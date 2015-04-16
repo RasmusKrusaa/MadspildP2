@@ -1,7 +1,4 @@
-Bacon 47.03
-Lasse 69
-Vikter 50.8
-Ost 12.66
-Mark 45.9
-Rasmus 12.4
-RasmusB 23
+﻿bacon_0_125_5_0
+æg_10_0_20_0
+ost_0_300_100_0
+hakket oksekød_0_500_0_6
