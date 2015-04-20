@@ -41,14 +41,14 @@
   <Class Name="Madspildprojekt.Beholdning">
     <Position X="4" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>CAAEAAAQCAAAAAAACAIAAAAABABAAAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Beholdning.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Madspildprojekt.Opskrift">
     <Position X="0.75" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAACAAAAAARAAAAAEAAAAAAAACAAAAAAAgAA=</HashCode>
+      <HashCode>EAAAgAAEAAAAAAAAABAAAAAEAAAAAAAACAAAAAAAAAE=</HashCode>
       <FileName>Opskrift.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -58,7 +58,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAEAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Indkøb.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -74,8 +74,11 @@
   </Class>
   <Class Name="Madspildprojekt.Producent">
     <Position X="7.5" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>CAAAAAAQAAAgAAAACAIAAAAABAAAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>Producent.cs</FileName>
     </TypeIdentifier>
   </Class>

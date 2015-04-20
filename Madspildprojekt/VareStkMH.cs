@@ -8,14 +8,14 @@ namespace Madspildprojekt
     public class VareStkMH : Vare
     {
         private decimal _Stk;
-        private int _MindstHoldbar;
+        private double _MindstHoldbar;
         
         public VareStkMH(string navn)
         {
             _Navn = navn;
            // _Pris = pris;
         }
-        public int MindstHoldbar
+        public double MindstHoldbar
         {
             get { return _MindstHoldbar; }
             set { _MindstHoldbar = value; }

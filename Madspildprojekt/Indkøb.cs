@@ -9,7 +9,7 @@ namespace Madspildprojekt
     {
         public List<Vare> Indkøbskurv = new List<Vare>();
 
-        private List<Vare> IndkøbskurvUdfraOpskrift(Opskrift opskrift, Husholdning hjemmeBeholdning)
+        private List<Vare> UdfraOpskrift(Opskrift opskrift, Husholdning hjemmeBeholdning)
         {
             foreach (Vare opskriftVare in opskrift.Ingredienser)
             {
@@ -17,13 +17,46 @@ namespace Madspildprojekt
                 foreach (Vare husholdningVare in hjemmeBeholdning.HusBeholdning)
                 {
                     if (opskriftVare._Navn == husholdningVare._Navn)
-                    {
+                    { //Tjek efter vægt
                         Indkøbskurv.Remove(opskriftVare);
                     }
                 }
             }
             return Indkøbskurv;
         }
+        //public decimal VolumenTjek(Vare v)
+        //{
+        //    var u =v.GetType().GetProperties();
+        //    if (v.GetType().GetProperties == VareVægtMH)
+        //    {
+
+        //    }
+        //    return 2;
+        //}
+        public List<Vare> ManuelTilføjning (Vare v)
+        {
+            TilføjVare(v, Indkøbskurv);
+            return Indkøbskurv;
+        }
+        public List<Vare> ManuelSlet(Vare v)
+        {
+            if (Indkøbskurv.Contains(v))
+            {
+                SletVare(v, Indkøbskurv);
+            }
+            else
+            {
+                throw new Exception(); //Indeholder ikke vare exception
+            }
+            return Indkøbskurv;
+        }
+        private void TilføjTilListe(List<Vare> liste)
+        {
+            foreach (Vare v in Indkøbskurv)
+            {
+                TilføjVare(v, liste);
+            }
+            Indkøbskurv = new List<Vare>();
+        }
     }
 }
-// skal kunne lave en indkøbskurv udfra en opskrift, som indeholder hvad man mangler til denne.

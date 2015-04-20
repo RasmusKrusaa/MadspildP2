@@ -8,7 +8,7 @@ namespace Madspildprojekt
     public class VareVægtSA : Vare
     {
         private decimal _Vægt;
-        private int _SidsteAnvendelse;
+        private double _SidsteAnvendelse;
 
         public VareVægtSA(string navn)
         {
@@ -21,7 +21,7 @@ namespace Madspildprojekt
             set { _Vægt = value; }
         }
 
-        public int SidsteAnvendelse
+        public double SidsteAnvendelse
         {
             get { return _SidsteAnvendelse; }
             set { _SidsteAnvendelse = value; }
