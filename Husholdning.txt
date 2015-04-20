@@ -1,0 +1,4 @@
+﻿Madspildprojekt.VareVægtMH
+Madspildprojekt.VareStkMH
+Madspildprojekt.VareVægtMH
+Madspildprojekt.VareVægtSA

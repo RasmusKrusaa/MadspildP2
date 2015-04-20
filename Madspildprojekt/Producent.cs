@@ -17,32 +17,32 @@ namespace Madspildprojekt
             foreach (string line in File.ReadAllLines(filnavn))
             {
                 string[] str = line.Split('_');
-
+                DateTime dagsDato = DateTime.Now;
                 if (str[stkIndex] != "0" && str[mindstHoldbarIndex] != "0")
                 {
                     VareStkMH v = new VareStkMH(str[navnIndex]);
-                    v.MindstHoldbar = double.Parse(str[mindstHoldbarIndex]);
+                    v.MindstHoldbar = dagsDato.AddDays(double.Parse(str[mindstHoldbarIndex]));
                     v.Stk = decimal.Parse(str[stkIndex]);
                     liste.Add(v);
                 }
                 else if (str[vægtIndex] != "0" && str[mindstHoldbarIndex] != "0")
                 {
                     VareVægtMH v = new VareVægtMH(str[navnIndex]);
-                    v.MindstHoldbar = double.Parse(str[mindstHoldbarIndex]);
+                    v.MindstHoldbar = dagsDato.AddDays(double.Parse(str[mindstHoldbarIndex]));
                     v.Vægt = decimal.Parse(str[vægtIndex]);
                     liste.Add(v);
                 }
                 else if (str[stkIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
                 {
                     VareStkSA v = new VareStkSA(str[navnIndex]);
-                    v.SidsteAnvendelse = double.Parse(str[sidsteAnvendelseIndex]);
+                    v.SidsteAnvendelse = dagsDato.AddDays(double.Parse(str[sidsteAnvendelseIndex]));
                     v.Stk = decimal.Parse(str[stkIndex]);
                     liste.Add(v);
                 }
                 else if (str[vægtIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
                 {
                     VareVægtSA v = new VareVægtSA(str[navnIndex]);
-                    v.SidsteAnvendelse = double.Parse(str[sidsteAnvendelseIndex]);
+                    v.SidsteAnvendelse = dagsDato.AddDays(double.Parse(str[sidsteAnvendelseIndex]));
                     v.Vægt = decimal.Parse(str[vægtIndex]);
                     liste.Add(v);
                 }

@@ -11,12 +11,12 @@ namespace Madspildprojekt
     {
         static void Main(string[] args)
         {
-            Indkøb i = new Indkøb();
-            VareVægtMH V = new VareVægtMH("kylling");
-            V.Vægt = 23m;
-            //i.VolumenTjek(V);
-            Husholdning H = new Husholdning();
 
+            string[] a = { "250_g_kulling", "100_g_fisk" };
+            string[] b = { "dyp kulling i fisk", "steg fisk" };
+            Opskrift o = new Opskrift();
+            o.TilføjOpskriftTilFil("lækker kulling", a, b);
+            o.Indlæs();
             Console.ReadKey();
         }
     }

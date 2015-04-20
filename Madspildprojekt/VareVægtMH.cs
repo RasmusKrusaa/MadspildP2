@@ -8,7 +8,7 @@ namespace Madspildprojekt
     public class VareVægtMH : Vare
     {
         private decimal _Vægt;
-        private double _MindstHoldbar;
+        private DateTime _MindstHoldbar;
 
         public VareVægtMH(string navn)
         {
@@ -16,7 +16,7 @@ namespace Madspildprojekt
             //_Pris = pris;
         }
 
-        public double MindstHoldbar
+        public DateTime MindstHoldbar
         {
             get { return _MindstHoldbar; }
             set { _MindstHoldbar = value; }

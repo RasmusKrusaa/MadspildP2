@@ -58,5 +58,6 @@ namespace Madspildprojekt
             }
             Indkøbskurv = new List<Vare>();
         }
+
     }
 }

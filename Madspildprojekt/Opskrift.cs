@@ -116,9 +116,29 @@ namespace Madspildprojekt
             return forslag;
         }
 
-        //private void TilføjOpskrift()
-        //{
-        //    throw new System.NotImplementedException();
-        //}
+        public void TilføjOpskriftTilFil(string retNavn, string[] Ingredienser, string[] Instruktioner)
+        {
+            var fil = new List<string>(File.ReadAllLines(@"C:\Users\Bilgram\Desktop\Program\MadspildP2\Opskrifter.txt"));
+            if (fil.ElementAt(fil.Count - 1) == "---")
+            {
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Bilgram\Desktop\Program\MadspildP2\Opskrifter.txt", true))
+                {
+                    file.WriteLine();
+                }
+            }
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Bilgram\Desktop\Program\MadspildP2\Opskrifter.txt", true))
+            {
+                file.WriteLine("$_" + retNavn);
+                foreach (string str in Ingredienser)
+                {
+                    file.WriteLine("@_" + str);
+                }
+                foreach (string str in Instruktioner)
+                {
+                    file.WriteLine("#_" + str);
+                }
+                file.Write("---");                
+            }
+        }
     }
 }

@@ -8,14 +8,14 @@ namespace Madspildprojekt
     public class VareStkSA : Vare
     {
         private decimal _Stk;
-        private double _SidsteAnvendelse;
+        private DateTime _SidsteAnvendelse;
 
         public VareStkSA(string navn)
         {
             _Navn = navn;
           //  _Pris = pris;
         }
-        public double SidsteAnvendelse
+        public DateTime SidsteAnvendelse
         {
             get { return _SidsteAnvendelse; }
             set { _SidsteAnvendelse = value; }
