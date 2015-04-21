@@ -11,12 +11,9 @@ namespace Madspildprojekt
     {
         static void Main(string[] args)
         {
-
-            string[] a = { "250_g_kulling", "100_g_fisk" };
-            string[] b = { "dyp kulling i fisk", "steg fisk" };
-            Opskrift o = new Opskrift();
-            o.TilføjOpskriftTilFil("lækker kulling", a, b);
-            o.Indlæs();
+            Producent p = new Producent();
+            List<Vare> l = new List<Vare>();
+            p.Varedannelse(@"C:\Users\Bilgram\Desktop\Program\MadspildP2\Produktkatalog.txt" , l);
             Console.ReadKey();
         }
     }

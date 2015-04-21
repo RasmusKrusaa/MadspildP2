@@ -13,7 +13,6 @@ namespace Madspildprojekt
         public VareStkSA(string navn)
         {
             _Navn = navn;
-          //  _Pris = pris;
         }
         public DateTime SidsteAnvendelse
         {

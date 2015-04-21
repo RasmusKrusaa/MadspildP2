@@ -46,7 +46,7 @@ namespace Madspildprojekt
             }
             else
             {
-                throw new Exception(); //Indeholder ikke vare exception
+                throw new VareTypeNotFoundException(); //Indeholder ikke vare exception
             }
             return Indkøbskurv;
         }

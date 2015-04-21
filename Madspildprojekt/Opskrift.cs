@@ -51,7 +51,7 @@ namespace Madspildprojekt
                 }
                 else 
                 {
-                    throw new Exception(); 
+                    throw new VareTypeNotFoundException(); 
                 }
             }
         }

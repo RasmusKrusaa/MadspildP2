@@ -48,7 +48,14 @@ namespace Madspildprojekt
                 }
                 else
                 {
-                    throw new Exception();
+                    try
+                    {
+                        throw new VareTypeNotFoundException("Varetype ikke fundet.");
+                    }
+                    catch (VareTypeNotFoundException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
                 }
             }
             return liste;

@@ -13,7 +13,6 @@ namespace Madspildprojekt
         public VareVægtMH(string navn)
         {
             _Navn = navn;
-            //_Pris = pris;
         }
 
         public DateTime MindstHoldbar

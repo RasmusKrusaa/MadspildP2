@@ -13,7 +13,6 @@ namespace Madspildprojekt
         public VareVægtSA(string navn)
         {
             _Navn = navn;
-          //  _Pris = pris;
         }
         public decimal Vægt
         {
