@@ -9,30 +9,62 @@ namespace Madspildprojekt
     {
         public List<Vare> Indkøbskurv = new List<Vare>();
 
-        private List<Vare> UdfraOpskrift(Opskrift opskrift, Husholdning hjemmeBeholdning)
+        public List<Vare> UdfraOpskrift(Opskrift opskrift, Husholdning hjemmeBeholdning)
         {
+            decimal d1, d2;
             foreach (Vare opskriftVare in opskrift.Ingredienser)
             {
                 Indkøbskurv.Add(opskriftVare);
                 foreach (Vare husholdningVare in hjemmeBeholdning.HusBeholdning)
                 {
                     if (opskriftVare._Navn == husholdningVare._Navn)
-                    { //Tjek efter vægt
-                        Indkøbskurv.Remove(opskriftVare);
+                    {
+                        if (opskriftVare is VareVægtMH || opskriftVare is VareVægtSA)
+                        {
+                            d1 = VolumenTjek(husholdningVare);
+                            d2 = VolumenTjek(opskriftVare);
+                            if (d1 >= d2)
+                                {
+                                    Indkøbskurv.Remove(opskriftVare);
+                                }
+                        }
+                        else if (opskriftVare is VareStkMH || opskriftVare is VareStkSA)
+                        {
+                            d1 = VolumenTjek(husholdningVare);
+                            d2 = VolumenTjek(opskriftVare);
+                            if (d1 >= d2)
+                            {
+                                Indkøbskurv.Remove(opskriftVare);
+                            }
+                        }
                     }
                 }
             }
             return Indkøbskurv;
         }
-        //public decimal VolumenTjek(Vare v)
-        //{
-        //    var u =v.GetType().GetProperties();
-        //    if (v.GetType().GetProperties == VareVægtMH)
-        //    {
-
-        //    }
-        //    return 2;
-        //}
+        public decimal VolumenTjek(Vare v)
+        {
+            if (v is VareVægtMH || v is VareVægtSA)
+            {
+                VareVægtMH v1 = v as VareVægtMH;
+                VareVægtSA v2 = v as VareVægtSA;
+                if (v1 == null)
+                {
+                    return v2.Vægt;
+                }
+                else return v1.Vægt;
+            }
+            else
+            {
+                VareStkMH v1 = v as VareStkMH;
+                VareStkSA v2 = v as VareStkSA;
+                if (v1 == null)
+                {
+                    return  v2.Stk;
+                }
+                else return v1.Stk;
+            }
+        }
         public List<Vare> ManuelTilføjning (Vare v)
         {
             TilføjVare(v, Indkøbskurv);

@@ -17,7 +17,7 @@ namespace Madspildprojekt
             foreach (string line in File.ReadAllLines(filnavn))
             {
                 string[] str = line.Split('_');
-                DateTime dagsDato = DateTime.Now;
+                DateTime dagsDato = DateTime.Today;
                 if (str[stkIndex] != "0" && str[mindstHoldbarIndex] != "0")
                 {
                     VareStkMH v = new VareStkMH(str[navnIndex]);
