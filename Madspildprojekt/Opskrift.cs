@@ -15,7 +15,7 @@ namespace Madspildprojekt
         public List<Opskrift> Opskrifter = new List<Opskrift>();
         
 
-        public void Indlæs()
+        public void Indlæs() //Filnavn som parameter
         {
             Opskrift o = new Opskrift();
             foreach (string line in File.ReadAllLines(@"C:\\Users\\Bilgram\\Desktop\\Program\\MadspildP2\\Opskrifter.txt"))
@@ -55,7 +55,7 @@ namespace Madspildprojekt
                 }
             }
         }
-
+        
         public List<Opskrift> ForeslåEfterVarer(string[] vareNavn)
         {
             List<Opskrift> forslag = new List<Opskrift>();

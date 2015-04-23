@@ -11,7 +11,7 @@ namespace Madspildprojekt
 
         public List<Vare> UdfraOpskrift(Opskrift opskrift, Husholdning hjemmeBeholdning)
         {
-            decimal d1, d2;
+            decimal d1, d2, d3;
             foreach (Vare opskriftVare in opskrift.Ingredienser)
             {
                 Indkøbskurv.Add(opskriftVare);
@@ -24,9 +24,21 @@ namespace Madspildprojekt
                             d1 = VolumenTjek(husholdningVare);
                             d2 = VolumenTjek(opskriftVare);
                             if (d1 >= d2)
-                                {
-                                    Indkøbskurv.Remove(opskriftVare);
-                                }
+                            {
+                                Indkøbskurv.Remove(opskriftVare);
+                            }
+                            else if (opskriftVare is VareVægtMH)
+                            {
+                                VareVægtMH v1 = opskriftVare as VareVægtMH;
+                                d3 = d2 - d1;
+                                v1.Vægt = d3;
+                            }
+                            else if (opskriftVare is VareVægtSA)
+                            {
+                                VareVægtSA v1 = opskriftVare as VareVægtSA;
+                                d3 = d2 - d1;
+                                v1.Vægt = d3;
+                            }
                         }
                         else if (opskriftVare is VareStkMH || opskriftVare is VareStkSA)
                         {
@@ -35,6 +47,18 @@ namespace Madspildprojekt
                             if (d1 >= d2)
                             {
                                 Indkøbskurv.Remove(opskriftVare);
+                            }
+                            else if (opskriftVare is VareStkMH)
+                            {
+                                VareStkMH v1 = opskriftVare as VareStkMH;
+                                d3 = d2 - d1;
+                                v1.Stk = d3;
+                            }
+                            else if (opskriftVare is VareStkSA)
+                            {
+                                VareStkSA v1 = opskriftVare as VareStkSA;
+                                d3 = d2 - d1;
+                                v1.Stk = d3;
                             }
                         }
                     }
@@ -82,10 +106,22 @@ namespace Madspildprojekt
             }
             return Indkøbskurv;
         }
-        private void TilføjTilListe(List<Vare> liste)
+        public void TilføjTilHjemmeBeholdning(List<Vare> liste, List<Vare> Produktkatalog)
         {
             foreach (Vare v in Indkøbskurv)
             {
+                foreach (Vare Produkt in Produktkatalog)
+                {
+                    if (v._Navn == Produkt._Navn)
+                    {
+                        decimal Antal = Math.Ceiling(VolumenTjek(v) / VolumenTjek(Produkt));
+                        Indkøbskurv.Remove(v);
+                        for (int i = 0; i < Antal; i++)
+                        {
+                            Indkøbskurv.Add(Produkt);
+                        }
+                    }
+                }
                 TilføjVare(v, liste);
             }
             Indkøbskurv = new List<Vare>();

@@ -8,11 +8,11 @@ namespace Madspildprojekt
 {
     public class Producent
     {
-        const int navnIndex = 0, stkIndex = 1, vægtIndex = 2,
+        private const int navnIndex = 0, stkIndex = 1, vægtIndex = 2,
             mindstHoldbarIndex = 3, sidsteAnvendelseIndex = 4;
         List<Vare> produktKatalog = new List<Vare>();
 
-        public List<Vare> Varedannelse(string filnavn, List<Vare> liste)
+        public List<Vare> Varedannelse(string filnavn, List<Vare> liste) //private
         {
             foreach (string line in File.ReadAllLines(filnavn))
             {
@@ -60,11 +60,12 @@ namespace Madspildprojekt
             }
             return liste;
         }
-        private List<Vare> indlaesProduktKatalog()
+        private List<Vare> indlaesProduktKatalog() //parameter på filen - public
         {
             Varedannelse("C:\\Users\\Bilgram\\Desktop\\Program\\MadspildP2\\Produktkatalog.txt", produktKatalog);
             return produktKatalog;
         }
+
     }
 }
 
