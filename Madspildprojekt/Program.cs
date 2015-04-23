@@ -33,7 +33,7 @@ namespace Madspildprojekt
             o.Indlæs();
             i.UdfraOpskrift(o.Opskrifter[1], h);
             i.TilføjTilHjemmeBeholdning(h.HusBeholdning, produktKatalog);
-            Console.WriteLine("Hej");
+            Console.ReadKey();
 
 
             //h.SletGammelVare(d);
