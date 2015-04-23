@@ -17,7 +17,7 @@ namespace Madspildprojekt
             Indkøb i = new Indkøb();
             Producent p = new Producent();
             List<Vare> produktKatalog = new List<Vare>();
-            p.Varedannelse(@"C:\Users\Bilgram\Desktop\Program\MadspildP2\Produktkatalog.txt", produktKatalog);
+          //  p.Varedannelse(@"C:\Users\Bilgram\Desktop\Program\MadspildP2\Produktkatalog.txt", produktKatalog);
             VareVægtMH v1 = new VareVægtMH("kulling");
             VareStkMH v2 = new VareStkMH("tomater");
             VareStkSA v3 = new VareStkSA("bacon");
@@ -30,10 +30,14 @@ namespace Madspildprojekt
             h.HusBeholdning.Add(v1);
             h.HusBeholdning.Add(v2);
             h.HusBeholdning.Add(v3);
-            o.Indlæs();
-            i.UdfraOpskrift(o.Opskrifter[1], h);
+         //   o.Indlæs();
+           // i.UdfraOpskrift(o.Opskrifter[1], h);
             i.TilføjTilHjemmeBeholdning(h.HusBeholdning, produktKatalog);
+<<<<<<< HEAD
             
+=======
+            o.Indlæs(@"C:\Users\Mark\Documents\GitHub\MadspildP2\Opskrifter.txt");
+>>>>>>> origin/master
             //h.SletGammelVare(d);
             //Producent p = new Producent();
             //List<Vare> l = new List<Vare>();
