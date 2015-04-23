@@ -6,13 +6,21 @@ using System.IO;
 
 namespace Madspildprojekt
 {
+    /*
+     * Beholdning indeholder metoder som kan arbejde med kollektionsklassen List<>.
+     */
     public class Beholdning
     {
+        /*
+         *Metoden "TilføjVare" tilføjer en specifik vare en en liste.
+        */
         public void TilføjVare(Vare v, List<Vare> liste) 
         {
             liste.Add(v);
         }
-
+        /*
+         * Metoden "SletVare" Sletter en specifik vare fra en liste.
+         */
         public void SletVare(Vare v, List<Vare> liste)
         {
             if (liste.Contains(v))
@@ -20,7 +28,9 @@ namespace Madspildprojekt
                 liste.Remove(v);
             }
         }
-
+        /*
+         * 
+         */
         public void SkrivListeAfVarerTilFil(string filsti, List<Vare> liste)
         {
             using(System.IO.StreamWriter file = new System.IO.StreamWriter(filsti, true))

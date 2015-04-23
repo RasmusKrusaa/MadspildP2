@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 
 namespace Madspildprojekt
+    /* 
+     * Denne klasse er en underklasse af vare, som har ansvaret for at tilskrive
+     * vægt og sidsteanvendelsesdato på vare som skal have disse specifikationer.
+    */
 {
     public class VareVægtSA : Vare
     {

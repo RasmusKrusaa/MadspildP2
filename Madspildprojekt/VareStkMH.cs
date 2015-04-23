@@ -5,6 +5,10 @@ using System.Text;
 
 namespace Madspildprojekt
 {
+    /* 
+     * Denne klasse er en underklasse af vare, som har ansvaret for at tilskrive
+     * stk og mindstholbarhedsdato på vare som skal have disse specifikationer.
+    */
     public class VareStkMH : Vare
     {
         private decimal _Stk;
