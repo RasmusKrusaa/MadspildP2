@@ -1,0 +1,9 @@
+C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll
+C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.pdb
+C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\Madspildprojekt.exe
+C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\nunit.framework.dll
+C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\Madspildprojekt.pdb
+C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\nunit.framework.xml
+C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.csprojResolveAssemblyReference.cache
+C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.dll
+C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.pdb

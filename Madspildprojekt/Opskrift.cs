@@ -9,16 +9,16 @@ namespace Madspildprojekt
     public class Opskrift : Beholdning
     {
 
-        protected string retNavn;
+        public string retNavn;
         public List<Vare> Ingredienser = new List<Vare>();
         private List<string> Instruktioner = new List<string>();
         public List<Opskrift> Opskrifter = new List<Opskrift>();
         
 
-        public void Indlæs() //Filnavn som parameter
+        public void Indlæs(string filnavn) //Filnavn som parameter
         {
             Opskrift o = new Opskrift();
-            foreach (string line in File.ReadAllLines(@"C:\\Users\\Bilgram\\Desktop\\Program\\MadspildP2\\Opskrifter.txt"))
+            foreach (string line in File.ReadAllLines(filnavn))
             {
                 string[] str = line.Split('_');
                 if (str[0] == "$")
