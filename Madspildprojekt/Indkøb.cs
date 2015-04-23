@@ -11,7 +11,7 @@ namespace Madspildprojekt
 
         public List<Vare> UdfraOpskrift(Opskrift opskrift, Husholdning hjemmeBeholdning)
         {
-            decimal d1, d2, d3;
+            decimal volumenHusVare, volumenOpskriftVare, manglendeVolumen;
             foreach (Vare opskriftVare in opskrift.Ingredienser)
             {
                 Indkøbskurv.Add(opskriftVare);
@@ -19,76 +19,23 @@ namespace Madspildprojekt
                 {
                     if (opskriftVare._Navn == husholdningVare._Navn)
                     {
-                        if (opskriftVare is VareVægtMH || opskriftVare is VareVægtSA)
+                        volumenHusVare = husholdningVare.VolumenTjek();
+                        volumenOpskriftVare = opskriftVare.VolumenTjek();
+                        if (volumenHusVare >= volumenOpskriftVare)
                         {
-                            d1 = VolumenTjek(husholdningVare);
-                            d2 = VolumenTjek(opskriftVare);
-                            if (d1 >= d2)
-                            {
-                                Indkøbskurv.Remove(opskriftVare);
-                            }
-                            else if (opskriftVare is VareVægtMH)
-                            {
-                                VareVægtMH v1 = opskriftVare as VareVægtMH;
-                                d3 = d2 - d1;
-                                v1.Vægt = d3;
-                            }
-                            else if (opskriftVare is VareVægtSA)
-                            {
-                                VareVægtSA v1 = opskriftVare as VareVægtSA;
-                                d3 = d2 - d1;
-                                v1.Vægt = d3;
-                            }
+                            Indkøbskurv.Remove(opskriftVare);
                         }
-                        else if (opskriftVare is VareStkMH || opskriftVare is VareStkSA)
+                        else
                         {
-                            d1 = VolumenTjek(husholdningVare);
-                            d2 = VolumenTjek(opskriftVare);
-                            if (d1 >= d2)
-                            {
-                                Indkøbskurv.Remove(opskriftVare);
-                            }
-                            else if (opskriftVare is VareStkMH)
-                            {
-                                VareStkMH v1 = opskriftVare as VareStkMH;
-                                d3 = d2 - d1;
-                                v1.Stk = d3;
-                            }
-                            else if (opskriftVare is VareStkSA)
-                            {
-                                VareStkSA v1 = opskriftVare as VareStkSA;
-                                d3 = d2 - d1;
-                                v1.Stk = d3;
-                            }
+                            manglendeVolumen = volumenOpskriftVare - volumenHusVare;
+                            opskriftVare.setVolumen(manglendeVolumen);
                         }
                     }
                 }
             }
             return Indkøbskurv;
         }
-        public decimal VolumenTjek(Vare v)
-        {
-            if (v is VareVægtMH || v is VareVægtSA)
-            {
-                VareVægtMH v1 = v as VareVægtMH;
-                VareVægtSA v2 = v as VareVægtSA;
-                if (v1 == null)
-                {
-                    return v2.Vægt;
-                }
-                else return v1.Vægt;
-            }
-            else
-            {
-                VareStkMH v1 = v as VareStkMH;
-                VareStkSA v2 = v as VareStkSA;
-                if (v1 == null)
-                {
-                    return  v2.Stk;
-                }
-                else return v1.Stk;
-            }
-        }
+
         public List<Vare> ManuelTilføjning (Vare v)
         {
             TilføjVare(v, Indkøbskurv);
@@ -106,6 +53,7 @@ namespace Madspildprojekt
             }
             return Indkøbskurv;
         }
+
         public void TilføjTilHjemmeBeholdning(List<Vare> liste, List<Vare> Produktkatalog)
         {
             foreach (Vare v in Indkøbskurv)
@@ -114,7 +62,7 @@ namespace Madspildprojekt
                 {
                     if (v._Navn == Produkt._Navn)
                     {
-                        decimal Antal = Math.Ceiling(VolumenTjek(v) / VolumenTjek(Produkt));
+                        decimal Antal = Math.Ceiling(v.VolumenTjek() / Produkt.VolumenTjek());
                         Indkøbskurv.Remove(v);
                         for (int i = 0; i < Antal; i++)
                         {
@@ -126,6 +74,5 @@ namespace Madspildprojekt
             }
             Indkøbskurv = new List<Vare>();
         }
-
     }
 }

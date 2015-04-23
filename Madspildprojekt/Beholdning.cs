@@ -12,7 +12,7 @@ namespace Madspildprojekt
     public class Beholdning
     {
         /*
-         *Metoden "TilføjVare" tilføjer en specifik vare en en liste.
+        * Metoden "TilføjVare" tilføjer en specifik vare til en liste.
         */
         public void TilføjVare(Vare v, List<Vare> liste) 
         {

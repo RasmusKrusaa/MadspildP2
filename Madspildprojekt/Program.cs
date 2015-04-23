@@ -33,13 +33,7 @@ namespace Madspildprojekt
             o.Indlæs();
             i.UdfraOpskrift(o.Opskrifter[1], h);
             i.TilføjTilHjemmeBeholdning(h.HusBeholdning, produktKatalog);
-<<<<<<< HEAD
-            Console.WriteLine("RasmusK");
-=======
-            Console.ReadKey();
-
->>>>>>> f3dbd111580fedbff746a17862c9e64e972cf288
-
+            
             //h.SletGammelVare(d);
             //Producent p = new Producent();
             //List<Vare> l = new List<Vare>();
