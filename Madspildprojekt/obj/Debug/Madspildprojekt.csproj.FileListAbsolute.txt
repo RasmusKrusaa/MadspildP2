@@ -15,4 +15,14 @@ C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildproj
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+<<<<<<< HEAD
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 >>>>>>> origin/master

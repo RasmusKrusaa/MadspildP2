@@ -33,7 +33,11 @@ namespace Madspildprojekt
          //   o.Indlæs();
            // i.UdfraOpskrift(o.Opskrifter[1], h);
             i.TilføjTilHjemmeBeholdning(h.HusBeholdning, produktKatalog);
+<<<<<<< HEAD
+            
+=======
             o.Indlæs(@"C:\Users\Mark\Documents\GitHub\MadspildP2\Opskrifter.txt");
+>>>>>>> origin/master
             //h.SletGammelVare(d);
             //Producent p = new Producent();
             //List<Vare> l = new List<Vare>();

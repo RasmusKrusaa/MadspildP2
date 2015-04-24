@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Madspildprojekt
 {
@@ -28,6 +29,34 @@ namespace Madspildprojekt
         {
             get { return _Stk; }
             set { _Stk = value; }
+        }
+
+        public override void ForGammelDatoTjek(DateTime dato)
+        {
+            if (_MindstHoldbar <= dato)
+            {
+                MessageBox.Show(_Navn + " er måske for gammel. Tjek dato!");
+            }
+        }
+
+        public override bool SletVareFraListeHvisGammel(DateTime dato, List<Vare> liste)
+        {
+            if (_MindstHoldbar <= dato)
+            {
+                liste.Remove(this);
+                return true;
+            }
+            return false;
+        }
+
+        public override decimal VolumenTjek()
+        {
+            return this._Stk;
+        }
+
+        public override void setVolumen(decimal volumen)
+        {
+            this._Stk = volumen;
         }
     }
 }
