@@ -11,9 +11,11 @@ namespace MadspildprojektTests
     [TestFixture]
     public class OpskriftTest
     {
-        [TestCase(0, Result="Forloren hare")]
-        [TestCase(1, Result="Æggekage")]
-        [TestCase(2, Result="Kødsovs")]
+        [TestCase(0, Result = "Forloren hare")]
+        [TestCase(1, Result = "Æggekage")]
+        [TestCase(2, Result = "Kødsovs")]
+        [TestCase(3, Result = "hakkede tomater")]
+        [TestCase(4, Result = "dåse tomatpure")]
         public string indlæsTest(int i)
         {
             //arrange
@@ -21,14 +23,32 @@ namespace MadspildprojektTests
             //act
             o.Indlæs(@"C:\Users\Mark\Documents\GitHub\MadspildP2\Opskrifter.txt"); // filnavn som parameter
             //assert
-            string h = o.Opskrifter[i].retNavn;
-            return h;
+            if (i < 3)
+	        {
+		        string h = o.Opskrifter[i].retNavn;
+                return h;
+	        }
+            else
+            {
+                string h = o.Opskrifter[2].Ingredienser[i]._Navn;
+                return h;
+            }
+
             
         }
         [Test]
-        public void RasmusKTest()
+        public void ForslåEfterVareTest()
         {
-            Assert.AreEqual(3, 2);
+            //Arrange
+            Opskrift O = new Opskrift();
+            O.Indlæs(@"C:\Users\Mark\Documents\GitHub\MadspildP2\Opskrifter.txt");
+            string[] h = { "bacon" };
+            List<Opskrift> ol = new List<Opskrift>();
+            //Act
+            ol = O.ForeslåEfterVarer(h);
+            //Assert
+            Assert.AreEqual("Æggekage", ol[1].retNavn);
+            
         }
     }
 }
