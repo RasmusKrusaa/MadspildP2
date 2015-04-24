@@ -2,4 +2,3 @@
 æg_10_0_20_0
 ost_0_300_100_0
 hakket oksekød_0_500_0_6
-hakket oksekød_0_0_0_0
