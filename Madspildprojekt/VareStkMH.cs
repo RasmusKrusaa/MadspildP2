@@ -58,10 +58,5 @@ namespace Madspildprojekt
         {
             this._Stk = volumen;
         }
-
-        public override string skrivInfoTilFil()
-        {
-            return _Navn + "_" + _Stk + "_0_" + _MindstHoldbar.ToShortDateString() + "_0";
-        }
     }
 }

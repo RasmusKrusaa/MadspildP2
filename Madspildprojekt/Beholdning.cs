@@ -31,29 +31,20 @@ namespace Madspildprojekt
         /*
          * 
          */
-        public void SkrivListeAfVarerTilFil(string filnavn, List<Vare> liste)
+        public void SkrivListeAfVarerTilFil(string filsti, List<Vare> liste)
         {
-            string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
-                Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
             using(System.IO.StreamWriter file = new System.IO.StreamWriter(filsti, true))
             {
                 foreach (Vare v in liste)
                 {
-                    file.WriteLine(v.skrivInfoTilFil());
+                    file.WriteLine(v._Navn);
                 }
+                //skriver objekter til fil, vi vil skrive elementerne fra objektet.
             }
         }
-
-        /*
-         * Metoden "IndlæsVarer" kalder på metoden IndlæsProdukter fra 
-         * producentklassen, som instantierer varer fra en fil.
-        */
-        public List<Vare> IndlæsVarer(string filnavn)
-        {
-            Producent p = new Producent();
-            List<Vare> husholdning = new List<Vare>();
-            husholdning = p.indlaesProdukter(filnavn);
-            return husholdning;
-        }
+        //protected void SorterBeholdning()
+        //{
+            
+        //}
     }
 }

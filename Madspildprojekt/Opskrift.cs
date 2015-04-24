@@ -18,9 +18,7 @@ namespace Madspildprojekt
         public void Indlæs(string filnavn) //Filnavn som parameter
         {
             Opskrift o = new Opskrift();
-            string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
-                Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
-            foreach (string line in File.ReadAllLines(filsti))
+            foreach (string line in File.ReadAllLines(filnavn))
             {
                 string[] str = line.Split('_');
                 if (str[0] == "$")
@@ -120,17 +118,15 @@ namespace Madspildprojekt
 
         public void TilføjOpskriftTilFil(string retNavn, string[] Ingredienser, string[] Instruktioner)
         {
-            string opskriftfilSti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
-                Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\Opskrifter.txt";
-            var fil = new List<string>(File.ReadAllLines(opskriftfilSti));
+            var fil = new List<string>(File.ReadAllLines(@"C:\Users\Bilgram\Desktop\Program\MadspildP2\Opskrifter.txt"));
             if (fil.ElementAt(fil.Count - 1) == "---")
             {
-                using (System.IO.StreamWriter file = new System.IO.StreamWriter(opskriftfilSti, true))
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Bilgram\Desktop\Program\MadspildP2\Opskrifter.txt", true))
                 {
                     file.WriteLine();
                 }
             }
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(opskriftfilSti, true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Bilgram\Desktop\Program\MadspildP2\Opskrifter.txt", true))
             {
                 file.WriteLine("$_" + retNavn);
                 foreach (string str in Ingredienser)

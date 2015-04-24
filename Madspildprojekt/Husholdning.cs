@@ -16,6 +16,16 @@ namespace Madspildprojekt
         public List<Vare> HusBeholdning = new List<Vare>(); // skal være private ?
 
         /*
+         *Metoden "indlæs" kalder på metoden Varedannelse, fra producent klassen, som instantierer varer fra en fil.
+         *I dette tilfælde instantieres varen fra filen husholning ind i listen husholdning.
+        */
+        public void indlæs(List<Vare> husholdning)
+        {
+            Producent p = new Producent();
+            p.Varedannelse("C:\\Users\\Bilgram\\Desktop\\Program\\MadspildP2\\Husholdning.txt", husholdning);          
+        }
+
+        /*
          *Metoden "DatoAdvarsel" informerer brugeren om udløbelende varer, baseret på sidsteanvendelses- eller mindstholdbarhedsdato.
         */
         public void DatoAdvarsel(DateTime dato)
@@ -39,7 +49,5 @@ namespace Madspildprojekt
                 }
             }
         }
-
-        // Metode der skal kunne slette varer fra husholdningen baseret på en opskrift.
     }
 }

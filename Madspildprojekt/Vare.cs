@@ -22,10 +22,5 @@ namespace Madspildprojekt
         }
 
         public virtual void setVolumen(decimal volumen) { }
-
-        public virtual string skrivInfoTilFil()
-        {
-            return "";
-        }
     }
 }
