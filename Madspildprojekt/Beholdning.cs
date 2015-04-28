@@ -29,7 +29,7 @@ namespace Madspildprojekt
             }
         }
         /*
-         * 
+         * Metoden "SkrifListeAfVarerTilFil" Skriver en liste af Varer til en fil.
          */
         public void SkrivListeAfVarerTilFil(string filnavn, List<Vare> liste)
         {
