@@ -12,37 +12,51 @@ namespace Madspildprojekt
             mindstHoldbarIndex = 3, sidsteAnvendelseIndex = 4;
         List<Vare> produktKatalog = new List<Vare>();
 
-        public List<Vare> Varedannelse(string filnavn, List<Vare> liste) //private
+        public DateTime setDato(string dato)
         {
-            foreach (string line in File.ReadAllLines(filnavn))
+            if (dato.Contains("/"))
+            {
+                return Convert.ToDateTime(dato);
+            }
+            else
+            {
+                return DateTime.Today.AddDays(double.Parse(dato));
+            }
+        }
+
+        private List<Vare> Varedannelse(string filnavn, List<Vare> liste)
+        {
+            string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
+                Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
+            foreach (string line in File.ReadAllLines(filsti))
             {
                 string[] str = line.Split('_');
                 DateTime dagsDato = DateTime.Today;
                 if (str[stkIndex] != "0" && str[mindstHoldbarIndex] != "0")
                 {
                     VareStkMH v = new VareStkMH(str[navnIndex]);
-                    v.MindstHoldbar = dagsDato.AddDays(double.Parse(str[mindstHoldbarIndex]));
+                    v.MindstHoldbar = setDato(str[mindstHoldbarIndex]);
                     v.Stk = decimal.Parse(str[stkIndex]);
                     liste.Add(v);
                 }
                 else if (str[vægtIndex] != "0" && str[mindstHoldbarIndex] != "0")
                 {
                     VareVægtMH v = new VareVægtMH(str[navnIndex]);
-                    v.MindstHoldbar = dagsDato.AddDays(double.Parse(str[mindstHoldbarIndex]));
+                    v.MindstHoldbar = setDato(str[mindstHoldbarIndex]);
                     v.Vægt = decimal.Parse(str[vægtIndex]);
                     liste.Add(v);
                 }
                 else if (str[stkIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
                 {
                     VareStkSA v = new VareStkSA(str[navnIndex]);
-                    v.SidsteAnvendelse = dagsDato.AddDays(double.Parse(str[sidsteAnvendelseIndex]));
+                    v.SidsteAnvendelse = setDato(str[sidsteAnvendelseIndex]);
                     v.Stk = decimal.Parse(str[stkIndex]);
                     liste.Add(v);
                 }
                 else if (str[vægtIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
                 {
                     VareVægtSA v = new VareVægtSA(str[navnIndex]);
-                    v.SidsteAnvendelse = dagsDato.AddDays(double.Parse(str[sidsteAnvendelseIndex]));
+                    v.SidsteAnvendelse = setDato(str[sidsteAnvendelseIndex]);
                     v.Vægt = decimal.Parse(str[vægtIndex]);
                     liste.Add(v);
                 }
@@ -60,10 +74,13 @@ namespace Madspildprojekt
             }
             return liste;
         }
-        private List<Vare> indlaesProduktKatalog() //parameter på filen - public
+
+        public List<Vare> indlaesProdukter(string filnavn)
         {
-            Varedannelse("C:\\Users\\Bilgram\\Desktop\\Program\\MadspildP2\\Produktkatalog.txt", produktKatalog);
-            return produktKatalog;
+            List<Vare> produktListe = new List<Vare>();
+            
+            Varedannelse(filnavn, produktListe);
+            return produktListe;
         }
 
     }

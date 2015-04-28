@@ -1,8 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> parent of 23c1f18... Oprydning i programmet og smarte ting med filnavne!
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.pdb
@@ -10,43 +7,31 @@ C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildpr
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of 23c1f18... Oprydning i programmet og smarte ting med filnavne!
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.pdb
-<<<<<<< HEAD
 =======
-=======
-=======
->>>>>>> parent of 23c1f18... Oprydning i programmet og smarte ting med filnavne!
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/master
 =======
 <<<<<<< HEAD
 >>>>>>> origin/master
-=======
->>>>>>> parent of 23c1f18... Oprydning i programmet og smarte ting med filnavne!
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.pdb
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/master
 >>>>>>> origin/master
-=======
-=======
->>>>>>> parent of 23c1f18... Oprydning i programmet og smarte ting med filnavne!
 >>>>>>> origin/master
 >>>>>>> origin/master

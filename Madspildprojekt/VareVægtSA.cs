@@ -58,5 +58,10 @@ namespace Madspildprojekt
         {
             this._Vægt = volumen;
         }
+
+        public override string skrivInfoTilFil()
+        {
+            return _Navn + "_0_" + _Vægt + "_0_" + _SidsteAnvendelse.ToShortDateString();  
+        }
     }
 }
