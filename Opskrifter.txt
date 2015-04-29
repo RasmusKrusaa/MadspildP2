@@ -14,7 +14,7 @@
 $_Æggekage
 @_8_æg
 @_1_bacon
-@_5_tomater
+@_5_tomat
 #_Steg baconen sprød og læg det til afdrypning
 #_Pisk æggene sammen med salt, peber og mælk
 #_Hæld æggemassen på panden
@@ -26,7 +26,7 @@ $_Kødsovs
 @_1_løg
 @_2_fed hvidløg
 @_500_g_hakket oksekød
-@_450_g_hakkede tomater
+@_450_g_hakkede tomat
 @_1_dåse tomatpure
 #_Svits løg og hvidløg
 #_Tilsæt kød
@@ -34,8 +34,8 @@ $_Kødsovs
 #_Lad kødsovsen simre i 10 minutter
 ---
 $_Svensk Pølseret
-@_800_g_kartofler
-@_500_g_pølser
+@_800_g_kartofel
+@_500_g_rød pølse
 @_1_løg
 @_10_g_smør
 @_1_dåse tomatpure
@@ -49,10 +49,10 @@ $_Svensk Pølseret
 $_Kyllingehjerter i karrysovs
 @_1_løg
 @_75_g_soltørrede tomater
-@_500_g_kyllingehjerter
+@_500_g_kyllingehjerte
 @_0,5_mælk
 @_800_g_kartofler
-@_200_g_broccoli
+@_0,8_broccoli
 #_Skær den øverste del af hjerterne fra, den del der er hvid
 #_Snit løgene fint. hak tomaterne
 #_Smelt 25g smør i en gryde og kom løgene heri, lad det svitse 2 minutter 
@@ -68,11 +68,11 @@ Kartoflerne skrælles og skæres ud i små stykker
 $_Lasagne
 @_500_g_oksekød
 @_6_løg
-@_400_g_gulerødder
+@_400_g_gulerød
 @_1_laurbærblad
-@_2_dåse hakkede tomater
+@_1000_g_hakkede tomater
 @_0,5_sødmælk
-@_9_lasagneplader
+@_9_lasagneplade
 @_100_g_ost
 #_Løgene hakkes og brunes i olie
 #_Kød kommes i og brunes, kryder med salt og peper
@@ -88,7 +88,7 @@ $_Lasagne
 $_Laksefarseret skrubbe
 @_200_g_laksefilet
 @_0,5_piskefløde
-@_1_æggehvide
+@_1_pasteuriseret æggehvide
 @_400_g_skrubbefilet
 @_0,2_hvidvin tør
 @_1_løg
