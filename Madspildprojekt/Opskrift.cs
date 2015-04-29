@@ -6,6 +6,11 @@ using System.IO;
 
 namespace Madspildprojekt
 {
+    /*
+     * Klassen Opskrift er en underklasse af beholdning.
+     * Opskrift har ansvar for at indlæse opskrifter, Foreslå opskrifter ud fra en liste af varer eller ud fra en bestemt vare.
+     * Derudover giver den også mulighed for at manuelt at tilføje en opskrift.
+     */
     public class Opskrift : Beholdning
     {
 
@@ -14,7 +19,9 @@ namespace Madspildprojekt
         private List<string> Instruktioner = new List<string>();
         public List<Opskrift> Opskrifter = new List<Opskrift>();
         
-
+        /*
+         * Metoden "indlæs" bliver brugt til at indlæse opskrifter fra fil, som tilføjes til specifikke lister.
+         */
         public void Indlæs(string filnavn) //Filnavn som parameter
         {
             Opskrift o = new Opskrift();
@@ -57,7 +64,9 @@ namespace Madspildprojekt
                 }
             }
         }
-        
+        /*
+         * Metoden "ForeslåEfterVarer" foreslårer en opskrift ud fra udvalgte varer 
+         */
         public List<Opskrift> ForeslåEfterVarer(string[] vareNavn)
         {
             List<Opskrift> forslag = new List<Opskrift>();
@@ -76,7 +85,9 @@ namespace Madspildprojekt
             }
             return forslag;
         }
-
+        /*
+         * Metoden "ForeslåEfterListe" foreslårer en opskrift ud fra en udvalgt liste, f.eks. husbeholdning.
+         */
         public List<Opskrift> ForeslåEfterListe(List<Vare> liste) 
         {
             List<Opskrift> forslag = new List<Opskrift>();
@@ -117,7 +128,9 @@ namespace Madspildprojekt
             }
             return forslag;
         }
-
+        /*
+         * Metoden "TilføjOpskriftTilFil" tilføjer en opskrift til fil, ud fra parameterne retnavn, ingrediencer og instruktioner.
+         */
         public void TilføjOpskriftTilFil(string retNavn, string[] Ingredienser, string[] Instruktioner)
         {
             string opskriftfilSti = Directory.GetParent(Directory.GetParent(Directory.GetParent(

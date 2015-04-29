@@ -21,7 +21,7 @@ namespace MadspildprojektTests
             //arrange
             Opskrift o = new Opskrift();
             //act
-            o.Indlæs(@"C:\Users\Mark\Documents\GitHub\MadspildP2\Opskrifter.txt"); // filnavn som parameter
+            o.Indlæs(@"C:\Users\mads\Desktop\program\MadspildP2\Opskrifter.txt"); // filnavn som parameter
             //assert
             if (i < 3)
 	        {
