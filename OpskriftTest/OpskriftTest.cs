@@ -21,7 +21,11 @@ namespace MadspildprojektTests
             //arrange
             Opskrift o = new Opskrift();
             //act
+<<<<<<< HEAD
             o.Indlæs("Opskrifter.txt"); // filnavn som parameter
+=======
+            o.Indlæs(@"C:\Users\mads\Desktop\program\MadspildP2\Opskrifter.txt"); // filnavn som parameter
+>>>>>>> origin/master
             //assert
             if (i < 3)
 	        {

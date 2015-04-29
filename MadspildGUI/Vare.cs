@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Madspildprojekt
+namespace MadspildGUI
 {
-    /*
-     * Vare er superklassen til VareStkMH, VareStkSA, VareVægtMH og VareVægtSA. Derudover indeholder Vare også de virtuelle metoder.
-     */
     public abstract class Vare
     {
         public string _Navn;

@@ -22,9 +22,15 @@ C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Mad
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
+<<<<<<< HEAD
+=======
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.pdb
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
