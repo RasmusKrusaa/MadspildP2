@@ -33,3 +33,80 @@ $_Kødsovs
 #_Tilføj hakkede tomater og tomatpure
 #_Lad kødsovsen simre i 10 minutter
 ---
+$_Svensk Pølseret
+@_800_g_kartofler
+@_500_g_pølser
+@_1_løg
+@_10_g_smør
+@_1_dåse tomatpure
+@_0,2_mælk
+@_0,5_piskefløde
+#_Skær kartofler og pølser i mindre stykker. Pil og hak løget
+#_Lad smørret blive gyldent og svits da løget der i i ca. i min
+#_Tilsæt 3 tsk. paprika og pølser og lad det svitse i ca. 3 min
+#_Skru ned til jævn varme og tilsæt kartofler, tomatpure og de øvrige ingredienser
+---
+$_Kyllingehjerter i karrysovs
+@_1_løg
+@_75_g_soltørrede tomater
+@_500_g_kyllingehjerter
+@_0,5_mælk
+@_800_g_kartofler
+@_200_g_broccoli
+#_Skær den øverste del af hjerterne fra, den del der er hvid
+#_Snit løgene fint. hak tomaterne
+#_Smelt 25g smør i en gryde og kom løgene heri, lad det svitse 2 minutter 
+#_Tilsæt karry og soltørrede tomater og svits yderligere 2 minutter
+#_Tilsæt hjerterne og lad det svitse til hjerterne er brunede. tilsæt 5 dl vand og lad simre under låg i 1 time
+#_Nu tilsættes 2,5 dl mælk, mængden afhænger af hvor meget sovs du vil lave... og det simrer igen i ca. 15 minutter
+#_Jævn sovsen lige inden servering
+#_Kartoffelmos:
+Kartoflerne skrælles og skæres ud i små stykker
+#_Broccolien gøres ren, skæres i små stykker og det hele kommes op i en gryde og koges til det er mørt
+#_Hæld vandet fra og rør det til en mos med en håndmikser. Tilsæt 2,5 dl mælk og 25g smør for at få det jævnt
+---
+$_Lasagne
+@_500_g_oksekød
+@_6_løg
+@_400_g_gulerødder
+@_1_laurbærblad
+@_2_dåse hakkede tomater
+@_0,5_sødmælk
+@_9_lasagneplader
+@_100_g_ost
+#_Løgene hakkes og brunes i olie
+#_Kød kommes i og brunes, kryder med salt og peper
+#_Kom herefter tomater og de revne gulerødder i. Evt. lidt ekstra vand
+#_lad det simre i ca. 15 minutter
+#_I mens laves den hvide sauce
+#_Smelt 30g margarinen, kom melet i og spæd mælken i lidt af gangen
+#_I et ildfast fad som er smurt med margarine, lægges lagvis hvid sauce, kødsauce, og lasagneplader
+#_Slut af med hvid sauce
+#_Drys af med revet ost
+#_Bages i ovnen ved 200 grader C. alm. ovn i 30 minutter.
+---
+$_Laksefarseret skrubbe
+@_200_g_laksefilet
+@_0,5_piskefløde
+@_1_æggehvide
+@_400_g_skrubbefilet
+@_0,2_hvidvin tør
+@_1_løg
+@_125_g_bacon
+@_5_tomater
+@_1_dåse tomatpure
+@_1_peberfrugt
+#_Laksefarseret skrubbe:
+#_Skær laksen i tynde strimler og kom dem op i en food-processor. Tilsæt æggehvide, fløde, 1/2 tsk. salt og lidt peber samt krydderurter (evt. basilikum, persille, dild eller en blanding heraf) efter behag. 
+#_Lad blenderen køre indtil farsen samler sig.
+#_I et fad lægges en skrubbefilet, der krydres med salt. 
+#_På midten lægges et lag laksefars og ovenpå lægges endnu en filet, hvori der er skåret en åbning på midten. 
+#_(Ved ulige antal filetter eller som et alternativ kan man også lægge et tyndt lag laksefars på fileterne og rulle dem). 
+#_Tilsæt hvidvin og fiskefond. Overdæk fadet med stanniol og damp fisken i en varm ovn ved 200 grader C alm. ovn i ca. 30 minutter. 
+#_Tag dem ud og lad dem trække i yderligere 10 minutter.
+#_Tomatsauce:
+#_Skær 2 skiver bacon og 1 løg i småstykker og svits det i lidt olie på en pande. 
+#_Tilsæt 5 tomater, der er skåret i kvarte og tomatkoncentrat samt væden fra fisken. 
+#_Lad det hele simre i ca. 10 min. Smag til med lidt sukker, salt og peber og tilsæt til sidst tynde strimler af peberfrugten.
+#_Server retten med kartofler eller ris.
+---

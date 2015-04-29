@@ -7,3 +7,12 @@ C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\nunit.framework
 C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.csprojResolveAssemblyReference.cache
 C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.dll
 C:\Users\Mark\Documents\GitHub\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.pdb
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.pdb
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\Madspildprojekt.exe
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\nunit.framework.dll
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\Madspildprojekt.pdb
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\nunit.framework.xml
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.csprojResolveAssemblyReference.cache
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.dll
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.pdb

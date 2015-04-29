@@ -21,7 +21,7 @@ namespace MadspildprojektTests
             //arrange
             Opskrift o = new Opskrift();
             //act
-            o.Indlæs(@"C:\Users\Mark\Documents\GitHub\MadspildP2\Opskrifter.txt"); // filnavn som parameter
+            o.Indlæs("Opskrifter.txt"); // filnavn som parameter
             //assert
             if (i < 3)
 	        {
@@ -41,14 +41,18 @@ namespace MadspildprojektTests
         {
             //Arrange
             Opskrift O = new Opskrift();
-            O.Indlæs(@"C:\Users\Mark\Documents\GitHub\MadspildP2\Opskrifter.txt");
-            string[] h = { "bacon" };
+            string[] o = { "Forloren hare", "Æggekage" };
+            O.Indlæs("Opskrifter.txt");
+            string[] h = { "bacon" , "æg" };
             List<Opskrift> ol = new List<Opskrift>();
             //Act
             ol = O.ForeslåEfterVarer(h);
             //Assert
-            Assert.AreEqual("Æggekage", ol[1].retNavn);
-            
+            for (int i = 0; i < ol.Count; i++)
+            {
+                Assert.AreEqual(o[i], ol[i].retNavn);
+            }
         }
+
     }
 }
