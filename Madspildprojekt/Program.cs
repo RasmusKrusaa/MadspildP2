@@ -12,10 +12,9 @@ namespace Madspildprojekt
         static void Main(string[] args)
         {
             Producent p = new Producent();
-            Husholdning h = new Husholdning();
-
-            h.HusBeholdning = h.IndlæsVarer("Husholdning.txt");
-            
+            Opskrift o = new Opskrift();
+            List<Vare> v =  p.indlaesProdukter("Produktkatalog.txt");
+            o.Indlæs("Opskrifter.txt");
             Console.ReadKey();
         }
     }

@@ -21,11 +21,8 @@ namespace MadspildprojektTests
             //arrange
             Opskrift o = new Opskrift();
             //act
-<<<<<<< HEAD
             o.Indlæs("Opskrifter.txt"); // filnavn som parameter
-=======
-            o.Indlæs(@"C:\Users\mads\Desktop\program\MadspildP2\Opskrifter.txt"); // filnavn som parameter
->>>>>>> origin/master
+
             //assert
             if (i < 3)
 	        {
@@ -57,6 +54,32 @@ namespace MadspildprojektTests
                 Assert.AreEqual(o[i], ol[i].retNavn);
             }
         }
+        [Test]
+        public void ForslåEfterListeTest()
+        {
+            //Arrange
+            int vareMatch = 0;
+            Opskrift o = new Opskrift();
+            Producent p = new Producent();
+            List<Vare> v = p.indlaesProdukter("Produktkatalog.txt");
+            List<Vare> v2 = new List<Vare>();
+            for (int i = 0; i < 10; i += 2)
+            {
+                v2.Add(v[i]);
+            }
+            o.Indlæs("Opskrifter.txt");
+            //Act
+            List<Opskrift> op = o.ForeslåEfterListe(v2);
+            foreach (Vare v1 in v2)
+	        {
+		        if (v1._Navn == op[0].Ingredienser.ToString())
+	            {
+		        vareMatch++; 
+	            }
+        	}
 
+            //Assert
+            Assert.GreaterOrEqual(vareMatch, 1);
+        }
     }
 }

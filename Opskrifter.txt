@@ -61,7 +61,7 @@ $_Kyllingehjerter i karrysovs
 #_Nu tilsættes 2,5 dl mælk, mængden afhænger af hvor meget sovs du vil lave... og det simrer igen i ca. 15 minutter
 #_Jævn sovsen lige inden servering
 #_Kartoffelmos:
-Kartoflerne skrælles og skæres ud i små stykker
+#_Kartoflerne skrælles og skæres ud i små stykker
 #_Broccolien gøres ren, skæres i små stykker og det hele kommes op i en gryde og koges til det er mørt
 #_Hæld vandet fra og rør det til en mos med en håndmikser. Tilsæt 2,5 dl mælk og 25g smør for at få det jævnt
 ---
