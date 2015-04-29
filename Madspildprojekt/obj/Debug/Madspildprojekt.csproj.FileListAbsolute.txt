@@ -6,21 +6,15 @@ C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspildpr
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Bilgram\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
-<<<<<<< HEAD
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe
 C:\Users\Mark\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.pdb
-=======
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
-<<<<<<< HEAD
 >>>>>>> origin/master
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe
@@ -28,10 +22,3 @@ C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Mad
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
