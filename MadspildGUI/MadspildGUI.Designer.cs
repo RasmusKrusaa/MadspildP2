@@ -33,7 +33,7 @@
             this.husbeholdning = new System.Windows.Forms.TabPage();
             this.funktionsKnapper = new System.Windows.Forms.FlowLayoutPanel();
             this.tilfoejVareKnap = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.sletVareKnap = new System.Windows.Forms.Button();
             this.ListBoxVarerIHus = new System.Windows.Forms.ListBox();
             this.opskrifter = new System.Windows.Forms.TabPage();
             this.navBar.SuspendLayout();
@@ -50,7 +50,7 @@
             this.navBar.Location = new System.Drawing.Point(0, 0);
             this.navBar.Name = "navBar";
             this.navBar.SelectedIndex = 0;
-            this.navBar.Size = new System.Drawing.Size(284, 262);
+            this.navBar.Size = new System.Drawing.Size(408, 329);
             this.navBar.TabIndex = 0;
             // 
             // indkoeb
@@ -71,7 +71,7 @@
             this.husbeholdning.Location = new System.Drawing.Point(4, 22);
             this.husbeholdning.Name = "husbeholdning";
             this.husbeholdning.Padding = new System.Windows.Forms.Padding(3);
-            this.husbeholdning.Size = new System.Drawing.Size(276, 236);
+            this.husbeholdning.Size = new System.Drawing.Size(400, 303);
             this.husbeholdning.TabIndex = 1;
             this.husbeholdning.Text = "Husbeholdning";
             this.husbeholdning.UseVisualStyleBackColor = true;
@@ -79,11 +79,11 @@
             // funktionsKnapper
             // 
             this.funktionsKnapper.Controls.Add(this.tilfoejVareKnap);
-            this.funktionsKnapper.Controls.Add(this.button2);
+            this.funktionsKnapper.Controls.Add(this.sletVareKnap);
             this.funktionsKnapper.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.funktionsKnapper.Location = new System.Drawing.Point(3, 204);
+            this.funktionsKnapper.Location = new System.Drawing.Point(3, 271);
             this.funktionsKnapper.Name = "funktionsKnapper";
-            this.funktionsKnapper.Size = new System.Drawing.Size(270, 29);
+            this.funktionsKnapper.Size = new System.Drawing.Size(394, 29);
             this.funktionsKnapper.TabIndex = 1;
             // 
             // tilfoejVareKnap
@@ -96,23 +96,23 @@
             this.tilfoejVareKnap.UseVisualStyleBackColor = true;
             this.tilfoejVareKnap.Click += new System.EventHandler(this.tilfoejVareKnap_Click);
             // 
-            // button2
+            // sletVareKnap
             // 
-            this.button2.Location = new System.Drawing.Point(84, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.sletVareKnap.Location = new System.Drawing.Point(84, 3);
+            this.sletVareKnap.Name = "sletVareKnap";
+            this.sletVareKnap.Size = new System.Drawing.Size(75, 23);
+            this.sletVareKnap.TabIndex = 1;
+            this.sletVareKnap.Text = "Slet Vare";
+            this.sletVareKnap.UseVisualStyleBackColor = true;
+            this.sletVareKnap.Click += new System.EventHandler(this.sletVareKnap_Click);
             // 
             // ListBoxVarerIHus
             // 
-            this.ListBoxVarerIHus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListBoxVarerIHus.Dock = System.Windows.Forms.DockStyle.Top;
             this.ListBoxVarerIHus.FormattingEnabled = true;
             this.ListBoxVarerIHus.Location = new System.Drawing.Point(3, 3);
             this.ListBoxVarerIHus.Name = "ListBoxVarerIHus";
-            this.ListBoxVarerIHus.Size = new System.Drawing.Size(270, 230);
+            this.ListBoxVarerIHus.Size = new System.Drawing.Size(394, 264);
             this.ListBoxVarerIHus.TabIndex = 0;
             this.ListBoxVarerIHus.DoubleClick += new System.EventHandler(this.ListBoxVarerIHus_DoubleClick);
             // 
@@ -127,7 +127,7 @@
             // 
             // MadspildGUI
             // 
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(408, 329);
             this.Controls.Add(this.navBar);
             this.Name = "MadspildGUI";
             this.navBar.ResumeLayout(false);
@@ -147,7 +147,7 @@
         public System.Collections.Generic.List<Vare> VarerIHus = new System.Collections.Generic.List<Vare>();
         private System.Windows.Forms.FlowLayoutPanel funktionsKnapper;
         private System.Windows.Forms.Button tilfoejVareKnap;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button sletVareKnap;
     }
 }
 

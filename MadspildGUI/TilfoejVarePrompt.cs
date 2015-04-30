@@ -12,10 +12,16 @@ namespace MadspildGUI
 {
     public partial class TilfoejVarePrompt : Form
     {
-        public TilfoejVarePrompt(MadspildGUI main)
+        public TilfoejVarePrompt()
         {
             InitializeComponent();
-            MadspildGUI m = main;
+        }
+
+        private string nyListboxVarerIHusItem;
+
+        public string NyListboxVarerIHusItem
+        {
+            get { return nyListboxVarerIHusItem; }
         }
 
         public void tilfoejKnap_Click(object sender, EventArgs e)
@@ -27,38 +33,42 @@ namespace MadspildGUI
             {
                 if (vaegtKnap.Checked && mindstHoldbarKnap.Checked)
                 {
-                    VareVægtMH v = new VareVægtMH(navnBox.Text);
+                    VareVægtMH v = new VareVægtMH(navnBox.Text.ToLower());
                     v.Vægt = Convert.ToDecimal(volumenBox.Text);
                     v.MindstHoldbar = datoVaelger.Value.Date;
                     b.TilføjVare(v, m.VarerIHus);
+                    nyListboxVarerIHusItem = v._Navn;
                 }
                 else if (vaegtKnap.Checked && sidsteAnvKnap.Checked)
                 {
-                    VareVægtSA v = new VareVægtSA(navnBox.Text);
+                    VareVægtSA v = new VareVægtSA(navnBox.Text.ToLower());
                     v.Vægt = Convert.ToDecimal(volumenBox.Text);
                     v.SidsteAnvendelse = datoVaelger.Value.Date;
                     b.TilføjVare(v, m.VarerIHus);
+                    nyListboxVarerIHusItem = v._Navn;
                 }
                 else if (stkKnap.Checked && mindstHoldbarKnap.Checked)
                 {
-                    VareStkMH v = new VareStkMH(navnBox.Text);
+                    VareStkMH v = new VareStkMH(navnBox.Text.ToLower());
                     v.Stk = Convert.ToDecimal(volumenBox.Text);
                     v.MindstHoldbar = datoVaelger.Value.Date;
                     b.TilføjVare(v, m.VarerIHus);
+                    nyListboxVarerIHusItem = v._Navn;
                 }
                 else if (stkKnap.Checked && sidsteAnvKnap.Checked)
                 {
-                    VareStkSA v = new VareStkSA(navnBox.Text);
+                    VareStkSA v = new VareStkSA(navnBox.Text.ToLower());
                     v.Stk = Convert.ToDecimal(volumenBox.Text);
                     v.SidsteAnvendelse = datoVaelger.Value.Date;
                     b.TilføjVare(v, m.VarerIHus);
+                    nyListboxVarerIHusItem = v._Navn;
                 }
                 b.SkrivListeAfVarerTilFil("Husholdning.txt", m.VarerIHus);
-                m.ListBoxVarerIHus.Items.Add("Hej");
+                DialogResult = DialogResult.OK;
                 Close();
             }
         }
-
+        
         private bool isValidVare()
         {
             if (navnBox.Text == "Indtast varenavn" ||

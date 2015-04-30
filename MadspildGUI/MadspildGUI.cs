@@ -47,12 +47,20 @@ namespace MadspildGUI
 
         private void tilfoejVareKnap_Click(object sender, EventArgs e)
         {
-            TilfoejVarePrompt tilfoejVare = new TilfoejVarePrompt(this);
-            tilfoejVare.Show();
+            TilfoejVarePrompt tilfoejVare = new TilfoejVarePrompt();
+            if (tilfoejVare.ShowDialog() == DialogResult.OK)
+            {
+                ListBoxVarerIHus.Items.Add(tilfoejVare.NyListboxVarerIHusItem);
+                indlaesVarerIHus();
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void sletVareKnap_Click(object sender, EventArgs e)
         {
+            Beholdning b = new Beholdning();
+            b.SletVare(VarerIHus[ListBoxVarerIHus.SelectedIndex], VarerIHus);
+            b.SkrivListeAfVarerTilFil("Husholdning.txt", VarerIHus);
+            indlaesVarerIHus();
         }
     }
 }
