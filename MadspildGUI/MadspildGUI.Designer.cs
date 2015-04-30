@@ -31,11 +31,11 @@
             this.navBar = new System.Windows.Forms.TabControl();
             this.indkoeb = new System.Windows.Forms.TabPage();
             this.husbeholdning = new System.Windows.Forms.TabPage();
-            this.ListBoxVarerIHus = new System.Windows.Forms.ListBox();
-            this.opskrifter = new System.Windows.Forms.TabPage();
             this.funktionsKnapper = new System.Windows.Forms.FlowLayoutPanel();
             this.tilfoejVareKnap = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.ListBoxVarerIHus = new System.Windows.Forms.ListBox();
+            this.opskrifter = new System.Windows.Forms.TabPage();
             this.navBar.SuspendLayout();
             this.husbeholdning.SuspendLayout();
             this.funktionsKnapper.SuspendLayout();
@@ -76,25 +76,6 @@
             this.husbeholdning.Text = "Husbeholdning";
             this.husbeholdning.UseVisualStyleBackColor = true;
             // 
-            // ListBoxVarerIHus
-            // 
-            this.ListBoxVarerIHus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListBoxVarerIHus.FormattingEnabled = true;
-            this.ListBoxVarerIHus.Location = new System.Drawing.Point(3, 3);
-            this.ListBoxVarerIHus.Name = "ListBoxVarerIHus";
-            this.ListBoxVarerIHus.Size = new System.Drawing.Size(270, 230);
-            this.ListBoxVarerIHus.TabIndex = 0;
-            this.ListBoxVarerIHus.DoubleClick += new System.EventHandler(this.ListBoxVarerIHus_DoubleClick);
-            // 
-            // opskrifter
-            // 
-            this.opskrifter.Location = new System.Drawing.Point(4, 22);
-            this.opskrifter.Name = "opskrifter";
-            this.opskrifter.Size = new System.Drawing.Size(276, 236);
-            this.opskrifter.TabIndex = 2;
-            this.opskrifter.Text = "Opskrifter";
-            this.opskrifter.UseVisualStyleBackColor = true;
-            // 
             // funktionsKnapper
             // 
             this.funktionsKnapper.Controls.Add(this.tilfoejVareKnap);
@@ -123,6 +104,26 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ListBoxVarerIHus
+            // 
+            this.ListBoxVarerIHus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListBoxVarerIHus.FormattingEnabled = true;
+            this.ListBoxVarerIHus.Location = new System.Drawing.Point(3, 3);
+            this.ListBoxVarerIHus.Name = "ListBoxVarerIHus";
+            this.ListBoxVarerIHus.Size = new System.Drawing.Size(270, 230);
+            this.ListBoxVarerIHus.TabIndex = 0;
+            this.ListBoxVarerIHus.DoubleClick += new System.EventHandler(this.ListBoxVarerIHus_DoubleClick);
+            // 
+            // opskrifter
+            // 
+            this.opskrifter.Location = new System.Drawing.Point(4, 22);
+            this.opskrifter.Name = "opskrifter";
+            this.opskrifter.Size = new System.Drawing.Size(276, 236);
+            this.opskrifter.TabIndex = 2;
+            this.opskrifter.Text = "Opskrifter";
+            this.opskrifter.UseVisualStyleBackColor = true;
             // 
             // MadspildGUI
             // 
@@ -140,10 +141,10 @@
 
         private System.Windows.Forms.TabControl navBar;
         private System.Windows.Forms.TabPage indkoeb;
-        private System.Windows.Forms.TabPage husbeholdning;
-        private System.Windows.Forms.ListBox ListBoxVarerIHus;
+        public System.Windows.Forms.TabPage husbeholdning;
+        public System.Windows.Forms.ListBox ListBoxVarerIHus;
         private System.Windows.Forms.TabPage opskrifter;
-        private System.Collections.Generic.List<Vare> VarerIHus = new System.Collections.Generic.List<Vare>();
+        public System.Collections.Generic.List<Vare> VarerIHus = new System.Collections.Generic.List<Vare>();
         private System.Windows.Forms.FlowLayoutPanel funktionsKnapper;
         private System.Windows.Forms.Button tilfoejVareKnap;
         private System.Windows.Forms.Button button2;

@@ -16,13 +16,17 @@ namespace MadspildGUI
         {
             InitializeComponent();
 
-            indlaesVarerIHus();
+            if (ListBoxVarerIHus.Items.Count == 0)
+            {
+                indlaesVarerIHus();
+            }
         }
 
         private void indlaesVarerIHus()
         {
             Husholdning h = new Husholdning();
             VarerIHus = h.IndlæsVarer("Husholdning.txt");
+            ListBoxVarerIHus.Items.Clear();
             foreach (Vare v in VarerIHus)
             {
                 ListBoxVarerIHus.Items.Add(v._Navn);
@@ -43,8 +47,12 @@ namespace MadspildGUI
 
         private void tilfoejVareKnap_Click(object sender, EventArgs e)
         {
-            TilfoejVarePrompt tilfoejVare = new TilfoejVarePrompt();
+            TilfoejVarePrompt tilfoejVare = new TilfoejVarePrompt(this);
             tilfoejVare.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
         }
     }
 }
