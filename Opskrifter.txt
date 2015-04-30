@@ -34,10 +34,9 @@ $_Kødsovs
 #_Lad kødsovsen simre i 10 minutter
 ---
 $_Svensk Pølseret
-@_800_g_kartofel
+@_800_g_kartoffel
 @_500_g_rød pølse
 @_1_løg
-@_10_g_smør
 @_1_dåse tomatpure
 @_0,2_mælk
 @_0,5_piskefløde
@@ -51,7 +50,7 @@ $_Kyllingehjerter i karrysovs
 @_75_g_soltørrede tomater
 @_500_g_kyllingehjerte
 @_0,5_mælk
-@_800_g_kartofler
+@_800_g_kartoffel
 @_0,8_broccoli
 #_Skær den øverste del af hjerterne fra, den del der er hvid
 #_Snit løgene fint. hak tomaterne
@@ -66,11 +65,11 @@ $_Kyllingehjerter i karrysovs
 #_Hæld vandet fra og rør det til en mos med en håndmikser. Tilsæt 2,5 dl mælk og 25g smør for at få det jævnt
 ---
 $_Lasagne
-@_500_g_oksekød
+@_500_g_hakket oksekød
 @_6_løg
 @_400_g_gulerød
 @_1_laurbærblad
-@_1000_g_hakkede tomater
+@_1000_g_hakkede tomat
 @_0,5_sødmælk
 @_9_lasagneplade
 @_100_g_ost
@@ -90,10 +89,10 @@ $_Laksefarseret skrubbe
 @_0,5_piskefløde
 @_1_pasteuriseret æggehvide
 @_400_g_skrubbefilet
-@_0,2_hvidvin tør
+@_0,2_hvidvin
 @_1_løg
 @_125_g_bacon
-@_5_tomater
+@_5_tomat
 @_1_dåse tomatpure
 @_1_peberfrugt
 #_Laksefarseret skrubbe:
@@ -109,4 +108,31 @@ $_Laksefarseret skrubbe
 #_Tilsæt 5 tomater, der er skåret i kvarte og tomatkoncentrat samt væden fra fisken. 
 #_Lad det hele simre i ca. 10 min. Smag til med lidt sukker, salt og peber og tilsæt til sidst tynde strimler af peberfrugten.
 #_Server retten med kartofler eller ris.
+---
+$_Tomatsuppe
+@_1000_g_cherrytomat
+@_4_tomat
+@_4_fed hvidløg
+@_2_rødløg
+@_1_ciabattabrød
+@_1_rød chili
+@_0,25_cremefraiche
+#_Tænd ovnen på 220° og sæt en stor gryde over lav varme
+#_Skær tomater i kvarte og fordel alle tomaterne i en bradepande
+#_Dryp generøst med olivenolie og krydr med salt og peber
+#_Flæk og udkern chilien og kom den op i
+#_Kvas 4 pillede fed hvidløg i
+#_Vend alt hurtigt sammen og sæt det på øverste rille i ovnen i 12-15 min
+#_Pil løgene, hak dem groft og kom dem op i den varme gryde med en sjat olivenolie og lidt salt
+#_Skru op til middel varme og lad løgene stå og blive bløde
+#_Rør rundt af og til. Rør 4 spsk balsamico i løgene og lad den koge ind
+#_Tag bradepanden med tomater ud af ovnen og hæld det hele op i gryden med løg
+#_Hæld forsigtigt grøntsagerne fra gryden op i blenderen; det skal gøres i to omgange
+#_Tilsæt næsten al basilikum, sæt låg på blenderskålen
+#_Læg et viskestykke over og blitz til ret grov konsistens
+#_Hæld din tomatsuppe op i en stor serveringsskål efterhånden
+#_Bland alt godt til sidst
+#_Smag din tomatsuppe til og slut af med en klat cremefraiche
+#_Nogle basilikumblade og et dryp ekstra-jomfruolivenolie
+#_Stil skålen på bordet sammen med en stabel suppeskåle og bradepanden med croutoner fra ovnen
 ---
