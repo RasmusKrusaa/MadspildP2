@@ -1,4 +1,27 @@
-﻿bacon_0_125_5_0
-æg_10_0_20_0
-ost_0_300_100_0
-hakket oksekød_0_500_0_6
+﻿bacon_0_125_30_0
+æg_10_0_30_0
+ost_0_300_30_0
+hakket oksekød_0_500_0_2
+løg_20_0_100_0
+tomat_10_0_10_0
+fed hvidløg_10_0_100_0
+hakket svinekød_0_500_0_5
+hakkede tomat_0_500_730_0
+dåse tomatpure_1_0_730_0
+kartoffel_0_1000_30_0
+bage kartoffel_1_0_30_0
+rød pølse_0_500_30_0
+mælk_1_0_7_0
+piskefløde_0,5_0_6_0
+soltørrede tomat_0_100_30_0
+kyllingehjerte_0_250_0_1
+broccoli_1_0_10_0
+gulerød_0_1000_21_0
+laurbærblad_5_0_180_0
+sødmælk_1_0_7_0
+lasagneplade_20_0_720_0
+laksefilet_0_100_0_3
+pasteuriseret æggehvide_1_0_60_0
+skrubbefilet_0_500_0_1
+hvidvin_1_0_900_0
+peberfrugt_1_0_7_0
