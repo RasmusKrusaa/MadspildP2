@@ -16,42 +16,35 @@ namespace MadspildGUI
         {
             InitializeComponent();
 
-            addMenu();
+            indlaesVarerIHus();
         }
 
-        void beholdning_Click(object sender, EventArgs e)
+        private void indlaesVarerIHus()
         {
-        }
-
-        void opskrifter_Click(object sender, EventArgs e)
-        {
-            Opskrift o = new Opskrift();
-            o.Indlæs("Opskrifter.txt");
-            ListBox opskrifter = new ListBox();
-
-            foreach (Opskrift opskrift in o.Opskrifter)
+            Husholdning h = new Husholdning();
+            VarerIHus = h.IndlæsVarer("Husholdning.txt");
+            foreach (Vare v in VarerIHus)
             {
-                opskrifter.Items.Add(opskrift);
+                ListBoxVarerIHus.Items.Add(v._Navn);
             }
-            
-            Controls.Add(opskrifter);
         }
 
-        void addMenu()
+        private void ListBoxVarerIHus_DoubleClick(object sender, EventArgs e)
         {
-            MenuStrip menu = new MenuStrip();
-            menu.Dock = DockStyle.Top;
-            ToolStripMenuItem indkøbskurv = new ToolStripMenuItem();
-            menu.Items.Add(indkøbskurv);
-            indkøbskurv.Text = "Indkøbskurv";
-            ToolStripMenuItem beholdning = new ToolStripMenuItem();
-            menu.Items.Add(beholdning);
-            beholdning.Text = "Beholdning";
-            ToolStripMenuItem opskrifter = new ToolStripMenuItem();
-            menu.Items.Add(opskrifter);
-            opskrifter.Text = "Opskrifter";
+            int antalVarer = VarerIHus.Count;
+            if (ListBoxVarerIHus.SelectedIndex >= 0 &&
+                ListBoxVarerIHus.SelectedIndex <= antalVarer)
+            {
+                MessageBox.Show(VarerIHus[ListBoxVarerIHus.SelectedIndex].ToString(),
+                VarerIHus[ListBoxVarerIHus.SelectedIndex]._Navn);
+            }
 
-            Controls.Add(menu);
+        }
+
+        private void tilfoejVareKnap_Click(object sender, EventArgs e)
+        {
+            TilfoejVarePrompt tilfoejVare = new TilfoejVarePrompt();
+            tilfoejVare.Show();
         }
     }
 }

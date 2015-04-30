@@ -64,5 +64,11 @@ namespace MadspildGUI
         {
             return _Navn + "_0_" + _Vægt + "_" + _MindstHoldbar.ToShortDateString() + "_0"; 
         }
+
+        public override string ToString()
+        {
+            return "Navn: " + _Navn + "\nVægt: " + _Vægt + "g" +
+                "\nMindst holdbarhedsdato: " + _MindstHoldbar.ToShortDateString();
+        }
     }
 }

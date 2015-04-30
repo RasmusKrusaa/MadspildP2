@@ -63,5 +63,11 @@ namespace MadspildGUI
         {
             return _Navn + "_0_" + _Vægt + "_0_" + _SidsteAnvendelse.ToShortDateString();  
         }
+
+        public override string ToString()
+        {
+            return "Navn: " + _Navn + "\nVægt: " + _Vægt + "g" +
+                "\nSidste anvendelsesdato: " + _SidsteAnvendelse.ToShortDateString();
+        }
     }
 }
