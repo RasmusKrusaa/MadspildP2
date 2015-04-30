@@ -35,7 +35,7 @@ namespace MadspildGUI
         {
             string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
-            using(System.IO.StreamWriter file = new System.IO.StreamWriter(filsti, true))
+            using(System.IO.StreamWriter file = new System.IO.StreamWriter(filsti))
             {
                 foreach (Vare v in liste)
                 {
