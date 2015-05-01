@@ -43,8 +43,8 @@
             // 
             // navBar
             // 
-            this.navBar.Controls.Add(this.indkoeb);
             this.navBar.Controls.Add(this.husbeholdning);
+            this.navBar.Controls.Add(this.indkoeb);
             this.navBar.Controls.Add(this.opskrifter);
             this.navBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navBar.Location = new System.Drawing.Point(0, 0);
@@ -58,7 +58,7 @@
             this.indkoeb.Location = new System.Drawing.Point(4, 22);
             this.indkoeb.Name = "indkoeb";
             this.indkoeb.Padding = new System.Windows.Forms.Padding(3);
-            this.indkoeb.Size = new System.Drawing.Size(276, 236);
+            this.indkoeb.Size = new System.Drawing.Size(400, 303);
             this.indkoeb.TabIndex = 0;
             this.indkoeb.Tag = "";
             this.indkoeb.Text = "Indkøbskurv";
@@ -120,7 +120,7 @@
             // 
             this.opskrifter.Location = new System.Drawing.Point(4, 22);
             this.opskrifter.Name = "opskrifter";
-            this.opskrifter.Size = new System.Drawing.Size(276, 236);
+            this.opskrifter.Size = new System.Drawing.Size(400, 303);
             this.opskrifter.TabIndex = 2;
             this.opskrifter.Text = "Opskrifter";
             this.opskrifter.UseVisualStyleBackColor = true;
@@ -130,6 +130,7 @@
             this.ClientSize = new System.Drawing.Size(408, 329);
             this.Controls.Add(this.navBar);
             this.Name = "MadspildGUI";
+            this.Shown += new System.EventHandler(this.MadspildGUI_Shown);
             this.navBar.ResumeLayout(false);
             this.husbeholdning.ResumeLayout(false);
             this.funktionsKnapper.ResumeLayout(false);
@@ -144,7 +145,6 @@
         public System.Windows.Forms.TabPage husbeholdning;
         public System.Windows.Forms.ListBox ListBoxVarerIHus;
         private System.Windows.Forms.TabPage opskrifter;
-        public System.Collections.Generic.List<Vare> VarerIHus = new System.Collections.Generic.List<Vare>();
         private System.Windows.Forms.FlowLayoutPanel funktionsKnapper;
         private System.Windows.Forms.Button tilfoejVareKnap;
         private System.Windows.Forms.Button sletVareKnap;

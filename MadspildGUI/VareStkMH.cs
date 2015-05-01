@@ -31,12 +31,14 @@ namespace MadspildGUI
             set { _Stk = value; }
         }
 
-        public override void ForGammelDatoTjek(DateTime dato)
+        public override bool ForGammelDatoTjek(DateTime dato)
         {
             if (_MindstHoldbar <= dato)
             {
-                MessageBox.Show(_Navn + " er måske for gammel. Tjek dato!");
+                MessageBox.Show(_Navn + " er måske for gammel. Tjek datoen! Hvis for gammel undersøg, om varen dufter mærkeligt eller andre usædvanligheder.");
+                return true;
             }
+            return false;
         }
 
         public override bool SletVareFraListeHvisGammel(DateTime dato, List<Vare> liste)
