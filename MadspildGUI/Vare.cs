@@ -9,7 +9,7 @@ namespace MadspildGUI
     {
         public string _Navn;
 
-        public virtual void ForGammelDatoTjek(DateTime dato) { }
+        public virtual bool ForGammelDatoTjek(DateTime dato) { return false; }
 
         public virtual bool SletVareFraListeHvisGammel(DateTime dato, List<Vare> liste)
         {

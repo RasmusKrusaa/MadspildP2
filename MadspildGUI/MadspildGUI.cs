@@ -11,23 +11,22 @@ using System.Windows.Forms;
 namespace MadspildGUI
 {
     public partial class MadspildGUI : Form
-    {   
+    {
+        public Husholdning h = new Husholdning();
+        public Beholdning b = new Beholdning();
+
         public MadspildGUI()
         {
             InitializeComponent();
 
-            if (ListBoxVarerIHus.Items.Count == 0)
-            {
-                indlaesVarerIHus();
-            }
+            indlaesVarerIHus();
         }
 
         private void indlaesVarerIHus()
         {
-            Husholdning h = new Husholdning();
-            VarerIHus = h.IndlæsVarer("Husholdning.txt");
+            h.HusBeholdning = h.IndlæsVarer("Husholdning.txt");
             ListBoxVarerIHus.Items.Clear();
-            foreach (Vare v in VarerIHus)
+            foreach (Vare v in h.HusBeholdning)
             {
                 ListBoxVarerIHus.Items.Add(v._Navn);
             }
@@ -35,12 +34,12 @@ namespace MadspildGUI
 
         private void ListBoxVarerIHus_DoubleClick(object sender, EventArgs e)
         {
-            int antalVarer = VarerIHus.Count;
+            int antalVarer = h.HusBeholdning.Count;
             if (ListBoxVarerIHus.SelectedIndex >= 0 &&
                 ListBoxVarerIHus.SelectedIndex <= antalVarer)
             {
-                MessageBox.Show(VarerIHus[ListBoxVarerIHus.SelectedIndex].ToString(),
-                VarerIHus[ListBoxVarerIHus.SelectedIndex]._Navn);
+                MessageBox.Show(h.HusBeholdning[ListBoxVarerIHus.SelectedIndex].ToString(),
+                h.HusBeholdning[ListBoxVarerIHus.SelectedIndex]._Navn);
             }
 
         }
@@ -57,10 +56,43 @@ namespace MadspildGUI
 
         private void sletVareKnap_Click(object sender, EventArgs e)
         {
-            Beholdning b = new Beholdning();
-            b.SletVare(VarerIHus[ListBoxVarerIHus.SelectedIndex], VarerIHus);
-            b.SkrivListeAfVarerTilFil("Husholdning.txt", VarerIHus);
+            if (ListBoxVarerIHus.SelectedIndex >= 0 && 
+                ListBoxVarerIHus.SelectedIndex <= h.HusBeholdning.Count)
+            {
+                b.SletVare(h.HusBeholdning[ListBoxVarerIHus.SelectedIndex], h.HusBeholdning);
+                b.SkrivListeAfVarerTilFil("Husholdning.txt", h.HusBeholdning);
+                indlaesVarerIHus();
+            }
+            else
+            {
+                MessageBox.Show("Markér venligst den vare, du ønsker at slette.", "Markér en vare");
+            }
+        }
+
+        private void OenskerBrugerAtSletteVare()
+        {
+            int antalVarer = h.HusBeholdning.Count;
+            for (int i = 0; i < antalVarer; i++)
+            {
+                if (h.HusBeholdning[i].ForGammelDatoTjek(DateTime.Today.Date) == true)
+                {
+                    if (MessageBox.Show("Ønsker du at slette " + h.HusBeholdning[i]._Navn +
+                        " fra din husholdning?", "Slet vare?", MessageBoxButtons.YesNo) ==
+                        DialogResult.Yes)
+                    {
+                        h.SletVare(h.HusBeholdning[i], h.HusBeholdning);
+                        i--;
+                        antalVarer--;
+                    }
+                }
+            }
+            b.SkrivListeAfVarerTilFil("Husholdning.txt", h.HusBeholdning);
             indlaesVarerIHus();
+        }
+
+        private void MadspildGUI_Shown(object sender, EventArgs e)
+        {
+            OenskerBrugerAtSletteVare();
         }
     }
 }

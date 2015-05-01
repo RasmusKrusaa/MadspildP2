@@ -18,12 +18,16 @@ namespace MadspildGUI
         /*
          *Metoden "DatoAdvarsel" informerer brugeren om udløbelende varer, baseret på sidsteanvendelses- eller mindstholdbarhedsdato.
         */
-        public void DatoAdvarsel(DateTime dato)
+        public bool DatoAdvarsel(DateTime dato)
         {
             foreach (Vare v in HusBeholdning)
             {
-                v.ForGammelDatoTjek(dato);
+                if (v.ForGammelDatoTjek(dato) == true)
+                {
+                    return true;
+                }
             }
+            return false;
         }
         /*
          * Metoden "SletGammelVare" Tjekker og sletter alle de varer i husholdningslisten, som har overskrevet deres holdbarhed.
