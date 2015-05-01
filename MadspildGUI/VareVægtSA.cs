@@ -71,5 +71,10 @@ namespace MadspildGUI
             return "Navn: " + _Navn + "\nVægt: " + _Vægt + "g" +
                 "\nSidste anvendelsesdato: " + _SidsteAnvendelse.ToShortDateString();
         }
+
+        public override string VareNavnOgVolumen()
+        {
+            return _Vægt + "g " + _Navn;
+        }
     }
 }

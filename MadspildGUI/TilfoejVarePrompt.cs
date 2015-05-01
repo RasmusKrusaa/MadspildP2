@@ -28,7 +28,8 @@ namespace MadspildGUI
         {
             Beholdning b = new Beholdning();
             Husholdning h = new Husholdning();
-            
+            h.HusBeholdning = h.IndlæsVarer("Husholdning.txt");
+
             if (isValidVare())
             {
                 if (vaegtKnap.Checked && mindstHoldbarKnap.Checked)

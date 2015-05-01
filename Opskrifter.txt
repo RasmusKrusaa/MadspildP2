@@ -38,8 +38,8 @@ $_Svensk Pølseret
 @_500_g_rød pølse
 @_1_løg
 @_1_dåse tomatpure
-@_0,2_mælk
-@_0,5_piskefløde
+@_0.2_mælk
+@_0.5_piskefløde
 #_Skær kartofler og pølser i mindre stykker. Pil og hak løget
 #_Lad smørret blive gyldent og svits da løget der i i ca. i min
 #_Tilsæt 3 tsk. paprika og pølser og lad det svitse i ca. 3 min
@@ -49,9 +49,9 @@ $_Kyllingehjerter i karrysovs
 @_1_løg
 @_75_g_soltørrede tomater
 @_500_g_kyllingehjerte
-@_0,5_mælk
+@_0.5_mælk
 @_800_g_kartoffel
-@_0,8_broccoli
+@_0.8_broccoli
 #_Skær den øverste del af hjerterne fra, den del der er hvid
 #_Snit løgene fint. hak tomaterne
 #_Smelt 25g smør i en gryde og kom løgene heri, lad det svitse 2 minutter 
@@ -70,7 +70,7 @@ $_Lasagne
 @_400_g_gulerød
 @_1_laurbærblad
 @_1000_g_hakkede tomat
-@_0,5_sødmælk
+@_0.5_sødmælk
 @_9_lasagneplade
 @_100_g_ost
 #_Løgene hakkes og brunes i olie
@@ -86,10 +86,10 @@ $_Lasagne
 ---
 $_Laksefarseret skrubbe
 @_200_g_laksefilet
-@_0,5_piskefløde
+@_0.5_piskefløde
 @_1_pasteuriseret æggehvide
 @_400_g_skrubbefilet
-@_0,2_hvidvin
+@_0.2_hvidvin
 @_1_løg
 @_125_g_bacon
 @_5_tomat
@@ -116,7 +116,7 @@ $_Tomatsuppe
 @_2_rødløg
 @_1_ciabattabrød
 @_1_rød chili
-@_0,25_cremefraiche
+@_0.25_cremefraiche
 #_Tænd ovnen på 220° og sæt en stor gryde over lav varme
 #_Skær tomater i kvarte og fordel alle tomaterne i en bradepande
 #_Dryp generøst med olivenolie og krydr med salt og peber

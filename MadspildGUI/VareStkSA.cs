@@ -67,5 +67,10 @@ namespace MadspildGUI
             return "Navn: " + _Navn + "\nStk: " + _Stk +
                 "\nSidste anvendelsesdato: " + _SidsteAnvendelse.ToShortDateString();
         }
+
+        public override string VareNavnOgVolumen()
+        {
+            return _Stk + " " + _Navn;
+        }
     }
 }

@@ -71,5 +71,10 @@ namespace MadspildGUI
             return "Navn: " + _Navn + "\nStk: " + _Stk + 
                 "\nMindst holdbarhedsdato: " + _MindstHoldbar.ToShortDateString();
         }
+
+        public override string VareNavnOgVolumen()
+        {
+            return _Stk + " " + _Navn;
+        }
     }
 }

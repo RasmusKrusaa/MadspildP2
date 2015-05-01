@@ -10,7 +10,7 @@ namespace MadspildGUI
     {
         public string retNavn;
         public List<Vare> Ingredienser = new List<Vare>();
-        private List<string> Instruktioner = new List<string>();
+        public List<string> Instruktioner = new List<string>();
         public List<Opskrift> Opskrifter = new List<Opskrift>();
         
 

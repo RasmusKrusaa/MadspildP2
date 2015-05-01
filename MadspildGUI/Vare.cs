@@ -27,5 +27,10 @@ namespace MadspildGUI
         {
             return "";
         }
+
+        public virtual string VareNavnOgVolumen()
+        {
+            return "";
+        }
     }
 }
