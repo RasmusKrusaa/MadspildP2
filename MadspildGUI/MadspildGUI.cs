@@ -71,21 +71,7 @@ namespace MadspildGUI
 
         private void OenskerBrugerAtSletteVare()
         {
-            int antalVarer = h.HusBeholdning.Count;
-            for (int i = 0; i < antalVarer; i++)
-            {
-                if (h.HusBeholdning[i].ForGammelDatoTjek(DateTime.Today.Date) == true)
-                {
-                    if (MessageBox.Show("Ønsker du at slette " + h.HusBeholdning[i]._Navn +
-                        " fra din husholdning?", "Slet vare?", MessageBoxButtons.YesNo) ==
-                        DialogResult.Yes)
-                    {
-                        h.SletVare(h.HusBeholdning[i], h.HusBeholdning);
-                        i--;
-                        antalVarer--;
-                    }
-                }
-            }
+            h.DatoAdvarsel(DateTime.Today);
             b.SkrivListeAfVarerTilFil("Husholdning.txt", h.HusBeholdning);
             indlaesVarerIHus();
         }
