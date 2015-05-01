@@ -34,7 +34,7 @@ namespace MadspildGUI
         /*
         * Metoden "Varedannelse" Indlæser fra en fil og instansiere varer over i en liste.
         */
-        private List<Vare> Varedannelse(string filnavn, List<Vare> liste)
+        public List<Vare> Varedannelse(string filnavn, List<Vare> liste)
         {
             string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;

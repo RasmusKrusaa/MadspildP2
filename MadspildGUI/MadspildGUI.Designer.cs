@@ -30,6 +30,11 @@
         {
             this.navBar = new System.Windows.Forms.TabControl();
             this.indkoeb = new System.Windows.Forms.TabPage();
+            this.ListBoxIndkoeb = new System.Windows.Forms.ListBox();
+            this.FunktionsKnapperIndKoeb = new System.Windows.Forms.FlowLayoutPanel();
+            this.TilfoejVareKnapIndkoeb = new System.Windows.Forms.Button();
+            this.SletVareKnapIndkoeb = new System.Windows.Forms.Button();
+            this.TiljoejTilBeholdningKnap = new System.Windows.Forms.Button();
             this.husbeholdning = new System.Windows.Forms.TabPage();
             this.funktionsKnapper = new System.Windows.Forms.FlowLayoutPanel();
             this.tilfoejVareKnap = new System.Windows.Forms.Button();
@@ -37,6 +42,8 @@
             this.ListBoxVarerIHus = new System.Windows.Forms.ListBox();
             this.opskrifter = new System.Windows.Forms.TabPage();
             this.navBar.SuspendLayout();
+            this.indkoeb.SuspendLayout();
+            this.FunktionsKnapperIndKoeb.SuspendLayout();
             this.husbeholdning.SuspendLayout();
             this.funktionsKnapper.SuspendLayout();
             this.SuspendLayout();
@@ -55,14 +62,66 @@
             // 
             // indkoeb
             // 
+            this.indkoeb.Controls.Add(this.ListBoxIndkoeb);
+            this.indkoeb.Controls.Add(this.FunktionsKnapperIndKoeb);
             this.indkoeb.Location = new System.Drawing.Point(4, 22);
             this.indkoeb.Name = "indkoeb";
             this.indkoeb.Padding = new System.Windows.Forms.Padding(3);
-            this.indkoeb.Size = new System.Drawing.Size(276, 236);
+            this.indkoeb.Size = new System.Drawing.Size(400, 303);
             this.indkoeb.TabIndex = 0;
             this.indkoeb.Tag = "";
             this.indkoeb.Text = "Indkøbskurv";
             this.indkoeb.UseVisualStyleBackColor = true;
+            // 
+            // ListBoxIndkoeb
+            // 
+            this.ListBoxIndkoeb.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ListBoxIndkoeb.FormattingEnabled = true;
+            this.ListBoxIndkoeb.Location = new System.Drawing.Point(3, 3);
+            this.ListBoxIndkoeb.Name = "ListBoxIndkoeb";
+            this.ListBoxIndkoeb.Size = new System.Drawing.Size(394, 264);
+            this.ListBoxIndkoeb.TabIndex = 3;
+            this.ListBoxIndkoeb.DoubleClick += new System.EventHandler(this.ListBoxIndkoeb_Doubleclick);
+            // 
+            // FunktionsKnapperIndKoeb
+            // 
+            this.FunktionsKnapperIndKoeb.Controls.Add(this.TilfoejVareKnapIndkoeb);
+            this.FunktionsKnapperIndKoeb.Controls.Add(this.SletVareKnapIndkoeb);
+            this.FunktionsKnapperIndKoeb.Controls.Add(this.TiljoejTilBeholdningKnap);
+            this.FunktionsKnapperIndKoeb.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.FunktionsKnapperIndKoeb.Location = new System.Drawing.Point(3, 273);
+            this.FunktionsKnapperIndKoeb.Name = "FunktionsKnapperIndKoeb";
+            this.FunktionsKnapperIndKoeb.Size = new System.Drawing.Size(394, 27);
+            this.FunktionsKnapperIndKoeb.TabIndex = 2;
+            // 
+            // TilfoejVareKnapIndkoeb
+            // 
+            this.TilfoejVareKnapIndkoeb.Location = new System.Drawing.Point(3, 3);
+            this.TilfoejVareKnapIndkoeb.Name = "TilfoejVareKnapIndkoeb";
+            this.TilfoejVareKnapIndkoeb.Size = new System.Drawing.Size(75, 23);
+            this.TilfoejVareKnapIndkoeb.TabIndex = 0;
+            this.TilfoejVareKnapIndkoeb.Text = "Tilføj Vare";
+            this.TilfoejVareKnapIndkoeb.UseVisualStyleBackColor = true;
+            // 
+            // SletVareKnapIndkoeb
+            // 
+            this.SletVareKnapIndkoeb.Location = new System.Drawing.Point(84, 3);
+            this.SletVareKnapIndkoeb.Name = "SletVareKnapIndkoeb";
+            this.SletVareKnapIndkoeb.Size = new System.Drawing.Size(75, 23);
+            this.SletVareKnapIndkoeb.TabIndex = 3;
+            this.SletVareKnapIndkoeb.Text = "Slet Vare";
+            this.SletVareKnapIndkoeb.UseVisualStyleBackColor = true;
+            this.SletVareKnapIndkoeb.Click += new System.EventHandler(this.SletVareKnapIndkoeb_Click);
+            // 
+            // TiljoejTilBeholdningKnap
+            // 
+            this.TiljoejTilBeholdningKnap.Location = new System.Drawing.Point(165, 3);
+            this.TiljoejTilBeholdningKnap.Name = "TiljoejTilBeholdningKnap";
+            this.TiljoejTilBeholdningKnap.Size = new System.Drawing.Size(125, 23);
+            this.TiljoejTilBeholdningKnap.TabIndex = 4;
+            this.TiljoejTilBeholdningKnap.Text = "Tilføj til husbeholdning";
+            this.TiljoejTilBeholdningKnap.UseVisualStyleBackColor = true;
+            this.TiljoejTilBeholdningKnap.Click += new System.EventHandler(this.TiljoejTilBeholdningKnap_Click);
             // 
             // husbeholdning
             // 
@@ -120,7 +179,7 @@
             // 
             this.opskrifter.Location = new System.Drawing.Point(4, 22);
             this.opskrifter.Name = "opskrifter";
-            this.opskrifter.Size = new System.Drawing.Size(276, 236);
+            this.opskrifter.Size = new System.Drawing.Size(400, 303);
             this.opskrifter.TabIndex = 2;
             this.opskrifter.Text = "Opskrifter";
             this.opskrifter.UseVisualStyleBackColor = true;
@@ -131,6 +190,8 @@
             this.Controls.Add(this.navBar);
             this.Name = "MadspildGUI";
             this.navBar.ResumeLayout(false);
+            this.indkoeb.ResumeLayout(false);
+            this.FunktionsKnapperIndKoeb.ResumeLayout(false);
             this.husbeholdning.ResumeLayout(false);
             this.funktionsKnapper.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -148,6 +209,12 @@
         private System.Windows.Forms.FlowLayoutPanel funktionsKnapper;
         private System.Windows.Forms.Button tilfoejVareKnap;
         private System.Windows.Forms.Button sletVareKnap;
+        private System.Windows.Forms.FlowLayoutPanel FunktionsKnapperIndKoeb;
+        private System.Windows.Forms.Button TilfoejVareKnapIndkoeb;
+        private System.Windows.Forms.Button SletVareKnapIndkoeb;
+        private System.Windows.Forms.Button TiljoejTilBeholdningKnap;
+        public System.Windows.Forms.ListBox ListBoxIndkoeb;
+        public System.Collections.Generic.List<Vare> Indkoebskurv = new System.Collections.Generic.List<Vare>();
     }
 }
 
