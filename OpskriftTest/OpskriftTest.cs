@@ -14,7 +14,7 @@ namespace MadspildprojektTests
         [TestCase(0, Result = "Forloren hare")]
         [TestCase(1, Result = "Æggekage")]
         [TestCase(2, Result = "Kødsovs")]
-        [TestCase(3, Result = "hakkede tomater")]
+        [TestCase(3, Result = "hakkede tomat")]
         [TestCase(4, Result = "dåse tomatpure")]
         public string indlæsTest(int i)
         {
@@ -38,18 +38,18 @@ namespace MadspildprojektTests
             
         }
         [Test]
-        public void ForslåEfterVareTest()
+        public void ForslåEfterVareTest() // mangler info
         {
             //Arrange
             Opskrift O = new Opskrift();
-            string[] o = { "Forloren hare", "Æggekage" };
+            string[] o = { "Forloren hare", "Æggekage", };
             O.Indlæs("Opskrifter.txt");
             string[] h = { "bacon" , "æg" };
             List<Opskrift> ol = new List<Opskrift>();
             //Act
             ol = O.ForeslåEfterVarer(h);
             //Assert
-            for (int i = 0; i < ol.Count; i++)
+            for (int i = 0; i < ol.Count(); i++)
             {
                 Assert.AreEqual(o[i], ol[i].retNavn);
             }
@@ -58,28 +58,79 @@ namespace MadspildprojektTests
         public void ForslåEfterListeTest()
         {
             //Arrange
-            int vareMatch = 0;
             Opskrift o = new Opskrift();
             Producent p = new Producent();
             List<Vare> v = p.indlaesProdukter("Produktkatalog.txt");
             List<Vare> v2 = new List<Vare>();
-            for (int i = 0; i < 10; i += 2)
+            for (int i = 0; i < 20; i += 2)
             {
                 v2.Add(v[i]);
             }
             o.Indlæs("Opskrifter.txt");
             //Act
             List<Opskrift> op = o.ForeslåEfterListe(v2);
-            foreach (Vare v1 in v2)
-	        {
-		        if (v1._Navn == op[0].Ingredienser.ToString())
-	            {
-		        vareMatch++; 
-	            }
-        	}
-
+            int[] vareMatch = new int[] { 0, 0, 0, 0, 0 };
+            int y = 0;
+            foreach (Opskrift oo in op)
+            {
+                foreach (Vare v3 in oo.Ingredienser)
+                {
+                    foreach (Vare v1 in v2)
+                    {
+                        if (v3._Navn == v1._Navn)
+                        {
+                            vareMatch[y]++;
+                        }
+                    }
+                }
+                y++;
+            }               
             //Assert
-            Assert.GreaterOrEqual(vareMatch, 1);
+            Assert.GreaterOrEqual(vareMatch[0], vareMatch[1]);
+            Assert.GreaterOrEqual(vareMatch[0], vareMatch[2]);
+            Assert.GreaterOrEqual(vareMatch[0], vareMatch[3]);
+            Assert.GreaterOrEqual(vareMatch[0], vareMatch[4]);
+            Assert.GreaterOrEqual(vareMatch[1], vareMatch[2]);
+            Assert.GreaterOrEqual(vareMatch[1], vareMatch[3]);
+            Assert.GreaterOrEqual(vareMatch[1], vareMatch[4]);
+            Assert.GreaterOrEqual(vareMatch[2], vareMatch[3]);
+            Assert.GreaterOrEqual(vareMatch[2], vareMatch[4]);
+            Assert.GreaterOrEqual(vareMatch[3], vareMatch[4]);
+        }
+        [Test]
+        public void TilføjOpskriftTilFilTest() 
+        {
+            //Arrange
+            string retNavn = "Tomatsuppe";
+            string[] ingredienser = { "1000_g_cherrytomat", "4_tomat", "4_fed hvidløg", "2_rødløg",
+                                        "1_ciabattabrød", "1_rød chili", "0,25_cremefraiche" } ;
+
+            string[] instruktioner = { "Tænd ovnen på 220° og sæt en stor gryde over lav varme", 
+                                         "Skær tomater i kvarte og fordel alle tomaterne i en bradepande", 
+                                         "Dryp generøst med olivenolie og krydr med salt og peber", 
+                                         "Flæk og udkern chilien og kom den op i", 
+                                         "Kvas 4 pillede fed hvidløg i",
+                                         "Vend alt hurtigt sammen og sæt det på øverste rille i ovnen i 12-15 min", 
+                                         "Pil løgene, hak dem groft og kom dem op i den varme gryde med en sjat olivenolie og lidt salt", 
+                                         "Skru op til middel varme og lad løgene stå og blive bløde", 
+                                         "Rør rundt af og til. Rør 4 spsk balsamico i løgene og lad den koge ind", 
+                                         "Tag bradepanden med tomater ud af ovnen og hæld det hele op i gryden med løg", 
+                                         "Hæld forsigtigt grøntsagerne fra gryden op i blenderen; det skal gøres i to omgange",
+                                         "Tilsæt næsten al basilikum, sæt låg på blenderskålen", 
+                                         "Læg et viskestykke over og blitz til ret grov konsistens",
+                                         "Hæld din tomatsuppe op i en stor serveringsskål efterhånden",
+                                         "Bland alt godt til sidst",
+                                         "Smag din tomatsuppe til og slut af med en klat cremefraiche",
+                                         "Nogle basilikumblade og et dryp ekstra-jomfruolivenolie",
+                                         "Stil skålen på bordet sammen med en stabel suppeskåle og bradepanden med croutoner fra ovnen" 
+                                      };
+            Opskrift to = new Opskrift();             
+            //Act
+            to.TilføjOpskriftTilFil(retNavn, ingredienser, instruktioner);
+
+            to.Indlæs("Opskrifter.txt");
+            //Assert
+            Assert.AreEqual(retNavn, to.Opskrifter[7].retNavn);
         }
     }
 }

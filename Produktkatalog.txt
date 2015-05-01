@@ -25,3 +25,8 @@ pasteuriseret æggehvide_1_0_60_0
 skrubbefilet_0_500_0_1
 hvidvin_1_0_900_0
 peberfrugt_1_0_7_0
+cherrytomat_0_1000_10_0
+rødløg_20_0_100_0
+ciabattabrød_1_0_10_0
+rød chili_1_0_7_0
+cremefraiche_0,25_0_7_0

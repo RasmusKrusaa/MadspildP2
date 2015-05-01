@@ -18,7 +18,7 @@ namespace Madspildprojekt
         public List<Vare> Ingredienser = new List<Vare>();
         private List<string> Instruktioner = new List<string>();
         public List<Opskrift> Opskrifter = new List<Opskrift>();
-        
+
         /*
          * Metoden "indlæs" bliver brugt til at indlæse opskrifter fra fil, som tilføjes til specifikke lister.
          */
@@ -58,9 +58,9 @@ namespace Madspildprojekt
                     Opskrifter.Add(o);
                     o = new Opskrift();
                 }
-                else 
+                else
                 {
-                    throw new VareTypeNotFoundException(); 
+                    throw new VareTypeNotFoundException();
                 }
             }
         }
@@ -70,17 +70,22 @@ namespace Madspildprojekt
         public List<Opskrift> ForeslåEfterVarer(string[] vareNavn)
         {
             List<Opskrift> forslag = new List<Opskrift>();
-            foreach (string str in vareNavn)
+            foreach (Opskrift o in Opskrifter)
             {
-                foreach (Opskrift o in Opskrifter)
+                int y = 0;
+                foreach (string str in vareNavn)
                 {
                     foreach (Vare v in o.Ingredienser)
-	                {
-		                if (v._Navn == str && !forslag.Contains(o))
-	                    {
+                    {
+                        if (v._Navn == str)
+                        {
+                            y++;
+                        }
+                        if (y == vareNavn.Count() && !forslag.Contains(o))
+                        {
                             forslag.Add(o);
-    	                }
-                    }   
+                        }
+                    }
                 }
             }
             return forslag;
@@ -88,10 +93,10 @@ namespace Madspildprojekt
         /*
          * Metoden "ForeslåEfterListe" foreslårer en opskrift ud fra en udvalgt liste, f.eks. husbeholdning.
          */
-        public List<Opskrift> ForeslåEfterListe(List<Vare> liste) 
+        public List<Opskrift> ForeslåEfterListe(List<Vare> liste)
         {
             List<Opskrift> forslag = new List<Opskrift>();
-            
+
             for (int forslagCount = 0; forslagCount < 5; forslagCount++)
             {
                 int topMatch = 0;
@@ -107,6 +112,7 @@ namespace Madspildprojekt
                                 if (opskriftVare._Navn == listeVare._Navn)
                                 {
                                     ingrediensMatch++;
+                                    break;
                                 }
                             }
                             if (topMatch < ingrediensMatch)
@@ -136,6 +142,13 @@ namespace Madspildprojekt
             string opskriftfilSti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\Opskrifter.txt";
             var fil = new List<string>(File.ReadAllLines(opskriftfilSti));
+            foreach (Opskrift o in Opskrifter)
+            {
+                while (o.retNavn != retNavn)
+                {
+                    continue; 
+                }
+            }
             if (fil.ElementAt(fil.Count - 1) == "---")
             {
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter(opskriftfilSti, true))
@@ -154,8 +167,11 @@ namespace Madspildprojekt
                 {
                     file.WriteLine("#_" + str);
                 }
-                file.Write("---");                
+                file.Write("---");
             }
-        }
+            Indlæs("Opskrifter.txt");
+        }   
     }
-}
+}   
+
+
