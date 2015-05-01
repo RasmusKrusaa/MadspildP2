@@ -10,3 +10,6 @@ C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\bin\Debug\Madspi
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
+C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.exe.config
+C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
+C:\Users\mads\Desktop\program\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
