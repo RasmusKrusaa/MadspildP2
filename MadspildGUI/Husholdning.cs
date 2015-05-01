@@ -20,8 +20,7 @@ namespace MadspildGUI
         */
         public void DatoAdvarsel(DateTime dato)
         {
-            int antalVarer = HusBeholdning.Count;
-            for (int i = 0; i < antalVarer; i++)
+            for (int i = 0; i < HusBeholdning.Count; i++)
             {
                 if (HusBeholdning[i].ForGammelDatoTjek(DateTime.Today.Date) == true)
                 {
@@ -31,7 +30,6 @@ namespace MadspildGUI
                     {
                         SletVare(HusBeholdning[i], HusBeholdning);
                         i--;
-                        antalVarer--;
                     }
                 }
             }

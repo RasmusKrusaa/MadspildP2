@@ -20,6 +20,8 @@ namespace MadspildGUI
             InitializeComponent();
 
             indlaesVarerIHus();
+
+            SletGamleVarerFraHus();
         }
 
         private void indlaesVarerIHus()
@@ -74,6 +76,11 @@ namespace MadspildGUI
             h.DatoAdvarsel(DateTime.Today);
             b.SkrivListeAfVarerTilFil("Husholdning.txt", h.HusBeholdning);
             indlaesVarerIHus();
+        }
+
+        private void SletGamleVarerFraHus()
+        {
+            h.SletGammelVare(DateTime.Today.AddDays(-30));
         }
 
         private void MadspildGUI_Shown(object sender, EventArgs e)
