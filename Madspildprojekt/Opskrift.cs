@@ -139,35 +139,40 @@ namespace Madspildprojekt
          */
         public void TilføjOpskriftTilFil(string retNavn, string[] Ingredienser, string[] Instruktioner)
         {
+            Indlæs("Opskrifter.txt");
+            bool eksiterendeVare = false;
             string opskriftfilSti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\Opskrifter.txt";
             var fil = new List<string>(File.ReadAllLines(opskriftfilSti));
             foreach (Opskrift o in Opskrifter)
             {
-                while (o.retNavn != retNavn)
+                if (o.retNavn == retNavn)
                 {
-                    continue; 
+                    eksiterendeVare = true;
                 }
             }
-            if (fil.ElementAt(fil.Count - 1) == "---")
+            if (eksiterendeVare == false)
             {
+                if (fil.ElementAt(fil.Count - 1) == "---")
+                {
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(opskriftfilSti, true))
+                    {
+                        file.WriteLine();
+                    }
+                }
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter(opskriftfilSti, true))
                 {
-                    file.WriteLine();
+                    file.WriteLine("$_" + retNavn);
+                    foreach (string str in Ingredienser)
+                    {
+                        file.WriteLine("@_" + str);
+                    }
+                    foreach (string str in Instruktioner)
+                    {
+                        file.WriteLine("#_" + str);
+                    }
+                    file.Write("---");
                 }
-            }
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(opskriftfilSti, true))
-            {
-                file.WriteLine("$_" + retNavn);
-                foreach (string str in Ingredienser)
-                {
-                    file.WriteLine("@_" + str);
-                }
-                foreach (string str in Instruktioner)
-                {
-                    file.WriteLine("#_" + str);
-                }
-                file.Write("---");
             }
             Indlæs("Opskrifter.txt");
         }   

@@ -49,39 +49,43 @@
             this.tilfoejKnap.Location = new System.Drawing.Point(3, 115);
             this.tilfoejKnap.Name = "tilfoejKnap";
             this.tilfoejKnap.Size = new System.Drawing.Size(75, 23);
-            this.tilfoejKnap.TabIndex = 0;
+            this.tilfoejKnap.TabIndex = 7;
             this.tilfoejKnap.Text = "Tilføj";
             this.tilfoejKnap.UseVisualStyleBackColor = true;
             this.tilfoejKnap.Click += new System.EventHandler(this.tilfoejKnap_Click);
             // 
             // volumenBox
             // 
+            this.topLayout.SetFlowBreak(this.volumenBox, true);
             this.volumenBox.Location = new System.Drawing.Point(3, 94);
             this.volumenBox.Multiline = true;
             this.volumenBox.Name = "volumenBox";
             this.volumenBox.Size = new System.Drawing.Size(100, 20);
-            this.volumenBox.TabIndex = 2;
+            this.volumenBox.TabIndex = 3;
             this.volumenBox.Text = "Indtast volumen";
             // 
             // navnBox
             // 
             this.navnBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.topLayout.SetFlowBreak(this.navnBox, true);
             this.navnBox.Location = new System.Drawing.Point(3, 3);
             this.navnBox.Name = "navnBox";
             this.navnBox.Size = new System.Drawing.Size(100, 20);
-            this.navnBox.TabIndex = 3;
+            this.navnBox.TabIndex = 0;
             this.navnBox.Text = "Indtast varenavn";
             // 
             // datoVaelger
             // 
+            this.bundLayout.SetFlowBreak(this.datoVaelger, true);
             this.datoVaelger.Location = new System.Drawing.Point(3, 89);
             this.datoVaelger.Name = "datoVaelger";
             this.datoVaelger.Size = new System.Drawing.Size(200, 20);
-            this.datoVaelger.TabIndex = 5;
+            this.datoVaelger.TabIndex = 6;
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.topLayout.SetFlowBreak(this.textBox1, true);
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(3, 29);
             this.textBox1.Multiline = true;
@@ -95,6 +99,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bundLayout.SetFlowBreak(this.textBox2, true);
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(3, 3);
             this.textBox2.Multiline = true;
@@ -111,7 +116,7 @@
             this.sidsteAnvKnap.Location = new System.Drawing.Point(3, 66);
             this.sidsteAnvKnap.Name = "sidsteAnvKnap";
             this.sidsteAnvKnap.Size = new System.Drawing.Size(112, 17);
-            this.sidsteAnvKnap.TabIndex = 10;
+            this.sidsteAnvKnap.TabIndex = 4;
             this.sidsteAnvKnap.TabStop = true;
             this.sidsteAnvKnap.Text = "Sidste anvendelse";
             this.sidsteAnvKnap.UseVisualStyleBackColor = true;
@@ -119,10 +124,11 @@
             // mindstHoldbarKnap
             // 
             this.mindstHoldbarKnap.AutoSize = true;
+            this.bundLayout.SetFlowBreak(this.mindstHoldbarKnap, true);
             this.mindstHoldbarKnap.Location = new System.Drawing.Point(121, 66);
             this.mindstHoldbarKnap.Name = "mindstHoldbarKnap";
             this.mindstHoldbarKnap.Size = new System.Drawing.Size(112, 17);
-            this.mindstHoldbarKnap.TabIndex = 11;
+            this.mindstHoldbarKnap.TabIndex = 5;
             this.mindstHoldbarKnap.TabStop = true;
             this.mindstHoldbarKnap.Text = "Mindst holdbarhed";
             this.mindstHoldbarKnap.UseVisualStyleBackColor = true;
@@ -133,7 +139,7 @@
             this.vaegtKnap.Location = new System.Drawing.Point(3, 71);
             this.vaegtKnap.Name = "vaegtKnap";
             this.vaegtKnap.Size = new System.Drawing.Size(51, 17);
-            this.vaegtKnap.TabIndex = 12;
+            this.vaegtKnap.TabIndex = 1;
             this.vaegtKnap.TabStop = true;
             this.vaegtKnap.Text = "Vægt";
             this.vaegtKnap.UseVisualStyleBackColor = true;
@@ -145,7 +151,7 @@
             this.stkKnap.Location = new System.Drawing.Point(60, 71);
             this.stkKnap.Name = "stkKnap";
             this.stkKnap.Size = new System.Drawing.Size(41, 17);
-            this.stkKnap.TabIndex = 13;
+            this.stkKnap.TabIndex = 2;
             this.stkKnap.TabStop = true;
             this.stkKnap.Text = "Stk";
             this.stkKnap.UseVisualStyleBackColor = true;

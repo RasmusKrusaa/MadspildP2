@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1010]C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll</TopNode>
-  <SelectedNode>[0-1010]C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll</SelectedNode>
+  <TopNode>[0-1013]C:\Users\Bilgram\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll</TopNode>
+  <SelectedNode>[0-1014]MadspildprojektTests</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1010]C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll" Expanded="true" />
-    <Node UniqueName="[0-1011]MadspildprojektTests" Expanded="true" />
-    <Node UniqueName="[0-1000]MadspildprojektTests.OpskriftTest" Expanded="true" />
-    <Node UniqueName="[0-1001]MadspildprojektTests.OpskriftTest.indlæsTest" Expanded="true" />
+    <Node UniqueName="[0-1013]C:\Users\Bilgram\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll" Expanded="true" />
+    <Node UniqueName="[0-1014]MadspildprojektTests" Expanded="true" />
+    <Node UniqueName="[0-1000]MadspildprojektTests.HusholdningTest" Expanded="true" />
+    <Node UniqueName="[0-1003]MadspildprojektTests.OpskriftTest" Expanded="true" />
+    <Node UniqueName="[0-1004]MadspildprojektTests.OpskriftTest.indlæsTest" Expanded="true" />
   </Nodes>
 </VisualState>

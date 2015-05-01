@@ -7,8 +7,8 @@ using System.IO;
 namespace MadspildGUI
 {
     /*
-    * Beholdning indeholder metoder som kan arbejde med kollektionsklassen List<>.
-    */
+     * Beholdning indeholder metoder som kan arbejde med kollektionsklassen List<>.
+     */
     public class Beholdning
     {
         /*
@@ -19,8 +19,8 @@ namespace MadspildGUI
             liste.Add(v);
         }
         /*
-        * Metoden "SletVare" Sletter en specifik vare fra en liste.
-        */
+         * Metoden "SletVare" Sletter en specifik vare fra en liste.
+         */
         public void SletVare(Vare v, List<Vare> liste)
         {
             if (liste.Contains(v))
@@ -29,8 +29,8 @@ namespace MadspildGUI
             }
         }
         /*
-        * Metoden "SkrifListeAfVarerTilFil" Skriver en liste af Varer til en fil.
-        */
+         * 
+         */
         public void SkrivListeAfVarerTilFil(string filnavn, List<Vare> liste)
         {
             string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(

@@ -12,7 +12,7 @@ kartoffel_0_1000_30_0
 bage kartoffel_1_0_30_0
 rød pølse_0_500_30_0
 mælk_1_0_7_0
-piskefløde_0,5_0_6_0
+piskefløde_0.5_0_6_0
 soltørrede tomat_0_100_30_0
 kyllingehjerte_0_250_0_1
 broccoli_1_0_10_0

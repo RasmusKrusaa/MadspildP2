@@ -8,6 +8,7 @@ C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\Madspil
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
+<<<<<<< HEAD
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
@@ -21,3 +22,15 @@ C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Mads
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
+=======
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
+>>>>>>> origin/master

@@ -103,7 +103,7 @@ namespace MadspildprojektTests
             //Arrange
             string retNavn = "Tomatsuppe";
             string[] ingredienser = { "1000_g_cherrytomat", "4_tomat", "4_fed hvidløg", "2_rødløg",
-                                        "1_ciabattabrød", "1_rød chili", "0,25_cremefraiche" } ;
+                                        "1_ciabattabrød", "1_rød chili", "0,25_cremefraiche" };
 
             string[] instruktioner = { "Tænd ovnen på 220° og sæt en stor gryde over lav varme", 
                                          "Skær tomater i kvarte og fordel alle tomaterne i en bradepande", 
@@ -124,13 +124,12 @@ namespace MadspildprojektTests
                                          "Nogle basilikumblade og et dryp ekstra-jomfruolivenolie",
                                          "Stil skålen på bordet sammen med en stabel suppeskåle og bradepanden med croutoner fra ovnen" 
                                       };
-            Opskrift to = new Opskrift();             
+            Opskrift to = new Opskrift();
             //Act
             to.TilføjOpskriftTilFil(retNavn, ingredienser, instruktioner);
 
-            to.Indlæs("Opskrifter.txt");
             //Assert
-            Assert.AreEqual(retNavn, to.Opskrifter[7].retNavn);
+            Assert.AreEqual(retNavn, to.Opskrifter[to.Opskrifter.Count-1].retNavn);
         }
     }
 }

@@ -27,8 +27,9 @@ namespace MadspildGUI
         public void tilfoejKnap_Click(object sender, EventArgs e)
         {
             Beholdning b = new Beholdning();
-            MadspildGUI m = new MadspildGUI();
-            
+            Husholdning h = new Husholdning();
+            h.HusBeholdning = h.IndlæsVarer("Husholdning.txt");
+
             if (isValidVare())
             {
                 if (vaegtKnap.Checked && mindstHoldbarKnap.Checked)
@@ -36,7 +37,7 @@ namespace MadspildGUI
                     VareVægtMH v = new VareVægtMH(navnBox.Text.ToLower());
                     v.Vægt = Convert.ToDecimal(volumenBox.Text);
                     v.MindstHoldbar = datoVaelger.Value.Date;
-                    b.TilføjVare(v, m.VarerIHus);
+                    b.TilføjVare(v, h.HusBeholdning);
                     nyListboxVarerIHusItem = v._Navn;
                 }
                 else if (vaegtKnap.Checked && sidsteAnvKnap.Checked)
@@ -44,7 +45,7 @@ namespace MadspildGUI
                     VareVægtSA v = new VareVægtSA(navnBox.Text.ToLower());
                     v.Vægt = Convert.ToDecimal(volumenBox.Text);
                     v.SidsteAnvendelse = datoVaelger.Value.Date;
-                    b.TilføjVare(v, m.VarerIHus);
+                    b.TilføjVare(v, h.HusBeholdning);
                     nyListboxVarerIHusItem = v._Navn;
                 }
                 else if (stkKnap.Checked && mindstHoldbarKnap.Checked)
@@ -52,7 +53,7 @@ namespace MadspildGUI
                     VareStkMH v = new VareStkMH(navnBox.Text.ToLower());
                     v.Stk = Convert.ToDecimal(volumenBox.Text);
                     v.MindstHoldbar = datoVaelger.Value.Date;
-                    b.TilføjVare(v, m.VarerIHus);
+                    b.TilføjVare(v, h.HusBeholdning);
                     nyListboxVarerIHusItem = v._Navn;
                 }
                 else if (stkKnap.Checked && sidsteAnvKnap.Checked)
@@ -60,10 +61,10 @@ namespace MadspildGUI
                     VareStkSA v = new VareStkSA(navnBox.Text.ToLower());
                     v.Stk = Convert.ToDecimal(volumenBox.Text);
                     v.SidsteAnvendelse = datoVaelger.Value.Date;
-                    b.TilføjVare(v, m.VarerIHus);
+                    b.TilføjVare(v, h.HusBeholdning);
                     nyListboxVarerIHusItem = v._Navn;
                 }
-                b.SkrivListeAfVarerTilFil("Husholdning.txt", m.VarerIHus);
+                b.SkrivListeAfVarerTilFil("Husholdning.txt", h.HusBeholdning);
                 DialogResult = DialogResult.OK;
                 Close();
             }
