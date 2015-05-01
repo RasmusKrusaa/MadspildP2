@@ -35,7 +35,7 @@ namespace MadspildGUI
             }
         }
         /*
-         * Metoden "SletGammelVare" Tjekker og sletter alle de varer i husholdningslisten, som har overskrevet deres holdbarhed.
+         * Metoden "SletGammelVare" Tjekker og sletter alle de varer i husholdningslisten, som har overskrevet deres holdbarhed med 30 dage.
         */
         public void SletGammelVare(DateTime dato)
         {
