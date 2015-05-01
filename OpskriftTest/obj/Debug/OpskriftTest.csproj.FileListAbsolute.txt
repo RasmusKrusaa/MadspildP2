@@ -25,3 +25,5 @@ C:\Users\Bilgram\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\nunit.framewo
 C:\Users\Bilgram\Desktop\Program\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.csprojResolveAssemblyReference.cache
 C:\Users\Bilgram\Desktop\Program\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.dll
 C:\Users\Bilgram\Desktop\Program\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.pdb
+C:\Users\Bilgram\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\MadspildGUI.exe
+C:\Users\Bilgram\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\MadspildGUI.pdb
