@@ -23,15 +23,11 @@ namespace MadspildGUI
                 return DateTime.Today.AddDays(double.Parse(dato));
             }
         }
-<<<<<<< HEAD
         /*
         * Metoden "Varedannelse" Indlæser fra en fil og instansiere varer over i en liste.
         */
         public List<Vare> Varedannelse(string filnavn, List<Vare> liste)
-=======
 
-        private List<Vare> Varedannelse(string filnavn, List<Vare> liste)
->>>>>>> origin/master
         {
             string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;

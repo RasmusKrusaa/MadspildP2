@@ -21,25 +21,24 @@ namespace MadspildGUI
         {
             InitializeComponent();
 
-<<<<<<< HEAD
+
             if (ListBoxVarerIHus.Items.Count == 0)
             {
-                indlaesVarerIHus();
+                IndlaesVarerIHus();
             }
 
             IndlaesIndkoebskurv();
-=======
             // husholdning tab
             IndlaesVarerIHus();
             SletGamleVarerFraHus();
 
             // opskrifter tab
             IndlaesOpskrifter();
->>>>>>> origin/master
+
         }
 
         // husholdningtab
-        private void IndlaesVarerIHus()
+        public void IndlaesVarerIHus()
         {
             h.HusBeholdning = h.IndlæsVarer("Husholdning.txt");
             ListBoxVarerIHus.Items.Clear();
@@ -187,7 +186,7 @@ namespace MadspildGUI
             {
                 foreach (Vare v in Indkoebskurv)
                 {
-                    VarerIHus.Add(v);
+                    //VarerIHus.Add(v);
                     ListBoxVarerIHus.Items.Add(v._Navn);
                 }
 

@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             this.navBar = new System.Windows.Forms.TabControl();
-<<<<<<< HEAD
-            this.indkoeb = new System.Windows.Forms.TabPage();
-            this.ListBoxIndkoeb = new System.Windows.Forms.ListBox();
+
+
             this.FunktionsKnapperIndKoeb = new System.Windows.Forms.FlowLayoutPanel();
             this.TilfoejVareKnapIndkoeb = new System.Windows.Forms.Button();
             this.SletVareKnapIndkoeb = new System.Windows.Forms.Button();
             this.TiljoejTilBeholdningKnap = new System.Windows.Forms.Button();
-=======
->>>>>>> origin/master
+            this.ListBoxIndkoeb = new System.Windows.Forms.ListBox();
             this.husbeholdning = new System.Windows.Forms.TabPage();
             this.funktionsKnapperHus = new System.Windows.Forms.FlowLayoutPanel();
             this.tilfoejVareKnap = new System.Windows.Forms.Button();
@@ -77,8 +75,7 @@
             this.navBar.SelectedIndex = 0;
             this.navBar.Size = new System.Drawing.Size(408, 329);
             this.navBar.TabIndex = 0;
-            // 
-<<<<<<< HEAD
+            //
             // indkoeb
             // 
             this.indkoeb.Controls.Add(this.ListBoxIndkoeb);
@@ -142,8 +139,6 @@
             this.TiljoejTilBeholdningKnap.UseVisualStyleBackColor = true;
             this.TiljoejTilBeholdningKnap.Click += new System.EventHandler(this.TiljoejTilBeholdningKnap_Click);
             // 
-=======
->>>>>>> origin/master
             // husbeholdning
             // 
             this.husbeholdning.Controls.Add(this.husholdningTablePanel);
@@ -192,28 +187,16 @@
             this.ListBoxVarerIHus.Name = "ListBoxVarerIHus";
             this.ListBoxVarerIHus.Size = new System.Drawing.Size(388, 251);
             this.ListBoxVarerIHus.TabIndex = 0;
-            this.ListBoxVarerIHus.DoubleClick += new System.EventHandler(this.ListBoxVarerIHus_DoubleClick);
-            // 
-            // indkoeb
-            // 
-            this.indkoeb.Location = new System.Drawing.Point(4, 22);
-            this.indkoeb.Name = "indkoeb";
-            this.indkoeb.Padding = new System.Windows.Forms.Padding(3);
-            this.indkoeb.Size = new System.Drawing.Size(400, 303);
-            this.indkoeb.TabIndex = 0;
-            this.indkoeb.Tag = "";
-            this.indkoeb.Text = "Indkøbskurv";
-            this.indkoeb.UseVisualStyleBackColor = true;
+            this.ListBoxVarerIHus.DoubleClick += new System.EventHandler(this.ListBoxVarerIHus_DoubleClick);         
             // 
             // opskrifter
             // 
             this.opskrifter.Controls.Add(this.ydreTablePanel);
             this.opskrifter.Location = new System.Drawing.Point(4, 22);
             this.opskrifter.Name = "opskrifter";
-<<<<<<< HEAD
-=======
+
             this.opskrifter.Padding = new System.Windows.Forms.Padding(3);
->>>>>>> origin/master
+
             this.opskrifter.Size = new System.Drawing.Size(400, 303);
             this.opskrifter.TabIndex = 2;
             this.opskrifter.Text = "Opskrifter";
@@ -345,14 +328,14 @@
         private System.Windows.Forms.FlowLayoutPanel funktionsKnapperHus;
         private System.Windows.Forms.Button tilfoejVareKnap;
         private System.Windows.Forms.Button sletVareKnap;
-<<<<<<< HEAD
+
         private System.Windows.Forms.FlowLayoutPanel FunktionsKnapperIndKoeb;
         private System.Windows.Forms.Button TilfoejVareKnapIndkoeb;
         private System.Windows.Forms.Button SletVareKnapIndkoeb;
         private System.Windows.Forms.Button TiljoejTilBeholdningKnap;
         public System.Windows.Forms.ListBox ListBoxIndkoeb;
         public System.Collections.Generic.List<Vare> Indkoebskurv = new System.Collections.Generic.List<Vare>();
-=======
+
         private System.Windows.Forms.TabPage opskrifter;
         private System.Windows.Forms.TableLayoutPanel ydreTablePanel;
         private System.Windows.Forms.TableLayoutPanel indreTopTablePanel;
@@ -362,7 +345,6 @@
         private System.Windows.Forms.Button tilfoejOpskriftKnap;
         private System.Windows.Forms.TableLayoutPanel husholdningTablePanel;
         private System.Windows.Forms.Button foreslaaOpskrifterEfterBeholdningKnap;
->>>>>>> origin/master
     }
 }
 
