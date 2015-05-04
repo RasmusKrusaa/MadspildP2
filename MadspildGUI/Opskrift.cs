@@ -13,10 +13,11 @@ namespace MadspildGUI
         public List<string> Instruktioner = new List<string>();
         public List<Opskrift> Opskrifter = new List<Opskrift>();
         
-
         public void Indlæs(string filnavn) //Filnavn som parameter
         {
             Opskrift o = new Opskrift();
+            Opskrifter = new List<Opskrift>();
+
             string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
             foreach (string line in File.ReadAllLines(filsti))

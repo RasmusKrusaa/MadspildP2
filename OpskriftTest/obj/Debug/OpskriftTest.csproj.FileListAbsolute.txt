@@ -29,3 +29,14 @@ C:\Users\Bilgram\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\MadspildGUI.e
 C:\Users\Bilgram\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\MadspildGUI.pdb
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\MadspildGUI.exe
 C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\MadspildGUI.pdb
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.pdb
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\MadspildGUI.exe
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\Madspildprojekt.exe
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\nunit.framework.dll
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\MadspildGUI.pdb
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\Madspildprojekt.pdb
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\OpskriftTest\bin\Debug\nunit.framework.xml
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.csprojResolveAssemblyReference.cache
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.dll
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\OpskriftTest\obj\Debug\OpskriftTest.pdb
