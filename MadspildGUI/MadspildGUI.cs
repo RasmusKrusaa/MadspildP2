@@ -213,5 +213,11 @@ namespace MadspildGUI
             TilfoejOpskriftPrompt tilfoejOpskrift = new TilfoejOpskriftPrompt();
             tilfoejOpskrift.Show();
         }
+
+        private void TilfoejVareKnapIndkoeb_Click(object sender, EventArgs e)
+        {
+            IndkoebskurvPrompt indkoebskurvPrompt = new IndkoebskurvPrompt();
+            indkoebskurvPrompt.Show();
+        }
     }
 }

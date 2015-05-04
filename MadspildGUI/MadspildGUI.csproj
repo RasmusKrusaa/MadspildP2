@@ -45,6 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Beholdning.cs" />
+    <Compile Include="IndkoebskurvPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndkoebskurvPrompt.Designer.cs">
+      <DependentUpon>IndkoebskurvPrompt.cs</DependentUpon>
+    </Compile>
     <Compile Include="MadspildGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,10 @@
     <Compile Include="VareTypeNotFoundException.cs" />
     <Compile Include="VareVægtMH.cs" />
     <Compile Include="VareVægtSA.cs" />
+    <EmbeddedResource Include="IndkoebskurvPrompt.resx">
+      <DependentUpon>IndkoebskurvPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MadspildGUI.resx">
       <DependentUpon>MadspildGUI.cs</DependentUpon>
     </EmbeddedResource>

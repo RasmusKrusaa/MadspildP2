@@ -183,6 +183,7 @@
             this.TilfoejVareKnapIndkoeb.TabIndex = 0;
             this.TilfoejVareKnapIndkoeb.Text = "Tilføj Vare";
             this.TilfoejVareKnapIndkoeb.UseVisualStyleBackColor = true;
+            this.TilfoejVareKnapIndkoeb.Click += new System.EventHandler(this.TilfoejVareKnapIndkoeb_Click);
             // 
             // SletVareKnapIndkoeb
             // 
