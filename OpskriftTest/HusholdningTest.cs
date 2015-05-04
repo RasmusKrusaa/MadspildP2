@@ -18,6 +18,7 @@ namespace MadspildprojektTests
         DateTime Igaar = DateTime.Today.AddDays(-1);
         DateTime Imorgen = DateTime.Today.AddDays(1);
         DateTime Idag = DateTime.Today;
+        DateTime EnDagForGammel = DateTime.Today.AddDays(-31);
         DateTime PræcisGammel = DateTime.Today.AddDays(-30);
         DateTime NæstenGammel = DateTime.Today.AddDays(-29);
         DateTime MegetGammel = DateTime.Today.AddDays(-123);
@@ -25,6 +26,7 @@ namespace MadspildprojektTests
         VareStkSA v2 = new VareStkSA("bacon");
         VareVægtMH v3 = new VareVægtMH("Humus");
         VareVægtSA v4 = new VareVægtSA("Banan");
+        VareVægtMH v5 = new VareVægtMH("Tomat");
 
         [Test]
         public void DatoAdvarselTest()
@@ -33,12 +35,13 @@ namespace MadspildprojektTests
             v2.SidsteAnvendelse = Igaar;
             v3.MindstHoldbar = Igaar;
             v4.SidsteAnvendelse = Idag;
+            v5.MindstHoldbar = MegetGammel;
             //Act
-            h.HusBeholdning = h.IndlæsVarer("Husholdning.txt");
             h.TilføjVare(v1, h.HusBeholdning);
             h.TilføjVare(v2, h.HusBeholdning);
             h.TilføjVare(v3, h.HusBeholdning);
             h.TilføjVare(v4, h.HusBeholdning);
+            h.TilføjVare(v5, h.HusBeholdning);
             h.DatoAdvarsel(DateTime.Today);
             
             //Assert
@@ -52,12 +55,13 @@ namespace MadspildprojektTests
             v2.SidsteAnvendelse = MegetGammel;
             v3.MindstHoldbar = NæstenGammel;
             v4.SidsteAnvendelse = Idag;
+            v5.MindstHoldbar = EnDagForGammel;
             //Act
-            h.HusBeholdning = h.IndlæsVarer("Husholdning.txt");
             h.TilføjVare(v1, h.HusBeholdning);
             h.TilføjVare(v2, h.HusBeholdning);
             h.TilføjVare(v3, h.HusBeholdning);
             h.TilføjVare(v4, h.HusBeholdning);
+            h.TilføjVare(v5, h.HusBeholdning);
             h.SletGammelVare(DateTime.Today.AddDays(-30));
 
             //Assert
