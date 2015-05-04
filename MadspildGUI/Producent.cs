@@ -18,6 +18,10 @@ namespace MadspildGUI
             {
                 return Convert.ToDateTime(dato);
             }
+            else if (dato.Contains("-"))
+	        {
+                return Convert.ToDateTime(dato);
+        	}
             else
             {
                 return DateTime.Today.AddDays(double.Parse(dato));
