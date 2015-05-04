@@ -136,3 +136,7 @@ $_Tomatsuppe
 #_Nogle basilikumblade og et dryp ekstra-jomfruolivenolie
 #_Stil skålen på bordet sammen med en stabel suppeskåle og bradepanden med croutoner fra ovnen
 ---
+$_Hakkebøf
+@_450_g_hakket oksekød
+#_steg kød
+---

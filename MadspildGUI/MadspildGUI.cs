@@ -207,5 +207,11 @@ namespace MadspildGUI
             ListBoxIndkoeb.Items.Remove(ListBoxIndkoeb.SelectedIndex);
             IndlaesIndkoebskurv();
         }
+
+        private void tilfoejOpskriftKnap_Click(object sender, EventArgs e)
+        {
+            TilfoejOpskriftPrompt tilfoejOpskrift = new TilfoejOpskriftPrompt();
+            tilfoejOpskrift.Show();
+        }
     }
 }
