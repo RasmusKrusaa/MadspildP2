@@ -55,5 +55,14 @@ namespace MadspildGUI
             husholdning = p.indlaesProdukter(filnavn);
             return husholdning;
         }
+
+        public void SletVareFraFil(string filnavn, List<Vare> Husbeholdning)
+        {
+            string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
+                Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
+
+            File.WriteAllText(filsti, String.Empty);
+            SkrivListeAfVarerTilFil(filnavn, Husbeholdning);
+        }
     }
 }

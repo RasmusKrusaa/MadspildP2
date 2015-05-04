@@ -116,7 +116,7 @@ $_Tomatsuppe
 @_2_rødløg
 @_1_ciabattabrød
 @_1_rød chili
-@_0.25_cremefraiche
+@_0,25_cremefraiche
 #_Tænd ovnen på 220° og sæt en stor gryde over lav varme
 #_Skær tomater i kvarte og fordel alle tomaterne i en bradepande
 #_Dryp generøst med olivenolie og krydr med salt og peber

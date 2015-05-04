@@ -17,13 +17,18 @@ namespace MadspildGUI
             InitializeComponent();
         }
 
+        public string retNavn
+        {
+            get { return retNavnBox.Text; }
+        }
+
         private void tilfoejKnap_Click(object sender, EventArgs e)
         {
             Opskrift o = new Opskrift();
             string[] ingredienser = new string[ingrediensVolumenBox.Lines.Length];
             string[] instruktioner = instruktionerBox.Lines;
             string[] ingredienserVolumen = ingrediensVolumenBox.Lines;
- 
+
             for (int linje = 0; linje < ingrediensVolumenBox.Lines.Length; linje++)
             {
                 string[] str = ingrediensVolumenBox.Lines[linje].Split(' ');
@@ -36,20 +41,44 @@ namespace MadspildGUI
                     MessageBox.Show("Det ser ud til at du har tilføjet mellemrum efter en ingrediensvolumen", "Fejl");
                 }
             }
-
             if (ingrediensNavnBox.Lines.Length == ingrediensVolumenBox.Lines.Length)
             {
-                for (int linje = 0; linje < ingrediensVolumenBox.Lines.Length; linje++)
+                if (isValidIngrediensVolumen())
                 {
-                    ingredienser[linje] = ingredienserVolumen[linje] + "_" + ingrediensNavnBox.Lines[linje];
+                    for (int linje = 0; linje < ingrediensVolumenBox.Lines.Length; linje++)
+                    {
+                        ingredienser[linje] = ingredienserVolumen[linje] + "_" + ingrediensNavnBox.Lines[linje];
+                    }
+                    if (MessageBox.Show("Er du sikker på, at du vil tilføje " + retNavnBox.Text + " til opskrifter?", 
+                        "Tilføj opskrift?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        DialogResult = DialogResult.Yes;
+                        o.TilføjOpskriftTilFil(retNavnBox.Text, ingredienser, instruktioner);
+                    }
                 }
-
-            o.TilføjOpskriftTilFil(retNavnBox.Text, ingredienser, instruktioner);
             }
             else
             {
                 MessageBox.Show("Der er ikke samme antal ingrediensnavne som ingrediensvolumener", "Fejl");
             }
-        }   
+        }
+
+        private bool isValidIngrediensVolumen()
+        {
+            for (int linje = 0; linje < ingrediensVolumenBox.Lines.Length; linje++)
+            {
+                if (ingrediensVolumenBox.Lines[linje].Length > 1)
+                {
+                    char sidsteChar = ingrediensVolumenBox.Lines[linje][ingrediensVolumenBox.Lines[linje].Length - 1];
+                    char andenSidsteChar = ingrediensVolumenBox.Lines[linje][ingrediensVolumenBox.Lines[linje].Length - 2];
+                    if (sidsteChar == 'g' && andenSidsteChar != ' ')
+                    {
+                        MessageBox.Show("Der skal være mellemrum mellem volumen og g! Fx 450 g", "Fejl");
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
     }
 }

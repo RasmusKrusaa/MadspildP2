@@ -21,7 +21,7 @@ namespace MadspildprojektTests
             //arrange
             Opskrift o = new Opskrift();
             //act
-            o.Indlæs("Opskrifter.txt"); // filnavn som parameter
+            o.Indlæs("Opskrifter.txt"); // Eller skal det være et TestFil.
 
             //assert
             if (i < 3)
@@ -55,7 +55,7 @@ namespace MadspildprojektTests
             }
         }
         [Test]
-        public void ForslåEfterListeTest()
+        public void ForslåEfterListeTest1()
         {
             //Arrange
             Opskrift o = new Opskrift();
@@ -87,16 +87,315 @@ namespace MadspildprojektTests
             }               
             //Assert
             Assert.GreaterOrEqual(vareMatch[0], vareMatch[1]);
+
+        }
+        [Test]
+        public void ForslåEfterListeTest2()
+        {
+            //Arrange
+            Opskrift o = new Opskrift();
+            Producent p = new Producent();
+            List<Vare> v = p.indlaesProdukter("Produktkatalog.txt");
+            List<Vare> v2 = new List<Vare>();
+            for (int i = 0; i < 20; i += 2)
+            {
+                v2.Add(v[i]);
+            }
+            o.Indlæs("Opskrifter.txt");
+            //Act
+            List<Opskrift> op = o.ForeslåEfterListe(v2);
+            int[] vareMatch = new int[] { 0, 0, 0, 0, 0 };
+            int y = 0;
+            foreach (Opskrift oo in op)
+            {
+                foreach (Vare v3 in oo.Ingredienser)
+                {
+                    foreach (Vare v1 in v2)
+                    {
+                        if (v3._Navn == v1._Navn)
+                        {
+                            vareMatch[y]++;
+                        }
+                    }
+                }
+                y++;
+            }
+            //Assert
             Assert.GreaterOrEqual(vareMatch[0], vareMatch[2]);
+        }
+        [Test]
+        public void ForslåEfterListeTest3()
+        {
+            //Arrange
+            Opskrift o = new Opskrift();
+            Producent p = new Producent();
+            List<Vare> v = p.indlaesProdukter("Produktkatalog.txt");
+            List<Vare> v2 = new List<Vare>();
+            for (int i = 0; i < 20; i += 2)
+            {
+                v2.Add(v[i]);
+            }
+            o.Indlæs("Opskrifter.txt");
+            //Act
+            List<Opskrift> op = o.ForeslåEfterListe(v2);
+            int[] vareMatch = new int[] { 0, 0, 0, 0, 0 };
+            int y = 0;
+            foreach (Opskrift oo in op)
+            {
+                foreach (Vare v3 in oo.Ingredienser)
+                {
+                    foreach (Vare v1 in v2)
+                    {
+                        if (v3._Navn == v1._Navn)
+                        {
+                            vareMatch[y]++;
+                        }
+                    }
+                }
+                y++;
+            }
+            //Assert
             Assert.GreaterOrEqual(vareMatch[0], vareMatch[3]);
+        }
+        [Test]
+        public void ForslåEfterListeTest4()
+        {
+            //Arrange
+            Opskrift o = new Opskrift();
+            Producent p = new Producent();
+            List<Vare> v = p.indlaesProdukter("Produktkatalog.txt");
+            List<Vare> v2 = new List<Vare>();
+            for (int i = 0; i < 20; i += 2)
+            {
+                v2.Add(v[i]);
+            }
+            o.Indlæs("Opskrifter.txt");
+            //Act
+            List<Opskrift> op = o.ForeslåEfterListe(v2);
+            int[] vareMatch = new int[] { 0, 0, 0, 0, 0 };
+            int y = 0;
+            foreach (Opskrift oo in op)
+            {
+                foreach (Vare v3 in oo.Ingredienser)
+                {
+                    foreach (Vare v1 in v2)
+                    {
+                        if (v3._Navn == v1._Navn)
+                        {
+                            vareMatch[y]++;
+                        }
+                    }
+                }
+                y++;
+            }
+            //Assert
             Assert.GreaterOrEqual(vareMatch[0], vareMatch[4]);
+        }
+        [Test]
+        public void ForslåEfterListeTest5()
+        {
+            //Arrange
+            Opskrift o = new Opskrift();
+            Producent p = new Producent();
+            List<Vare> v = p.indlaesProdukter("Produktkatalog.txt");
+            List<Vare> v2 = new List<Vare>();
+            for (int i = 0; i < 20; i += 2)
+            {
+                v2.Add(v[i]);
+            }
+            o.Indlæs("Opskrifter.txt");
+            //Act
+            List<Opskrift> op = o.ForeslåEfterListe(v2);
+            int[] vareMatch = new int[] { 0, 0, 0, 0, 0 };
+            int y = 0;
+            foreach (Opskrift oo in op)
+            {
+                foreach (Vare v3 in oo.Ingredienser)
+                {
+                    foreach (Vare v1 in v2)
+                    {
+                        if (v3._Navn == v1._Navn)
+                        {
+                            vareMatch[y]++;
+                        }
+                    }
+                }
+                y++;
+            }
+            //Assert
             Assert.GreaterOrEqual(vareMatch[1], vareMatch[2]);
+        }
+        [Test]
+        public void ForslåEfterListeTest6()
+        {
+            //Arrange
+            Opskrift o = new Opskrift();
+            Producent p = new Producent();
+            List<Vare> v = p.indlaesProdukter("Produktkatalog.txt");
+            List<Vare> v2 = new List<Vare>();
+            for (int i = 0; i < 20; i += 2)
+            {
+                v2.Add(v[i]);
+            }
+            o.Indlæs("Opskrifter.txt");
+            //Act
+            List<Opskrift> op = o.ForeslåEfterListe(v2);
+            int[] vareMatch = new int[] { 0, 0, 0, 0, 0 };
+            int y = 0;
+            foreach (Opskrift oo in op)
+            {
+                foreach (Vare v3 in oo.Ingredienser)
+                {
+                    foreach (Vare v1 in v2)
+                    {
+                        if (v3._Navn == v1._Navn)
+                        {
+                            vareMatch[y]++;
+                        }
+                    }
+                }
+                y++;
+            }
+            //Assert
             Assert.GreaterOrEqual(vareMatch[1], vareMatch[3]);
+        }
+        [Test]
+        public void ForslåEfterListeTest7()
+        {
+            //Arrange
+            Opskrift o = new Opskrift();
+            Producent p = new Producent();
+            List<Vare> v = p.indlaesProdukter("Produktkatalog.txt");
+            List<Vare> v2 = new List<Vare>();
+            for (int i = 0; i < 20; i += 2)
+            {
+                v2.Add(v[i]);
+            }
+            o.Indlæs("Opskrifter.txt");
+            //Act
+            List<Opskrift> op = o.ForeslåEfterListe(v2);
+            int[] vareMatch = new int[] { 0, 0, 0, 0, 0 };
+            int y = 0;
+            foreach (Opskrift oo in op)
+            {
+                foreach (Vare v3 in oo.Ingredienser)
+                {
+                    foreach (Vare v1 in v2)
+                    {
+                        if (v3._Navn == v1._Navn)
+                        {
+                            vareMatch[y]++;
+                        }
+                    }
+                }
+                y++;
+            }
+            //Assert
             Assert.GreaterOrEqual(vareMatch[1], vareMatch[4]);
+        }
+        [Test]
+        public void ForslåEfterListeTest8()
+        {
+            //Arrange
+            Opskrift o = new Opskrift();
+            Producent p = new Producent();
+            List<Vare> v = p.indlaesProdukter("Produktkatalog.txt");
+            List<Vare> v2 = new List<Vare>();
+            for (int i = 0; i < 20; i += 2)
+            {
+                v2.Add(v[i]);
+            }
+            o.Indlæs("Opskrifter.txt");
+            //Act
+            List<Opskrift> op = o.ForeslåEfterListe(v2);
+            int[] vareMatch = new int[] { 0, 0, 0, 0, 0 };
+            int y = 0;
+            foreach (Opskrift oo in op)
+            {
+                foreach (Vare v3 in oo.Ingredienser)
+                {
+                    foreach (Vare v1 in v2)
+                    {
+                        if (v3._Navn == v1._Navn)
+                        {
+                            vareMatch[y]++;
+                        }
+                    }
+                }
+                y++;
+            }
+            //Assert
             Assert.GreaterOrEqual(vareMatch[2], vareMatch[3]);
+        }
+        [Test]
+        public void ForslåEfterListeTest9()
+        {
+            //Arrange
+            Opskrift o = new Opskrift();
+            Producent p = new Producent();
+            List<Vare> v = p.indlaesProdukter("Produktkatalog.txt");
+            List<Vare> v2 = new List<Vare>();
+            for (int i = 0; i < 20; i += 2)
+            {
+                v2.Add(v[i]);
+            }
+            o.Indlæs("Opskrifter.txt");
+            //Act
+            List<Opskrift> op = o.ForeslåEfterListe(v2);
+            int[] vareMatch = new int[] { 0, 0, 0, 0, 0 };
+            int y = 0;
+            foreach (Opskrift oo in op)
+            {
+                foreach (Vare v3 in oo.Ingredienser)
+                {
+                    foreach (Vare v1 in v2)
+                    {
+                        if (v3._Navn == v1._Navn)
+                        {
+                            vareMatch[y]++;
+                        }
+                    }
+                }
+                y++;
+            }
+            //Assert
             Assert.GreaterOrEqual(vareMatch[2], vareMatch[4]);
+        }
+        [Test]
+        public void ForslåEfterListeTest10()
+        {
+            //Arrange
+            Opskrift o = new Opskrift();
+            Producent p = new Producent();
+            List<Vare> v = p.indlaesProdukter("Produktkatalog.txt");
+            List<Vare> v2 = new List<Vare>();
+            for (int i = 0; i < 20; i += 2)
+            {
+                v2.Add(v[i]);
+            }
+            o.Indlæs("Opskrifter.txt");
+            //Act
+            List<Opskrift> op = o.ForeslåEfterListe(v2);
+            int[] vareMatch = new int[] { 0, 0, 0, 0, 0 };
+            int y = 0;
+            foreach (Opskrift oo in op)
+            {
+                foreach (Vare v3 in oo.Ingredienser)
+                {
+                    foreach (Vare v1 in v2)
+                    {
+                        if (v3._Navn == v1._Navn)
+                        {
+                            vareMatch[y]++;
+                        }
+                    }
+                }
+                y++;
+            }
+            //Assert
             Assert.GreaterOrEqual(vareMatch[3], vareMatch[4]);
         }
+
         [Test]
         public void TilføjOpskriftTilFilTest() 
         {
