@@ -33,8 +33,10 @@ namespace MadspildGUI
             SletGamleVarerFraHus();
 
             // opskrifter tab
-            IndlaesOpskrifter();
-
+            if (listBoxOpskrifter.Items.Count == 0)
+            {
+                IndlaesOpskrifter();
+            }
         }
 
         // husholdningtab
@@ -65,7 +67,6 @@ namespace MadspildGUI
             TilfoejVarePrompt tilfoejVare = new TilfoejVarePrompt();
             if (tilfoejVare.ShowDialog() == DialogResult.OK)
             {
-                ListBoxVarerIHus.Items.Add(tilfoejVare.NyListboxVarerIHusItem);
                 IndlaesVarerIHus();
             }
         }
@@ -206,6 +207,15 @@ namespace MadspildGUI
             Indkøb i = new Indkøb();
             ListBoxIndkoeb.Items.Remove(ListBoxIndkoeb.SelectedIndex);
             IndlaesIndkoebskurv();
+        }
+
+        private void tilfoejOpskriftKnap_Click(object sender, EventArgs e)
+        {
+            TilfoejOpskriftPrompt tilfoejOpskrift = new TilfoejOpskriftPrompt();
+            if (tilfoejOpskrift.ShowDialog() == DialogResult.Yes)
+            {
+                IndlaesOpskrifter();
+            }
         }
     }
 }

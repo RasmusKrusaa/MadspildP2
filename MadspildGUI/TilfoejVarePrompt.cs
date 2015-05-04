@@ -72,6 +72,9 @@ namespace MadspildGUI
         
         private bool isValidVare()
         {
+            Producent p = new Producent();
+            List<Vare> produktkatalog = p.indlaesProdukter("Produktkatalog.txt");
+
             if (navnBox.Text == "Indtast varenavn" ||
                 volumenBox.Text == "Indtast volumen" ||
                 (!vaegtKnap.Checked && !stkKnap.Checked) ||
@@ -99,6 +102,25 @@ namespace MadspildGUI
                     return false;
                 }
                 return true;
+            }
+            if (datoVaelger.Value.Date < DateTime.Today.Date)
+            {
+                MessageBox.Show("Du kan ikke vælge en dato før i dag!", "Forkert dato");
+                return false;
+            }
+
+            bool findesVareIProduktkatalog = false;
+            foreach (Vare v in produktkatalog)
+            {
+                if (v._Navn == navnBox.Text.ToLower())
+                {
+                    findesVareIProduktkatalog = true; 
+                }
+            }
+            if (findesVareIProduktkatalog == false)
+            {
+                MessageBox.Show("Det indtastede varenavn findes ikke i produktkataloget", "Fejl i varenavn");
+                return false;
             }
             return true;
         }
