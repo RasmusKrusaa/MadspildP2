@@ -18,3 +18,13 @@ C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Mads
 C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
 C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
 C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
