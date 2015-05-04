@@ -41,5 +41,32 @@ namespace Madspildprojekt
         }
 
         // Metode der skal kunne slette varer fra husholdningen baseret på en opskrift.
+        public void SletVareUdFraOpskrift(Opskrift o)
+        {
+            decimal OpskriftVolumen = 0, HusbeholdningVolumen = 0; // erklærer viabler.
+
+            foreach (Vare v in o.Ingredienser)
+            {
+                for (int i = 0; i < HusBeholdning.Count; i++)
+                {
+                    if (v._Navn == HusBeholdning[i]._Navn) 
+                    {
+                        OpskriftVolumen = v.VolumenTjek();
+                        HusbeholdningVolumen = HusBeholdning[i].VolumenTjek();
+                        HusbeholdningVolumen = HusbeholdningVolumen - OpskriftVolumen;
+                        if (HusbeholdningVolumen != 0)
+                        {
+                            HusBeholdning[i].setVolumen(HusbeholdningVolumen);
+                        }
+                        else
+                        {
+                            SletVare(HusBeholdning[i], HusBeholdning);
+                            i--;
+                        }
+                    }
+                }
+            }
+            SletVareFraFil("Husholdning.txt", HusBeholdning); 
+        }
     }
 }

@@ -119,29 +119,41 @@ namespace MadspildGUI
 
         public void TilføjOpskriftTilFil(string retNavn, string[] Ingredienser, string[] Instruktioner)
         {
+            bool eksiterendeVare = false;
             string opskriftfilSti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\Opskrifter.txt";
             var fil = new List<string>(File.ReadAllLines(opskriftfilSti));
-            if (fil.ElementAt(fil.Count - 1) == "---")
+            foreach (Opskrift o in Opskrifter)
             {
+                if (o.retNavn == retNavn)
+                {
+                    eksiterendeVare = true;
+                }
+            }
+            if (eksiterendeVare == false)
+            {
+                if (fil.ElementAt(fil.Count - 1) == "---")
+                {
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(opskriftfilSti, true))
+                    {
+                        file.WriteLine();
+                    }
+                }
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter(opskriftfilSti, true))
                 {
-                    file.WriteLine();
+                    file.WriteLine("$_" + retNavn);
+                    foreach (string str in Ingredienser)
+                    {
+                        file.WriteLine("@_" + str);
+                    }
+                    foreach (string str in Instruktioner)
+                    {
+                        file.WriteLine("#_" + str);
+                    }
+                    file.Write("---");
                 }
             }
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(opskriftfilSti, true))
-            {
-                file.WriteLine("$_" + retNavn);
-                foreach (string str in Ingredienser)
-                {
-                    file.WriteLine("@_" + str);
-                }
-                foreach (string str in Instruktioner)
-                {
-                    file.WriteLine("#_" + str);
-                }
-                file.Write("---");                
-            }
-        }
+            Indlæs("Opskrifter.txt");
+        }   
     }
 }

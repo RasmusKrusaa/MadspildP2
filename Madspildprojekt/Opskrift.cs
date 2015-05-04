@@ -139,6 +139,7 @@ namespace Madspildprojekt
          */
         public void TilføjOpskriftTilFil(string retNavn, string[] Ingredienser, string[] Instruktioner)
         {
+            Indlæs("Opskrifter.txt");
             bool eksiterendeVare = false;
             string opskriftfilSti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\Opskrifter.txt";
@@ -173,7 +174,6 @@ namespace Madspildprojekt
                     file.Write("---");
                 }
             }
-            Indlæs("Opskrifter.txt");
         }   
     }
 }   

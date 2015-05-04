@@ -26,12 +26,16 @@ namespace Madspildprojekt
             {
                 return Convert.ToDateTime(dato);
             }
+            else if (dato.Contains("-"))
+            {
+                return Convert.ToDateTime(dato);
+            }
             else
             {
                 return DateTime.Today.AddDays(double.Parse(dato));
             }
         }
-        /*
+        /*  
          * Metoden "Varedannelse" Indlæser fra en fil og instansiere varer over i en liste.
          */
         private List<Vare> Varedannelse(string filnavn, List<Vare> liste)
