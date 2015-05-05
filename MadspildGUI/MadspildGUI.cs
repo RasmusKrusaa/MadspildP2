@@ -145,21 +145,14 @@ namespace MadspildGUI
             }
             opskrifterIGUI = forslag;
         }
-        private void IndlaesIndkoebskurv()
+        public void IndlaesIndkoebskurv() // public da den skal kaldes fra den anden klasse
         {
-            VareStkMH v = new VareStkMH("Gris");
-            v.MindstHoldbar = DateTime.Today;
-            v.Stk = 2;
-
-            VareVægtSA v1 = new VareVægtSA("Nakkeost");
-            v1.SidsteAnvendelse = DateTime.Today;
-            v1.Vægt = 200;
-
-            Indkoebskurv.Add(v);
-            Indkoebskurv.Add(v1);
-
-            ListBoxIndkoeb.Items.Add(v._Navn);
-            ListBoxIndkoeb.Items.Add(v1._Navn);
+            IndkoebskurvPrompt InkPromt = new IndkoebskurvPrompt();
+            Indkoebskurv = InkPromt.PropMidlertidigIndkoebskurv;
+            foreach (Vare v in Indkoebskurv)
+            {
+                ListBoxIndkoeb.Items.Add(v);
+            }
         }
 
         private void ListBoxIndkoeb_Doubleclick(object sender, EventArgs e)
@@ -221,7 +214,20 @@ namespace MadspildGUI
         private void TilfoejVareKnapIndkoeb_Click(object sender, EventArgs e)
         {
             IndkoebskurvPrompt indkoebskurvPrompt = new IndkoebskurvPrompt();
-            indkoebskurvPrompt.Show();
+            if (indkoebskurvPrompt.ShowDialog() == DialogResult.OK)
+            {
+                ListBoxIndkoeb.Items.Clear();
+                foreach (Vare v in indkoebskurvPrompt.PropMidlertidigIndkoebskurv)
+                {
+                    Indkoebskurv.Add(v);
+                    ListBoxIndkoeb.Items.Add(v._Navn);
+                }
+            }
+        }
+
+        private void ListBoxIndkoeb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

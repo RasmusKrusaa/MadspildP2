@@ -12,6 +12,14 @@ namespace MadspildGUI
 {
     public partial class IndkoebskurvPrompt : Form
     {
+        private List<Vare> MidlertidigIndkoebskurv = new List<Vare>();
+
+        public List<Vare> PropMidlertidigIndkoebskurv
+        {
+            get { return MidlertidigIndkoebskurv; }
+            set { MidlertidigIndkoebskurv = value; }
+        }
+        
         public IndkoebskurvPrompt()
         {
             InitializeComponent();
@@ -35,14 +43,37 @@ namespace MadspildGUI
         
         private void IndkoebskurvTilfoejtilMidlertidigIndkoebskurv_Click(object sender, EventArgs e)
         {
-            List<Vare> ML = new List<Vare>();
             Producent p = new Producent();
+            int MICount = 0;
             List<Vare> produktkatalogindkoeb = p.indlaesProdukter("Produktkatalog.txt");
-            ML.Add(produktkatalogindkoeb[listBoxIndkoebProduktKatalog.SelectedIndex]);
-            listBoxIndkoebIndkoebskurv.Items.Add(ML[0]._Navn);
-        //    return ML;
-        //Skal til hjælpe funktion
-        
+            PropMidlertidigIndkoebskurv.Add(produktkatalogindkoeb[listBoxIndkoebProduktKatalog.SelectedIndex]);
+            MICount = PropMidlertidigIndkoebskurv.Count;
+            listBoxIndkoebIndkoebskurv.Items.Add(PropMidlertidigIndkoebskurv[--MICount]._Navn);
+        }
+
+        private void listBoxIndkoebIndkoebskurv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InkoebskurvSletVareMidlertidigIndkoebskurv_Click(object sender, EventArgs e)
+        {
+            if (listBoxIndkoebIndkoebskurv.SelectedIndex != -1)
+            {
+                PropMidlertidigIndkoebskurv.Remove(PropMidlertidigIndkoebskurv[listBoxIndkoebIndkoebskurv.SelectedIndex]);
+                listBoxIndkoebIndkoebskurv.Items.RemoveAt(listBoxIndkoebIndkoebskurv.SelectedIndex);
+            }
+        }
+
+        private void TilføjTilInkoebskruv_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+
+        private void listBoxIndkoebProduktKatalog_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

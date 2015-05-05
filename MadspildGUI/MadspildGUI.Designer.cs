@@ -162,6 +162,7 @@
             this.ListBoxIndkoeb.Name = "ListBoxIndkoeb";
             this.ListBoxIndkoeb.Size = new System.Drawing.Size(394, 270);
             this.ListBoxIndkoeb.TabIndex = 3;
+            this.ListBoxIndkoeb.SelectedIndexChanged += new System.EventHandler(this.ListBoxIndkoeb_SelectedIndexChanged);
             this.ListBoxIndkoeb.DoubleClick += new System.EventHandler(this.ListBoxIndkoeb_Doubleclick);
             // 
             // FunktionsKnapperIndKoeb
