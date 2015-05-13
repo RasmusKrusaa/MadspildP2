@@ -29,37 +29,40 @@ namespace MadspildGUI
             string[] instruktioner = instruktionerBox.Lines;
             string[] ingredienserVolumen = ingrediensVolumenBox.Lines;
 
-            for (int linje = 0; linje < ingrediensVolumenBox.Lines.Length; linje++)
+            if (isChangedAlleBokse())
             {
-                string[] str = ingrediensVolumenBox.Lines[linje].Split(' ');
-                if (str.Length == 2)
+                for (int linje = 0; linje < ingrediensVolumenBox.Lines.Length; linje++)
                 {
-                    ingredienserVolumen[linje] = str[0] + "_" + str[1];
-                }
-                else if (str.Length > 2)
-                {
-                    MessageBox.Show("Det ser ud til at du har tilføjet mellemrum efter en ingrediensvolumen", "Fejl");
-                }
-            }
-            if (ingrediensNavnBox.Lines.Length == ingrediensVolumenBox.Lines.Length)
-            {
-                if (isValidIngrediensVolumen())
-                {
-                    for (int linje = 0; linje < ingrediensVolumenBox.Lines.Length; linje++)
+                    string[] str = ingrediensVolumenBox.Lines[linje].Split(' ');
+                    if (str.Length == 2)
                     {
-                        ingredienser[linje] = ingredienserVolumen[linje] + "_" + ingrediensNavnBox.Lines[linje];
+                        ingredienserVolumen[linje] = str[0] + "_" + str[1];
                     }
-                    if (MessageBox.Show("Er du sikker på, at du vil tilføje " + retNavnBox.Text + " til opskrifter?", 
-                        "Tilføj opskrift?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    else if (str.Length > 2)
                     {
-                        DialogResult = DialogResult.Yes;
-                        o.TilføjOpskriftTilFil(retNavnBox.Text, ingredienser, instruktioner);
+                        MessageBox.Show("Du har indtastet forkert i volumenboksen! Skriv fx 450 g", "Fejl");
                     }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Der er ikke samme antal ingrediensnavne som ingrediensvolumener", "Fejl");
+                if (ingrediensNavnBox.Lines.Length == ingrediensVolumenBox.Lines.Length)
+                {
+                    if (isValidIngrediensVolumen() && isValidIngrediensNavn())
+                    {
+                        for (int linje = 0; linje < ingrediensVolumenBox.Lines.Length; linje++)
+                        {
+                            ingredienser[linje] = ingredienserVolumen[linje] + "_" + ingrediensNavnBox.Lines[linje];
+                        }
+                        if (MessageBox.Show("Er du sikker på, at du vil tilføje " + retNavnBox.Text + " til opskrifter?",
+                            "Tilføj opskrift?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            DialogResult = DialogResult.Yes;
+                            o.TilføjOpskriftTilFil(retNavnBox.Text, ingredienser, instruktioner);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Der er ikke samme antal ingrediensnavne som ingrediensvolumener", "Fejl");
+                }
             }
         }
 
@@ -77,6 +80,56 @@ namespace MadspildGUI
                         return false;
                     }
                 }
+                if (!Char.IsDigit(ingrediensVolumenBox.Lines[linje][0]))
+                {
+                    MessageBox.Show("Skriv først antal styk eller vægt i volumenboksen!", "Fejl");
+                    return false;
+                }
+                foreach (char c in ingrediensVolumenBox.Lines[linje])
+                {
+                    if (char.IsLetter(c) && c != 'g')
+                    {
+                        MessageBox.Show("Det eneste bogstav, du kan skrive i volumenboksen er 'g' for gram!", "Fejl");
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        private bool isValidIngrediensNavn()
+        {
+            Producent p = new Producent();
+            List<Vare> produktkatalog = p.indlaesProdukter("Produktkatalog.txt");
+
+            bool findesVareIProduktkatalog = false;
+            foreach (Vare v in produktkatalog)
+            {
+                for (int linje = 0; linje < ingrediensNavnBox.Lines.Length; linje++)
+                {
+                    if (v._Navn == ingrediensNavnBox.Lines[linje])
+                    {
+                        findesVareIProduktkatalog = true;
+                    }
+                }
+            }
+            if (findesVareIProduktkatalog == false)
+            {
+                MessageBox.Show("Et af de indtastede varenavne findes ikke i produktkataloget", "Fejl i varenavn");
+                return false;
+            }
+            return true;
+        }
+
+        private bool isChangedAlleBokse()
+        {
+            if (retNavnBox.Text == "Indtast rettens navn" ||
+                ingrediensNavnBox.Text == "Indtast ingrediensers volumen\n(1 per linje)\nfx 450 g" ||
+                ingrediensVolumenBox.Text == "Indtast ingrediensers navn\n(1 per linje)\nfx hakket oksekød" ||
+                instruktionerBox.Text == "Indtast instruktioner (1 per linje)") 
+            {
+                MessageBox.Show("Det ser ud til, at du har glemt at udfylde nogle felter", "Fejl");
+                return false;
             }
             return true;
         }

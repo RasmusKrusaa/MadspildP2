@@ -223,5 +223,24 @@ namespace MadspildGUI
             IndkoebskurvPrompt indkoebskurvPrompt = new IndkoebskurvPrompt();
             indkoebskurvPrompt.Show();
         }
+
+        private void visOpskrifterKnap_Click(object sender, EventArgs e)
+        {
+            IndlaesOpskrifter();
+        }
+
+        private void foreslaaEfterVarerKnap_Click(object sender, EventArgs e)
+        {
+            ForeslaaEfterVarerPrompt foreslaaPrompt = new ForeslaaEfterVarerPrompt();
+            if (foreslaaPrompt.ShowDialog() == DialogResult.OK)
+            {
+                opskrifterIGUI = foreslaaPrompt.Forslag;
+                listBoxOpskrifter.Items.Clear();
+                foreach (Opskrift op in foreslaaPrompt.Forslag)
+                {
+                    listBoxOpskrifter.Items.Add(op.retNavn);
+                }
+            }
+        }
     }
 }
