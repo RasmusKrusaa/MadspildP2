@@ -249,6 +249,7 @@ namespace MadspildGUI
 
         }
 
+<<<<<<< HEAD
         private void ListBoxVarerIHus_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -277,6 +278,25 @@ namespace MadspildGUI
                 MessageBox.Show("Du har ikke nok varer til at lave denne ret!");  
             }
             
+=======
+        private void visOpskrifterKnap_Click(object sender, EventArgs e)
+        {
+            IndlaesOpskrifter();
+        }
+
+        private void foreslaaEfterVarerKnap_Click(object sender, EventArgs e)
+        {
+            ForeslaaEfterVarerPrompt foreslaaPrompt = new ForeslaaEfterVarerPrompt();
+            if (foreslaaPrompt.ShowDialog() == DialogResult.OK)
+            {
+                opskrifterIGUI = foreslaaPrompt.Forslag;
+                listBoxOpskrifter.Items.Clear();
+                foreach (Opskrift op in foreslaaPrompt.Forslag)
+                {
+                    listBoxOpskrifter.Items.Add(op.retNavn);
+                }
+            }
+>>>>>>> origin/master
         }
     }
 }

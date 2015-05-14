@@ -49,8 +49,13 @@
             this.funktionsKnapperOpskrifter = new System.Windows.Forms.FlowLayoutPanel();
             this.tilfoejOpskriftKnap = new System.Windows.Forms.Button();
             this.foreslaaOpskrifterEfterBeholdningKnap = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+=======
+            this.visOpskrifterKnap = new System.Windows.Forms.Button();
+            this.foreslaaEfterVarerKnap = new System.Windows.Forms.Button();
+>>>>>>> origin/master
             this.navBar.SuspendLayout();
             this.husbeholdning.SuspendLayout();
             this.husholdningTablePanel.SuspendLayout();
@@ -73,7 +78,7 @@
             this.navBar.Margin = new System.Windows.Forms.Padding(0);
             this.navBar.Name = "navBar";
             this.navBar.SelectedIndex = 0;
-            this.navBar.Size = new System.Drawing.Size(408, 329);
+            this.navBar.Size = new System.Drawing.Size(481, 361);
             this.navBar.TabIndex = 0;
             // 
             // husbeholdning
@@ -215,7 +220,7 @@
             this.opskrifter.Location = new System.Drawing.Point(4, 22);
             this.opskrifter.Name = "opskrifter";
             this.opskrifter.Padding = new System.Windows.Forms.Padding(3);
-            this.opskrifter.Size = new System.Drawing.Size(400, 303);
+            this.opskrifter.Size = new System.Drawing.Size(473, 335);
             this.opskrifter.TabIndex = 2;
             this.opskrifter.Text = "Opskrifter";
             this.opskrifter.UseVisualStyleBackColor = true;
@@ -233,7 +238,7 @@
             this.ydreTablePanelOpskrifter.RowCount = 2;
             this.ydreTablePanelOpskrifter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.21549F));
             this.ydreTablePanelOpskrifter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.78451F));
-            this.ydreTablePanelOpskrifter.Size = new System.Drawing.Size(394, 297);
+            this.ydreTablePanelOpskrifter.Size = new System.Drawing.Size(467, 329);
             this.ydreTablePanelOpskrifter.TabIndex = 2;
             // 
             // indreTopTablePanelOpskrifter
@@ -241,6 +246,8 @@
             this.indreTopTablePanelOpskrifter.ColumnCount = 2;
             this.indreTopTablePanelOpskrifter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.20618F));
             this.indreTopTablePanelOpskrifter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.79382F));
+            this.indreTopTablePanelOpskrifter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.indreTopTablePanelOpskrifter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.indreTopTablePanelOpskrifter.Controls.Add(this.listBoxOpskrifter, 0, 0);
             this.indreTopTablePanelOpskrifter.Controls.Add(this.listBoxOpskriftInfo, 1, 0);
             this.indreTopTablePanelOpskrifter.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -249,7 +256,7 @@
             this.indreTopTablePanelOpskrifter.Name = "indreTopTablePanelOpskrifter";
             this.indreTopTablePanelOpskrifter.RowCount = 1;
             this.indreTopTablePanelOpskrifter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.indreTopTablePanelOpskrifter.Size = new System.Drawing.Size(394, 262);
+            this.indreTopTablePanelOpskrifter.Size = new System.Drawing.Size(467, 290);
             this.indreTopTablePanelOpskrifter.TabIndex = 0;
             // 
             // listBoxOpskrifter
@@ -258,7 +265,7 @@
             this.listBoxOpskrifter.FormattingEnabled = true;
             this.listBoxOpskrifter.Location = new System.Drawing.Point(3, 3);
             this.listBoxOpskrifter.Name = "listBoxOpskrifter";
-            this.listBoxOpskrifter.Size = new System.Drawing.Size(152, 256);
+            this.listBoxOpskrifter.Size = new System.Drawing.Size(181, 284);
             this.listBoxOpskrifter.TabIndex = 0;
             this.listBoxOpskrifter.DoubleClick += new System.EventHandler(this.listBoxOpskrifter_DoubleClick);
             // 
@@ -267,21 +274,26 @@
             this.listBoxOpskriftInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxOpskriftInfo.FormattingEnabled = true;
             this.listBoxOpskriftInfo.HorizontalScrollbar = true;
-            this.listBoxOpskriftInfo.Location = new System.Drawing.Point(161, 3);
+            this.listBoxOpskriftInfo.Location = new System.Drawing.Point(190, 3);
             this.listBoxOpskriftInfo.Name = "listBoxOpskriftInfo";
-            this.listBoxOpskriftInfo.Size = new System.Drawing.Size(230, 256);
+            this.listBoxOpskriftInfo.Size = new System.Drawing.Size(274, 284);
             this.listBoxOpskriftInfo.TabIndex = 1;
             // 
             // funktionsKnapperOpskrifter
             // 
             this.funktionsKnapperOpskrifter.Controls.Add(this.tilfoejOpskriftKnap);
             this.funktionsKnapperOpskrifter.Controls.Add(this.foreslaaOpskrifterEfterBeholdningKnap);
+<<<<<<< HEAD
             this.funktionsKnapperOpskrifter.Controls.Add(this.button1);
             this.funktionsKnapperOpskrifter.Controls.Add(this.button2);
+=======
+            this.funktionsKnapperOpskrifter.Controls.Add(this.visOpskrifterKnap);
+            this.funktionsKnapperOpskrifter.Controls.Add(this.foreslaaEfterVarerKnap);
+>>>>>>> origin/master
             this.funktionsKnapperOpskrifter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.funktionsKnapperOpskrifter.Location = new System.Drawing.Point(3, 265);
+            this.funktionsKnapperOpskrifter.Location = new System.Drawing.Point(3, 293);
             this.funktionsKnapperOpskrifter.Name = "funktionsKnapperOpskrifter";
-            this.funktionsKnapperOpskrifter.Size = new System.Drawing.Size(388, 29);
+            this.funktionsKnapperOpskrifter.Size = new System.Drawing.Size(461, 33);
             this.funktionsKnapperOpskrifter.TabIndex = 1;
             this.funktionsKnapperOpskrifter.Paint += new System.Windows.Forms.PaintEventHandler(this.funktionsKnapperOpskrifter_Paint);
             // 
@@ -305,6 +317,7 @@
             this.foreslaaOpskrifterEfterBeholdningKnap.UseVisualStyleBackColor = true;
             this.foreslaaOpskrifterEfterBeholdningKnap.Click += new System.EventHandler(this.foreslaaOpskrifterEfterBeholdningKnap_Click);
             // 
+<<<<<<< HEAD
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(199, 3);
@@ -324,10 +337,31 @@
             this.button2.Text = "Opskrift Udført";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Opskriften_Er_Lavet_Click);
+=======
+            // visOpskrifterKnap
+            // 
+            this.visOpskrifterKnap.Location = new System.Drawing.Point(223, 3);
+            this.visOpskrifterKnap.Name = "visOpskrifterKnap";
+            this.visOpskrifterKnap.Size = new System.Drawing.Size(80, 23);
+            this.visOpskrifterKnap.TabIndex = 2;
+            this.visOpskrifterKnap.Text = "Vis Opskrifter";
+            this.visOpskrifterKnap.UseVisualStyleBackColor = true;
+            this.visOpskrifterKnap.Click += new System.EventHandler(this.visOpskrifterKnap_Click);
+            // 
+            // foreslaaEfterVarerKnap
+            // 
+            this.foreslaaEfterVarerKnap.Location = new System.Drawing.Point(309, 3);
+            this.foreslaaEfterVarerKnap.Name = "foreslaaEfterVarerKnap";
+            this.foreslaaEfterVarerKnap.Size = new System.Drawing.Size(103, 23);
+            this.foreslaaEfterVarerKnap.TabIndex = 3;
+            this.foreslaaEfterVarerKnap.Text = "Foreslå efter varer";
+            this.foreslaaEfterVarerKnap.UseVisualStyleBackColor = true;
+            this.foreslaaEfterVarerKnap.Click += new System.EventHandler(this.foreslaaEfterVarerKnap_Click);
+>>>>>>> origin/master
             // 
             // MadspildGUI
             // 
-            this.ClientSize = new System.Drawing.Size(408, 329);
+            this.ClientSize = new System.Drawing.Size(481, 361);
             this.Controls.Add(this.navBar);
             this.Name = "MadspildGUI";
             this.Shown += new System.EventHandler(this.MadspildGUI_Shown);
@@ -371,8 +405,13 @@
         private System.Windows.Forms.Button tilfoejOpskriftKnap;
         private System.Windows.Forms.TableLayoutPanel husholdningTablePanel;
         private System.Windows.Forms.Button foreslaaOpskrifterEfterBeholdningKnap;
+<<<<<<< HEAD
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+=======
+        private System.Windows.Forms.Button visOpskrifterKnap;
+        private System.Windows.Forms.Button foreslaaEfterVarerKnap;
+>>>>>>> origin/master
     }
 }
 

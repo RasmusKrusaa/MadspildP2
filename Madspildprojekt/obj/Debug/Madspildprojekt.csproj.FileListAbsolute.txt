@@ -8,3 +8,4 @@ C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Mad
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\bin\Debug\Madspildprojekt.pdb
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.exe
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.pdb
+C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\Madspildprojekt\obj\Debug\Madspildprojekt.csprojResolveAssemblyReference.cache
