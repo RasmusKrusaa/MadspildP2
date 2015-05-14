@@ -11,20 +11,20 @@ namespace Madspildprojekt
      * Opskrift har ansvar for at indlæse opskrifter, Foreslå opskrifter ud fra en liste af varer eller ud fra en bestemt vare.
      * Derudover giver den også mulighed for at manuelt at tilføje en opskrift.
      */
-    public class Opskrift : Beholdning
+    public class Opskrift2 : Beholdning2
     {
 
         public string retNavn;
-        public List<Vare> Ingredienser = new List<Vare>();
+        public List<Vare2> Ingredienser = new List<Vare2>();
         private List<string> Instruktioner = new List<string>();
-        public List<Opskrift> Opskrifter = new List<Opskrift>();
+        public List<Opskrift2> Opskrifter = new List<Opskrift2>();
 
         /*
          * Metoden "indlæs" bliver brugt til at indlæse opskrifter fra fil, som tilføjes til specifikke lister.
          */
         public void Indlæs(string filnavn) //Filnavn som parameter
         {
-            Opskrift o = new Opskrift();
+            Opskrift2 o = new Opskrift2();
             string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
             foreach (string line in File.ReadAllLines(filsti))
@@ -56,7 +56,7 @@ namespace Madspildprojekt
                 else if (str[0] == "---")
                 {
                     Opskrifter.Add(o);
-                    o = new Opskrift();
+                    o = new Opskrift2();
                 }
                 else
                 {
@@ -67,15 +67,15 @@ namespace Madspildprojekt
         /*
          * Metoden "ForeslåEfterVarer" foreslårer en opskrift ud fra udvalgte varer 
          */
-        public List<Opskrift> ForeslåEfterVarer(string[] vareNavn)
+        public List<Opskrift2> ForeslåEfterVarer(string[] vareNavn)
         {
-            List<Opskrift> forslag = new List<Opskrift>();
-            foreach (Opskrift o in Opskrifter)
+            List<Opskrift2> forslag = new List<Opskrift2>();
+            foreach (Opskrift2 o in Opskrifter)
             {
                 int y = 0;
                 foreach (string str in vareNavn)
                 {
-                    foreach (Vare v in o.Ingredienser)
+                    foreach (Vare2 v in o.Ingredienser)
                     {
                         if (v._Navn == str)
                         {
@@ -93,21 +93,21 @@ namespace Madspildprojekt
         /*
          * Metoden "ForeslåEfterListe" foreslårer en opskrift ud fra en udvalgt liste, f.eks. husbeholdning.
          */
-        public List<Opskrift> ForeslåEfterListe(List<Vare> liste)
+        public List<Opskrift2> ForeslåEfterListe(List<Vare2> liste)
         {
-            List<Opskrift> forslag = new List<Opskrift>();
+            List<Opskrift2> forslag = new List<Opskrift2>();
 
             for (int forslagCount = 0; forslagCount < 5; forslagCount++)
             {
                 int topMatch = 0;
-                foreach (Opskrift o in Opskrifter)
+                foreach (Opskrift2 o in Opskrifter)
                 {
                     int ingrediensMatch = 0;
                     if (!forslag.Contains(o))
                     {
-                        foreach (Vare opskriftVare in o.Ingredienser)
+                        foreach (Vare2 opskriftVare in o.Ingredienser)
                         {
-                            foreach (Vare listeVare in liste)
+                            foreach (Vare2 listeVare in liste)
                             {
                                 if (opskriftVare._Navn == listeVare._Navn)
                                 {
@@ -144,7 +144,7 @@ namespace Madspildprojekt
             string opskriftfilSti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\Opskrifter.txt";
             var fil = new List<string>(File.ReadAllLines(opskriftfilSti));
-            foreach (Opskrift o in Opskrifter)
+            foreach (Opskrift2 o in Opskrifter)
             {
                 if (o.retNavn == retNavn)
                 {

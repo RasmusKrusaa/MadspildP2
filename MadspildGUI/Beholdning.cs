@@ -29,13 +29,13 @@ namespace MadspildGUI
             }
         }
         /*
-         * 
+         * Metoden "SkrifListeAfVarerTilFil" Skriver en liste af Varer til en fil.
          */
         public void SkrivListeAfVarerTilFil(string filnavn, List<Vare> liste)
         {
             string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
-            using(System.IO.StreamWriter file = new System.IO.StreamWriter(filsti))
+            using(System.IO.StreamWriter file = new System.IO.StreamWriter(filsti)) // muligvis , true
             {
                 foreach (Vare v in liste)
                 {

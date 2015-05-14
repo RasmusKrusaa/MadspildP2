@@ -11,16 +11,16 @@ namespace Madspildprojekt
      * Klassen har også ansvaret for at informere om varens holdbarhedsdato og slette hvis det er nødvendigt.
      * Derudover er det en underklasse af beholdning så den får funktionaliterne af metoderne fra beholdningsklassen.
     */
-    public class Husholdning : Beholdning
+    public class Husholdning2 : Beholdning2
     {
-        public List<Vare> HusBeholdning = new List<Vare>(); // skal være private ?
+        public List<Vare2> HusBeholdning = new List<Vare2>(); // skal være private ?
 
         /*
          *Metoden "DatoAdvarsel" informerer brugeren om udløbelende varer, baseret på sidsteanvendelses- eller mindstholdbarhedsdato.
         */
         public void DatoAdvarsel(DateTime dato)
         {
-            foreach (Vare v in HusBeholdning)
+            foreach (Vare2 v in HusBeholdning)
             {
                 v.ForGammelDatoTjek(dato);
             }
@@ -41,11 +41,11 @@ namespace Madspildprojekt
         }
 
         // Metode der skal kunne slette varer fra husholdningen baseret på en opskrift.
-        public void SletVareUdFraOpskrift(Opskrift o)
+        public void SletVareUdFraOpskrift(Opskrift2 o)
         {
             decimal OpskriftVolumen = 0, HusbeholdningVolumen = 0; // erklærer viabler.
 
-            foreach (Vare v in o.Ingredienser)
+            foreach (Vare2 v in o.Ingredienser)
             {
                 for (int i = 0; i < HusBeholdning.Count; i++)
                 {

@@ -39,3 +39,16 @@ C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Tilf
 C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
 >>>>>>> origin/master
 C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.IndkoebskurvPrompt.resources
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejOpskriftPrompt.resources
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache

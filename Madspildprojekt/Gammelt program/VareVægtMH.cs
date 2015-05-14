@@ -10,7 +10,7 @@ namespace Madspildprojekt
     * Denne klasse er en underklasse af vare, som har ansvaret for at tilskrive
     * vægt og mindstholdbar på vare som skal have disse specifikationer.
     */
-    public class VareVægtMH : Vare
+    public class VareVægtMH : Vare2
     {
         private decimal _Vægt;
         private DateTime _MindstHoldbar;
@@ -46,7 +46,7 @@ namespace Madspildprojekt
          * Metoden "SletVareFraListeHvisGammel" overskriver den som findes i superklassen Vare
          * og fjerner en Vare fra en liste hvis Varen har overskredet datoen.
          */ 
-        public override bool SletVareFraListeHvisGammel(DateTime dato, List<Vare> liste)
+        public override bool SletVareFraListeHvisGammel(DateTime dato, List<Vare2> liste)
         {
             if (_MindstHoldbar <= dato)
             {

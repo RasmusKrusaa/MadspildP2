@@ -10,11 +10,11 @@ namespace Madspildprojekt
      * Klassen Producent producerer de varer som kan handles, ud fra en fil
      * og på den måde laver den et produktkatalog.
      */
-    public class Producent
+    public class Producent2
     {
         private const int navnIndex = 0, stkIndex = 1, vægtIndex = 2,
             mindstHoldbarIndex = 3, sidsteAnvendelseIndex = 4;
-        List<Vare> produktKatalog = new List<Vare>();
+        List<Vare2> produktKatalog = new List<Vare2>();
 
         /*
          * Metoden "setDato" får en string, og hvis det er på formen "dd/mm/yy" konvertere den stringen til en Datetime.
@@ -38,7 +38,7 @@ namespace Madspildprojekt
         /*  
          * Metoden "Varedannelse" Indlæser fra en fil og instansiere varer over i en liste.
          */
-        private List<Vare> Varedannelse(string filnavn, List<Vare> liste)
+        private List<Vare2> Varedannelse(string filnavn, List<Vare2> liste)
         {
             string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
@@ -91,9 +91,9 @@ namespace Madspildprojekt
         /*
          * Metoden "indlaesProdukter" kalder på Varedannelse metoden, med filnavn som parameter, og returnerer produktliste. 
          */
-        public List<Vare> indlaesProdukter(string filnavn)
+        public List<Vare2> indlaesProdukter(string filnavn)
         {
-            List<Vare> produktListe = new List<Vare>();
+            List<Vare2> produktListe = new List<Vare2>();
             
             Varedannelse(filnavn, produktListe);
             return produktListe;

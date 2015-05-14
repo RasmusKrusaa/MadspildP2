@@ -24,6 +24,7 @@ namespace MadspildGUI
 
         private void tilfoejKnap_Click(object sender, EventArgs e)
         {
+            string filnavn = "Opskrifter.txt";
             Opskrift o = new Opskrift();
             string[] ingredienser = new string[ingrediensVolumenBox.Lines.Length];
             string[] instruktioner = instruktionerBox.Lines;
@@ -55,7 +56,7 @@ namespace MadspildGUI
                             "Tilføj opskrift?", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
                             DialogResult = DialogResult.Yes;
-                            o.TilføjOpskriftTilFil(retNavnBox.Text, ingredienser, instruktioner);
+                            o.TilføjOpskriftTilFil(retNavnBox.Text, ingredienser, instruktioner, filnavn);
                         }
                     }
                 }

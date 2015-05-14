@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MadspildGUI
+namespace Madspildprojekt
 {
     /* 
-     * Denne klasse er en underklasse af vare, som har ansvaret for at tilskrive
-     * vægt og sidsteanvendelsesdato på vare som skal have disse specifikationer.
+    * Denne klasse er en underklasse af vare, som har ansvaret for at tilskrive
+    * vægt og sidsteanvendelse på vare som skal have disse specifikationer.
     */
-    public class VareVægtSA : Vare
+    public class VareVægtSA : Vare2
     {
         private decimal _Vægt;
         private DateTime _SidsteAnvendelse;
@@ -34,20 +34,18 @@ namespace MadspildGUI
         * Metoden "ForGammelDatoTjek" overskriver den som findes i superklassen Vare og
         * tjekker efter sidsteanvendelsesdato i forhold til et DateTime input.
         */
-        public override bool ForGammelDatoTjek(DateTime dato)
+        public override void ForGammelDatoTjek(DateTime dato)
         {
             if (_SidsteAnvendelse <= dato)
             {
-                MessageBox.Show(_Navn + " er måske for gammel. Tjek datoen! Hvis for gammel smid ud!");
-                return true;
+                MessageBox.Show(_Navn + " er måske for gammel. Tjek dato! Hvis for gammel smid ud.");
             }
-            return false;
         }
         /*
         * Metoden "SletVareFraListeHvisGammel" overskriver den som findes i superklassen Vare
         * og fjerner en Vare fra en liste hvis Varen har overskredet datoen.
         */ 
-        public override bool SletVareFraListeHvisGammel(DateTime dato, List<Vare> liste)
+        public override bool SletVareFraListeHvisGammel(DateTime dato, List<Vare2> liste)
         {
             if (_SidsteAnvendelse <= dato)
             {
@@ -76,17 +74,6 @@ namespace MadspildGUI
         public override string skrivInfoTilFil()
         {
             return _Navn + "_0_" + _Vægt + "_0_" + _SidsteAnvendelse.ToShortDateString();  
-        }
-
-        public override string ToString()
-        {
-            return "Navn: " + _Navn + "\nVægt: " + _Vægt + "g" +
-                "\nSidste anvendelsesdato: " + _SidsteAnvendelse.ToShortDateString();
-        }
-
-        public override string VareNavnOgVolumen()
-        {
-            return _Vægt + "g " + _Navn;
         }
     }
 }

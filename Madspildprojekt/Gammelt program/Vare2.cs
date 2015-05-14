@@ -8,13 +8,13 @@ namespace Madspildprojekt
     /*
      * Vare er superklassen til VareStkMH, VareStkSA, VareVægtMH og VareVægtSA. Derudover indeholder Vare også de virtuelle metoder.
      */
-    public abstract class Vare
+    public abstract class Vare2
     {
         public string _Navn;
 
         public virtual void ForGammelDatoTjek(DateTime dato) { }
 
-        public virtual bool SletVareFraListeHvisGammel(DateTime dato, List<Vare> liste)
+        public virtual bool SletVareFraListeHvisGammel(DateTime dato, List<Vare2> liste)
         {
             return false;
         }

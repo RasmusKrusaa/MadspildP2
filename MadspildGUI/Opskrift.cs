@@ -6,13 +6,21 @@ using System.IO;
 
 namespace MadspildGUI
 {
+    /*
+     * Klassen Opskrift er en underklasse af beholdning.
+     * Opskrift har ansvar for at indlæse opskrifter, Foreslå opskrifter ud fra en liste af varer eller ud fra en bestemt vare.
+     * Derudover giver den også mulighed for at manuelt at tilføje en opskrift.
+     */
     public class Opskrift : Beholdning
     {
         public string retNavn;
         public List<Vare> Ingredienser = new List<Vare>();
         public List<string> Instruktioner = new List<string>();
         public List<Opskrift> Opskrifter = new List<Opskrift>();
-        
+
+        /*
+         * Metoden "indlæs" bliver brugt til at indlæse opskrifter fra fil, som tilføjes til specifikke lister.
+         */
         public void Indlæs(string filnavn) //Filnavn som parameter
         {
             Opskrift o = new Opskrift();
@@ -57,26 +65,56 @@ namespace MadspildGUI
                 }
             }
         }
-        
+        /*
+         * Metoden "ForeslåEfterVarer" foreslårer en opskrift ud fra udvalgte varer 
+         */
+
+        //!!!!!!!!!!!!!!GAMLE GUI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //public List<Opskrift> ForeslåEfterVarer(string[] vareNavn)
+        //{
+        //    List<Opskrift> forslag = new List<Opskrift>();
+        //    foreach (string str in vareNavn)
+        //    {
+        //        foreach (Opskrift o in Opskrifter)
+        //        {
+        //            foreach (Vare v in o.Ingredienser)
+        //            {
+        //                if (v._Navn == str && !forslag.Contains(o))
+        //                {
+        //                    forslag.Add(o);
+        //                }
+        //            }   
+        //        }
+        //    }
+        //    return forslag;
+        //}
+
         public List<Opskrift> ForeslåEfterVarer(string[] vareNavn)
         {
             List<Opskrift> forslag = new List<Opskrift>();
-            foreach (string str in vareNavn)
+            foreach (Opskrift o in Opskrifter)
             {
-                foreach (Opskrift o in Opskrifter)
+                int y = 0;
+                foreach (string str in vareNavn)
                 {
                     foreach (Vare v in o.Ingredienser)
-	                {
-		                if (v._Navn == str && !forslag.Contains(o))
-	                    {
+                    {
+                        if (v._Navn == str)
+                        {
+                            y++;
+                        }
+                        if (y == vareNavn.Count() && !forslag.Contains(o))
+                        {
                             forslag.Add(o);
-    	                }
-                    }   
+                        }
+                    }
                 }
             }
             return forslag;
         }
-
+        /*
+         * Metoden "ForeslåEfterListe" foreslårer en opskrift ud fra en udvalgt liste, f.eks. husbeholdning.
+         */
         public List<Opskrift> ForeslåEfterListe(List<Vare> liste) 
         {
             List<Opskrift> forslag = new List<Opskrift>();
@@ -96,6 +134,7 @@ namespace MadspildGUI
                                 if (opskriftVare._Navn == listeVare._Navn)
                                 {
                                     ingrediensMatch++;
+                                    break; // tilføjet fra console
                                 }
                             }
                             if (topMatch < ingrediensMatch)
@@ -117,12 +156,15 @@ namespace MadspildGUI
             }
             return forslag;
         }
-
-        public void TilføjOpskriftTilFil(string retNavn, string[] Ingredienser, string[] Instruktioner)
+        /*
+         * Metoden "TilføjOpskriftTilFil" tilføjer en opskrift til fil, ud fra parameterne retnavn, ingrediencer og instruktioner.
+         */
+        public void TilføjOpskriftTilFil(string retNavn, string[] Ingredienser, string[] Instruktioner, string filnavn)
         {
+            Indlæs(filnavn); // tilføjet fra console
             bool eksiterendeVare = false;
             string opskriftfilSti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
-                Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\Opskrifter.txt";
+                Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
             var fil = new List<string>(File.ReadAllLines(opskriftfilSti));
             foreach (Opskrift o in Opskrifter)
             {
@@ -154,7 +196,6 @@ namespace MadspildGUI
                     file.Write("---");
                 }
             }
-            Indlæs("Opskrifter.txt");
-        }   
+        }
     }
 }

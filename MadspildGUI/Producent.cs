@@ -6,12 +6,20 @@ using System.IO;
 
 namespace MadspildGUI
 {
+    /*
+     * Klassen Producent producerer de varer som kan handles, ud fra en fil
+     * og på den måde laver den et produktkatalog.
+     */
     public class Producent
     {
         private const int navnIndex = 0, stkIndex = 1, vægtIndex = 2,
             mindstHoldbarIndex = 3, sidsteAnvendelseIndex = 4;
         List<Vare> produktKatalog = new List<Vare>();
 
+        /*
+         * Metoden "setDato" får en string, og hvis det er på formen "dd/mm/yy" konvertere den stringen til en Datetime.
+         * Derudover kan den også returnerer en DateTime, hvis den får antallet af dage en vare kan holde sig som parameter.
+         */
         public DateTime setDato(string dato)
         {
             if (dato.Contains("/"))
@@ -30,8 +38,7 @@ namespace MadspildGUI
         /*
         * Metoden "Varedannelse" Indlæser fra en fil og instansiere varer over i en liste.
         */
-        public List<Vare> Varedannelse(string filnavn, List<Vare> liste)
-
+        private List<Vare> Varedannelse(string filnavn, List<Vare> liste)
         {
             string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
@@ -81,7 +88,9 @@ namespace MadspildGUI
             }
             return liste;
         }
-
+        /*
+         * Metoden "indlaesProdukter" kalder på Varedannelse metoden, med filnavn som parameter, og returnerer produktliste. 
+         */
         public List<Vare> indlaesProdukter(string filnavn)
         {
             List<Vare> produktListe = new List<Vare>();
@@ -89,7 +98,6 @@ namespace MadspildGUI
             Varedannelse(filnavn, produktListe);
             return produktListe;
         }
-
     }
 }
 

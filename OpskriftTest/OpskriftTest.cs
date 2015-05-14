@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using Madspildprojekt;
+using MadspildGUI;
+using System.Windows.Forms;
 
 namespace MadspildprojektTests
 {
@@ -400,6 +401,7 @@ namespace MadspildprojektTests
         public void TilføjOpskriftTilFilTest() 
         {
             //Arrange
+            string filnavn = "OpskrifterTest.txt";
             string retNavn = "Tomatsuppe";
             string[] ingredienser = { "1000_g_cherrytomat", "4_tomat", "4_fed hvidløg", "2_rødløg",
                                         "1_ciabattabrød", "1_rød chili", "0,25_cremefraiche" };
@@ -425,7 +427,7 @@ namespace MadspildprojektTests
                                       };
             Opskrift to = new Opskrift();
             //Act
-            to.TilføjOpskriftTilFil(retNavn, ingredienser, instruktioner);
+            to.TilføjOpskriftTilFil(retNavn, ingredienser, instruktioner, filnavn);
 
             //Assert
             Assert.AreEqual(retNavn, to.Opskrifter[to.Opskrifter.Count-1].retNavn);

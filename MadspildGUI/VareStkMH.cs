@@ -30,7 +30,10 @@ namespace MadspildGUI
             get { return _Stk; }
             set { _Stk = value; }
         }
-
+        /*
+         * Metoden "ForGammelDatoTjek" overskriver den som findes i superklassen Vare og
+         * tjekker efter Mindstholdbar dato i forhold til et DateTime input.
+         */
         public override bool ForGammelDatoTjek(DateTime dato)
         {
             if (_MindstHoldbar <= dato)
@@ -40,7 +43,10 @@ namespace MadspildGUI
             }
             return false;
         }
-
+        /*
+         * Metoden "SletVareFraListeHvisGammel" overskriver den som findes i superklassen Vare
+         * og fjerner en Vare fra en liste hvis Varen har overskredet datoen.
+         */ 
         public override bool SletVareFraListeHvisGammel(DateTime dato, List<Vare> liste)
         {
             if (_MindstHoldbar <= dato)
@@ -50,17 +56,23 @@ namespace MadspildGUI
             }
             return false;
         }
-
+        /* 
+         * Metoden "VolumenTjek" returnerer Stk fra en instans
+         */ 
         public override decimal VolumenTjek()
         {
             return this._Stk;
         }
-
+        /* 
+         * Metoden "SetVolumen" sætter en instansens stk til det input, som "SetVolumen" får.
+         */
         public override void setVolumen(decimal volumen)
         {
             this._Stk = volumen;
         }
-
+        /* 
+        * Metoden "skrivInfoTilFil" returner en string med _Navn, _Stk og _Mindstholdbar på en specifik måde.
+        */
         public override string skrivInfoTilFil()
         {
             return _Navn + "_" + _Stk + "_0_" + _MindstHoldbar.ToShortDateString() + "_0";
