@@ -138,6 +138,7 @@ namespace MadspildGUI
         private void foreslaaOpskrifterEfterBeholdningKnap_Click(object sender, EventArgs e)
         {
             List<Opskrift> forslag = o.ForeslåEfterListe(h.HusBeholdning);
+            o.Opskrifter = forslag;
             listBoxOpskrifter.Items.Clear();
             foreach (Opskrift op in forslag)
             {
@@ -254,9 +255,17 @@ namespace MadspildGUI
         }
 
         private void Tilføj_Opskrifts_Ingredienser_Til_Inkoebskurv_Click(object sender, EventArgs e)
-        {            
-            i.UdfraOpskrift(o.Opskrifter[listBoxOpskrifter.SelectedIndex], h);
-            IndlaesIndkoebskurv();           
+        {
+            if (listBoxOpskrifter.SelectedIndex == -1)
+            {
+                MessageBox.Show("Du skal markere en opskrift!");
+            }
+            else
+	        {
+                i.UdfraOpskrift(o.Opskrifter[listBoxOpskrifter.SelectedIndex], h);
+                IndlaesIndkoebskurv();
+                MessageBox.Show("De manglende varer er blevet tilføjet til inkøbskurven");
+            }
         }
 
         private void funktionsKnapperOpskrifter_Paint(object sender, PaintEventArgs e)
@@ -266,15 +275,26 @@ namespace MadspildGUI
 
         private void Opskriften_Er_Lavet_Click(object sender, EventArgs e)
         {
-            try
+            if (listBoxOpskrifter.SelectedIndex == -1)
             {
-                h.SletVareUdFraOpskrift(o.Opskrifter[listBoxOpskrifter.SelectedIndex], "Husholdning.txt");
+                MessageBox.Show("Du skal markere en ret før du laver den!");
+            }
+            else
+            {
+                bool k = true;
+                k = h.SletVareUdFraOpskrift(o.Opskrifter[listBoxOpskrifter.SelectedIndex], "Husholdning.txt");
                 IndlaesVarerIHus();
+                if (k == true)
+                {
+                    MessageBox.Show("Du har lavet retten " + o.Opskrifter[listBoxOpskrifter.SelectedIndex].retNavn + " og ingredienserne er fjernet fra beholdningen");
+                }
+                else
+                {
+                    MessageBox.Show("Du har ikke nok varer til at lave " + o.Opskrifter[listBoxOpskrifter.SelectedIndex].retNavn);
+                }
+                IndlaesOpskrifter();
             }
-            catch (ArgumentNullException)
-            {
-                MessageBox.Show("Du har ikke nok varer til at lave denne ret!");  
-            }
+
         }    
         private void visOpskrifterKnap_Click(object sender, EventArgs e)
         {
@@ -287,6 +307,7 @@ namespace MadspildGUI
             if (foreslaaPrompt.ShowDialog() == DialogResult.OK)
             {
                 opskrifterIGUI = foreslaaPrompt.Forslag;
+                o.Opskrifter = foreslaaPrompt.Forslag;
                 listBoxOpskrifter.Items.Clear();
                 foreach (Opskrift op in foreslaaPrompt.Forslag)
                 {
@@ -294,5 +315,11 @@ namespace MadspildGUI
                 }
             }
         }
+
+        private void MadspildGUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
