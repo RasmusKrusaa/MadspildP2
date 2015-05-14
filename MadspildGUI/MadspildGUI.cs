@@ -321,5 +321,10 @@ namespace MadspildGUI
 
         }
 
+        private void listBoxOpskrifter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -52,9 +52,9 @@
             this.visOpskrifterKnap = new System.Windows.Forms.Button();
             this.foreslaaEfterVarerKnap = new System.Windows.Forms.Button();
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick = new System.Windows.Forms.Button();
+            this.Opskriften_er_Lavet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.Opskriften_er_Lavet = new System.Windows.Forms.Button();
             this.navBar.SuspendLayout();
             this.husbeholdning.SuspendLayout();
             this.husholdningTablePanel.SuspendLayout();
@@ -86,7 +86,7 @@
             this.husbeholdning.Location = new System.Drawing.Point(4, 22);
             this.husbeholdning.Name = "husbeholdning";
             this.husbeholdning.Padding = new System.Windows.Forms.Padding(3);
-            this.husbeholdning.Size = new System.Drawing.Size(549, 346);
+            this.husbeholdning.Size = new System.Drawing.Size(565, 346);
             this.husbeholdning.TabIndex = 1;
             this.husbeholdning.Text = "Husbeholdning";
             this.husbeholdning.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             this.husholdningTablePanel.RowCount = 2;
             this.husholdningTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.81407F));
             this.husholdningTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.18593F));
-            this.husholdningTablePanel.Size = new System.Drawing.Size(543, 340);
+            this.husholdningTablePanel.Size = new System.Drawing.Size(559, 340);
             this.husholdningTablePanel.TabIndex = 2;
             // 
             // funktionsKnapperHus
@@ -114,7 +114,7 @@
             this.funktionsKnapperHus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.funktionsKnapperHus.Location = new System.Drawing.Point(3, 304);
             this.funktionsKnapperHus.Name = "funktionsKnapperHus";
-            this.funktionsKnapperHus.Size = new System.Drawing.Size(537, 33);
+            this.funktionsKnapperHus.Size = new System.Drawing.Size(553, 33);
             this.funktionsKnapperHus.TabIndex = 1;
             // 
             // tilfoejVareKnapHus
@@ -143,7 +143,7 @@
             this.ListBoxVarerIHus.FormattingEnabled = true;
             this.ListBoxVarerIHus.Location = new System.Drawing.Point(3, 3);
             this.ListBoxVarerIHus.Name = "ListBoxVarerIHus";
-            this.ListBoxVarerIHus.Size = new System.Drawing.Size(537, 295);
+            this.ListBoxVarerIHus.Size = new System.Drawing.Size(553, 295);
             this.ListBoxVarerIHus.TabIndex = 0;
             this.ListBoxVarerIHus.SelectedIndexChanged += new System.EventHandler(this.ListBoxVarerIHus_SelectedIndexChanged);
             this.ListBoxVarerIHus.DoubleClick += new System.EventHandler(this.ListBoxVarerIHus_DoubleClick);
@@ -155,7 +155,7 @@
             this.indkoeb.Location = new System.Drawing.Point(4, 22);
             this.indkoeb.Name = "indkoeb";
             this.indkoeb.Padding = new System.Windows.Forms.Padding(3);
-            this.indkoeb.Size = new System.Drawing.Size(549, 346);
+            this.indkoeb.Size = new System.Drawing.Size(565, 346);
             this.indkoeb.TabIndex = 0;
             this.indkoeb.Tag = "";
             this.indkoeb.Text = "Indkøbskurv";
@@ -167,7 +167,7 @@
             this.ListBoxIndkoeb.FormattingEnabled = true;
             this.ListBoxIndkoeb.Location = new System.Drawing.Point(3, 3);
             this.ListBoxIndkoeb.Name = "ListBoxIndkoeb";
-            this.ListBoxIndkoeb.Size = new System.Drawing.Size(543, 313);
+            this.ListBoxIndkoeb.Size = new System.Drawing.Size(559, 313);
             this.ListBoxIndkoeb.TabIndex = 3;
             this.ListBoxIndkoeb.SelectedIndexChanged += new System.EventHandler(this.ListBoxIndkoeb_SelectedIndexChanged);
             this.ListBoxIndkoeb.DoubleClick += new System.EventHandler(this.ListBoxIndkoeb_Doubleclick);
@@ -180,7 +180,7 @@
             this.FunktionsKnapperIndKoeb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.FunktionsKnapperIndKoeb.Location = new System.Drawing.Point(3, 316);
             this.FunktionsKnapperIndKoeb.Name = "FunktionsKnapperIndKoeb";
-            this.FunktionsKnapperIndKoeb.Size = new System.Drawing.Size(543, 27);
+            this.FunktionsKnapperIndKoeb.Size = new System.Drawing.Size(559, 27);
             this.FunktionsKnapperIndKoeb.TabIndex = 2;
             // 
             // TilfoejVareKnapIndkoeb
@@ -266,6 +266,7 @@
             this.listBoxOpskrifter.Name = "listBoxOpskrifter";
             this.listBoxOpskrifter.Size = new System.Drawing.Size(218, 293);
             this.listBoxOpskrifter.TabIndex = 0;
+            this.listBoxOpskrifter.SelectedIndexChanged += new System.EventHandler(this.listBoxOpskrifter_SelectedIndexChanged);
             this.listBoxOpskrifter.DoubleClick += new System.EventHandler(this.listBoxOpskrifter_DoubleClick);
             // 
             // listBoxOpskriftInfo
@@ -343,6 +344,16 @@
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick.UseVisualStyleBackColor = true;
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Click += new System.EventHandler(this.Tilføj_Opskrifts_Ingredienser_Til_Inkoebskurv_Click);
             // 
+            // Opskriften_er_Lavet
+            // 
+            this.Opskriften_er_Lavet.Location = new System.Drawing.Point(475, 3);
+            this.Opskriften_er_Lavet.Name = "Opskriften_er_Lavet";
+            this.Opskriften_er_Lavet.Size = new System.Drawing.Size(75, 30);
+            this.Opskriften_er_Lavet.TabIndex = 5;
+            this.Opskriften_er_Lavet.Text = "Lavet";
+            this.Opskriften_er_Lavet.UseVisualStyleBackColor = true;
+            this.Opskriften_er_Lavet.Click += new System.EventHandler(this.Opskriften_Er_Lavet_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(199, 3);
@@ -362,16 +373,6 @@
             this.button2.Text = "Opskrift Udført";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Opskriften_Er_Lavet_Click);
-            // 
-            // Opskriften_er_Lavet
-            // 
-            this.Opskriften_er_Lavet.Location = new System.Drawing.Point(475, 3);
-            this.Opskriften_er_Lavet.Name = "Opskriften_er_Lavet";
-            this.Opskriften_er_Lavet.Size = new System.Drawing.Size(75, 30);
-            this.Opskriften_er_Lavet.TabIndex = 5;
-            this.Opskriften_er_Lavet.Text = "Lavet";
-            this.Opskriften_er_Lavet.UseVisualStyleBackColor = true;
-            this.Opskriften_er_Lavet.Click += new System.EventHandler(this.Opskriften_Er_Lavet_Click);
             // 
             // MadspildGUI
             // 
