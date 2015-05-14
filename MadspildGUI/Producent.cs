@@ -38,44 +38,51 @@ namespace MadspildGUI
             foreach (string line in File.ReadAllLines(filsti))
             {
                 string[] str = line.Split('_');
-                DateTime dagsDato = DateTime.Today;
-                if (str[stkIndex] != "0" && str[mindstHoldbarIndex] != "0")
+                if (str[0] == "")
                 {
-                    VareStkMH v = new VareStkMH(str[navnIndex]);
-                    v.MindstHoldbar = setDato(str[mindstHoldbarIndex]);
-                    v.Stk = decimal.Parse(str[stkIndex]);
-                    liste.Add(v);
-                }
-                else if (str[vægtIndex] != "0" && str[mindstHoldbarIndex] != "0")
-                {
-                    VareVægtMH v = new VareVægtMH(str[navnIndex]);
-                    v.MindstHoldbar = setDato(str[mindstHoldbarIndex]);
-                    v.Vægt = decimal.Parse(str[vægtIndex]);
-                    liste.Add(v);
-                }
-                else if (str[stkIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
-                {
-                    VareStkSA v = new VareStkSA(str[navnIndex]);
-                    v.SidsteAnvendelse = setDato(str[sidsteAnvendelseIndex]);
-                    v.Stk = decimal.Parse(str[stkIndex]);
-                    liste.Add(v);
-                }
-                else if (str[vægtIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
-                {
-                    VareVægtSA v = new VareVægtSA(str[navnIndex]);
-                    v.SidsteAnvendelse = setDato(str[sidsteAnvendelseIndex]);
-                    v.Vægt = decimal.Parse(str[vægtIndex]);
-                    liste.Add(v);
+                    return liste;
                 }
                 else
                 {
-                    try
+                    DateTime dagsDato = DateTime.Today;
+                    if (str[stkIndex] != "0" && str[mindstHoldbarIndex] != "0")
                     {
-                        throw new VareTypeNotFoundException("Varetype ikke fundet.");
+                        VareStkMH v = new VareStkMH(str[navnIndex]);
+                        v.MindstHoldbar = setDato(str[mindstHoldbarIndex]);
+                        v.Stk = decimal.Parse(str[stkIndex]);
+                        liste.Add(v);
                     }
-                    catch (VareTypeNotFoundException ex)
+                    else if (str[vægtIndex] != "0" && str[mindstHoldbarIndex] != "0")
                     {
-                        Console.WriteLine(ex.Message);
+                        VareVægtMH v = new VareVægtMH(str[navnIndex]);
+                        v.MindstHoldbar = setDato(str[mindstHoldbarIndex]);
+                        v.Vægt = decimal.Parse(str[vægtIndex]);
+                        liste.Add(v);
+                    }
+                    else if (str[stkIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
+                    {
+                        VareStkSA v = new VareStkSA(str[navnIndex]);
+                        v.SidsteAnvendelse = setDato(str[sidsteAnvendelseIndex]);
+                        v.Stk = decimal.Parse(str[stkIndex]);
+                        liste.Add(v);
+                    }
+                    else if (str[vægtIndex] != "0" && str[sidsteAnvendelseIndex] != "0")
+                    {
+                        VareVægtSA v = new VareVægtSA(str[navnIndex]);
+                        v.SidsteAnvendelse = setDato(str[sidsteAnvendelseIndex]);
+                        v.Vægt = decimal.Parse(str[vægtIndex]);
+                        liste.Add(v);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            throw new VareTypeNotFoundException("Varetype ikke fundet.");
+                        }
+                        catch (VareTypeNotFoundException ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                     }
                 }
             }

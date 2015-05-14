@@ -49,36 +49,76 @@ namespace MadspildGUI
             }
         }
 
-        public void SletVareUdFraOpskrift(Opskrift o, string filnavn)
+        public bool SletVareUdFraOpskrift(Opskrift o, string filnavn)
         {
-            decimal OpskriftVolumen = 0, HusbeholdningVolumen = 0; // erklærer viabler.
-
+            List<Vare> Templiste = new List<Vare>();
+            List<string> VarerSlettetFraOpskrift = new List<string>();
+            decimal OpskriftVolumen = 0, HusbeholdningVolumen = 0, FlerevareVolumen = 0; // erklærer viabler.
+            int Varematch = 0;
             foreach (Vare v in o.Ingredienser)
             {
+                Templiste.Clear();
                 for (int i = 0; i < HusBeholdning.Count; i++)
                 {
+                    
                     if (v._Navn == HusBeholdning[i]._Navn)
                     {
+                        Varematch++;
                         OpskriftVolumen = v.VolumenTjek();
                         HusbeholdningVolumen = HusBeholdning[i].VolumenTjek();
                         HusbeholdningVolumen = HusbeholdningVolumen - OpskriftVolumen;
-                        if (HusbeholdningVolumen == 0)
-                        {
-                            throw new ArgumentNullException();
-                        }
-                        else if (HusbeholdningVolumen > 0)
-                        {
-                            HusBeholdning[i].setVolumen(HusbeholdningVolumen);
-                        }
-                        else if (HusbeholdningVolumen < 0)
+                        if (HusbeholdningVolumen == 0 && !VarerSlettetFraOpskrift.Contains(v._Navn))
                         {
                             SletVare(HusBeholdning[i], HusBeholdning);
                             i--;
+                            VarerSlettetFraOpskrift.Add(HusBeholdning[i]._Navn);
+                        }
+                        else if (HusbeholdningVolumen > 0 && !VarerSlettetFraOpskrift.Contains(v._Navn))
+                        {
+                            HusBeholdning[i].setVolumen(HusbeholdningVolumen);
+                            VarerSlettetFraOpskrift.Add(HusBeholdning[i]._Navn);
+                        }
+                        else if (HusbeholdningVolumen < 0)
+                        {
+                            if (HusBeholdning.FindAll(x => x._Navn == v._Navn).Count() == 1)
+                            {
+                              return false;  
+                            }
+                            else if (HusBeholdning.FindAll(x => x._Navn == v._Navn).Count() > 1)
+                            {
+                                Templiste = HusBeholdning.FindAll(x => x._Navn == v._Navn);
+                                foreach (Vare tempvare in Templiste)
+                                {
+                                    FlerevareVolumen += tempvare.VolumenTjek();
+                                }    
+                                if (OpskriftVolumen > FlerevareVolumen)
+                                    {
+                                        return false;
+                                    }
+                                    else if (OpskriftVolumen <= FlerevareVolumen)
+                                    {
+                                        Templiste.Sort((a, b) => a.GetDate().CompareTo(b.GetDate()));
+                                        OpskriftVolumen -= Templiste[0].VolumenTjek();
+                                        v.setVolumen(OpskriftVolumen);
+                                        SletVare(HusBeholdning[i], HusBeholdning);
+                                        i--;
+                                    }
+                               
+                            }
+
                         } 
                     }
-                }
+                }              
             }
-            SletVareFraFil(filnavn, HusBeholdning);
+            if (Varematch < o.Ingredienser.Count())
+            {
+                return false;
+            }
+            else
+            {
+                SletVareFraFil(filnavn, HusBeholdning);
+                return true;
+            }
         }
     }
 }

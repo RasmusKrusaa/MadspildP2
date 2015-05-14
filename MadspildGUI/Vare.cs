@@ -32,5 +32,9 @@ namespace MadspildGUI
         {
             return "";
         }
+        public virtual DateTime GetDate()
+        {
+            return DateTime.Now;
+        }
     }
 }

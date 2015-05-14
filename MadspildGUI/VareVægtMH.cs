@@ -51,7 +51,10 @@ namespace MadspildGUI
             }
             return false;
         }
-
+        public override DateTime GetDate()
+        {
+            return _MindstHoldbar;
+        }
         public override decimal VolumenTjek()
         {
             return this._Vægt;

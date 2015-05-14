@@ -46,7 +46,10 @@ namespace MadspildGUI
             }
             return false;
         }
-
+        public override DateTime GetDate()
+        {
+            return _SidsteAnvendelse;
+        }
         public override decimal VolumenTjek()
         {
             return this._Stk;
