@@ -38,3 +38,4 @@ C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Tilf
 C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
 C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
 >>>>>>> origin/master
+C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources

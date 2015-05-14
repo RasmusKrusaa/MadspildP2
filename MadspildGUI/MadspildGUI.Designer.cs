@@ -49,13 +49,10 @@
             this.funktionsKnapperOpskrifter = new System.Windows.Forms.FlowLayoutPanel();
             this.tilfoejOpskriftKnap = new System.Windows.Forms.Button();
             this.foreslaaOpskrifterEfterBeholdningKnap = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-=======
             this.visOpskrifterKnap = new System.Windows.Forms.Button();
             this.foreslaaEfterVarerKnap = new System.Windows.Forms.Button();
->>>>>>> origin/master
             this.navBar.SuspendLayout();
             this.husbeholdning.SuspendLayout();
             this.husholdningTablePanel.SuspendLayout();
@@ -283,13 +280,8 @@
             // 
             this.funktionsKnapperOpskrifter.Controls.Add(this.tilfoejOpskriftKnap);
             this.funktionsKnapperOpskrifter.Controls.Add(this.foreslaaOpskrifterEfterBeholdningKnap);
-<<<<<<< HEAD
-            this.funktionsKnapperOpskrifter.Controls.Add(this.button1);
-            this.funktionsKnapperOpskrifter.Controls.Add(this.button2);
-=======
             this.funktionsKnapperOpskrifter.Controls.Add(this.visOpskrifterKnap);
             this.funktionsKnapperOpskrifter.Controls.Add(this.foreslaaEfterVarerKnap);
->>>>>>> origin/master
             this.funktionsKnapperOpskrifter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.funktionsKnapperOpskrifter.Location = new System.Drawing.Point(3, 293);
             this.funktionsKnapperOpskrifter.Name = "funktionsKnapperOpskrifter";
@@ -317,7 +309,6 @@
             this.foreslaaOpskrifterEfterBeholdningKnap.UseVisualStyleBackColor = true;
             this.foreslaaOpskrifterEfterBeholdningKnap.Click += new System.EventHandler(this.foreslaaOpskrifterEfterBeholdningKnap_Click);
             // 
-<<<<<<< HEAD
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(199, 3);
@@ -337,7 +328,6 @@
             this.button2.Text = "Opskrift Udført";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Opskriften_Er_Lavet_Click);
-=======
             // visOpskrifterKnap
             // 
             this.visOpskrifterKnap.Location = new System.Drawing.Point(223, 3);
@@ -357,7 +347,6 @@
             this.foreslaaEfterVarerKnap.Text = "Foreslå efter varer";
             this.foreslaaEfterVarerKnap.UseVisualStyleBackColor = true;
             this.foreslaaEfterVarerKnap.Click += new System.EventHandler(this.foreslaaEfterVarerKnap_Click);
->>>>>>> origin/master
             // 
             // MadspildGUI
             // 
@@ -405,13 +394,11 @@
         private System.Windows.Forms.Button tilfoejOpskriftKnap;
         private System.Windows.Forms.TableLayoutPanel husholdningTablePanel;
         private System.Windows.Forms.Button foreslaaOpskrifterEfterBeholdningKnap;
-<<<<<<< HEAD
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-=======
         private System.Windows.Forms.Button visOpskrifterKnap;
         private System.Windows.Forms.Button foreslaaEfterVarerKnap;
->>>>>>> origin/master
+
     }
 }
 
