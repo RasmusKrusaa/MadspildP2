@@ -267,7 +267,6 @@ namespace MadspildGUI
 
         private void Opskriften_Er_Lavet_Click(object sender, EventArgs e)
         {
-
             try
             {
                 h.SletVareUdFraOpskrift(o.Opskrifter[listBoxOpskrifter.SelectedIndex], "Husholdning.txt");
