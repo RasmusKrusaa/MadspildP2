@@ -66,7 +66,7 @@ namespace MadspildGUI
         }
 
         private void TilføjTilInkoebskruv_Click(object sender, EventArgs e)
-        {
+        {               
             DialogResult = DialogResult.OK;
             Close();
         }

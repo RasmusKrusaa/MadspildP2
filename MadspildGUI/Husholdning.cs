@@ -13,7 +13,7 @@ namespace MadspildGUI
     */
     public class Husholdning : Beholdning
     {
-        public List<Vare> HusBeholdning = new List<Vare>(); // skal være private ?
+        public List<Vare> HusBeholdning = new List<Vare>(); // skal være private
 
         /*
          *Metoden "DatoAdvarsel" informerer brugeren om udløbelende varer, baseret på sidsteanvendelses- eller mindstholdbarhedsdato.
@@ -62,15 +62,19 @@ namespace MadspildGUI
                         OpskriftVolumen = v.VolumenTjek();
                         HusbeholdningVolumen = HusBeholdning[i].VolumenTjek();
                         HusbeholdningVolumen = HusbeholdningVolumen - OpskriftVolumen;
-                        if (HusbeholdningVolumen != 0)
+                        if (HusbeholdningVolumen == 0)
+                        {
+                            throw new ArgumentNullException();
+                        }
+                        else if (HusbeholdningVolumen > 0)
                         {
                             HusBeholdning[i].setVolumen(HusbeholdningVolumen);
                         }
-                        else
+                        else if (HusbeholdningVolumen < 0)
                         {
                             SletVare(HusBeholdning[i], HusBeholdning);
                             i--;
-                        }
+                        } 
                     }
                 }
             }

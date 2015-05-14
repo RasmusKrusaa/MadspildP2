@@ -16,7 +16,7 @@ namespace MadspildGUI
         public Beholdning b = new Beholdning();
         public Opskrift o = new Opskrift();
         public List<Opskrift> opskrifterIGUI = new List<Opskrift>();
-
+        public Indkøb i = new Indkøb();
         public MadspildGUI()
         {
             InitializeComponent();
@@ -147,43 +147,51 @@ namespace MadspildGUI
         }
         public void IndlaesIndkoebskurv() // public da den skal kaldes fra den anden klasse
         {
-            IndkoebskurvPrompt InkPromt = new IndkoebskurvPrompt();
-            Indkoebskurv = InkPromt.PropMidlertidigIndkoebskurv;
-            foreach (Vare v in Indkoebskurv)
+            ListBoxIndkoeb.Items.Clear();
+            foreach (Vare v in i.Indkøbskurv)
             {
-                ListBoxIndkoeb.Items.Add(v);
+                ListBoxIndkoeb.Items.Add(v._Navn);
             }
         }
 
         private void ListBoxIndkoeb_Doubleclick(object sender, EventArgs e)
         {
-            int antalVarer = Indkoebskurv.Count;
+            int antalVarer = i.Indkøbskurv.Count;
             if (ListBoxIndkoeb.SelectedIndex >= 0 &&
                 ListBoxIndkoeb.SelectedIndex <= antalVarer)
             {
-                MessageBox.Show(Indkoebskurv[ListBoxIndkoeb.SelectedIndex].ToString(),
-                Indkoebskurv[ListBoxIndkoeb.SelectedIndex]._Navn);
+                if (i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareStkMH || i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareStkSA)
+                {
+                    MessageBox.Show("Stk: " + i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex].VolumenTjek().ToString(),
+                    i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex]._Navn);
+                }
+                else if (i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareVægtMH || i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareVægtSA)
+                {
+                    MessageBox.Show("Vægt: " + i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex].VolumenTjek().ToString() + "g",
+                    i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex]._Navn);
+                }
+                
             }
         }
 
         private void TiljoejTilBeholdningKnap_Click(object sender, EventArgs e)
         {
-            //Indkøb i = new Indkøb();
-            //Producent p = new Producent();
-            //List<Vare> produktkatalog = new List<Vare>();
-            //p.Varedannelse("Produktkatalog.txt", produktkatalog);
-
             bool temp = false;
             temp = ValidTilfoejTilHusbeholdning();
-
+            Producent P = new Producent();
+            List<Vare> Produktkatalog = P.indlaesProdukter("Produktkatalog.txt");
             if (temp == true)
             {
-                foreach (Vare v in Indkoebskurv)
-                {
-                    //VarerIHus.Add(v);
-                    ListBoxVarerIHus.Items.Add(v._Navn);
-                }
-
+                i.TilføjTilHjemmeBeholdning(h.HusBeholdning,Produktkatalog);
+                ListBoxIndkoeb.Items.Clear();
+                h.SkrivListeAfVarerTilFil("Husholdning.txt", h.HusBeholdning);
+                IndlaesVarerIHus();
+                //foreach (Vare v in i.Indkøbskurv)
+                //{
+                //    h.HusBeholdning.Add(v);
+                //    ListBoxVarerIHus.Items.Add(v._Navn);
+                //    ListBoxIndkoeb.Items.Clear();
+                //}
             }
         }
         private bool ValidTilfoejTilHusbeholdning()
@@ -197,9 +205,17 @@ namespace MadspildGUI
 
         private void SletVareKnapIndkoeb_Click(object sender, EventArgs e)
         {
-            Indkøb i = new Indkøb();
-            ListBoxIndkoeb.Items.Remove(ListBoxIndkoeb.SelectedIndex);
-            IndlaesIndkoebskurv();
+            if (ListBoxIndkoeb.SelectedIndex >= 0 &&
+                ListBoxIndkoeb.SelectedIndex <= i.Indkøbskurv.Count)
+            {
+                ListBoxIndkoeb.Items.Remove(ListBoxIndkoeb.SelectedIndex);
+                i.Indkøbskurv.Remove(i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex]);
+                IndlaesIndkoebskurv();
+            }
+            else
+            {
+                MessageBox.Show("Markér venligst den vare, du ønsker at slette.", "Markér en vare");
+            }
         }
 
         private void tilfoejOpskriftKnap_Click(object sender, EventArgs e)
@@ -219,7 +235,10 @@ namespace MadspildGUI
                 ListBoxIndkoeb.Items.Clear();
                 foreach (Vare v in indkoebskurvPrompt.PropMidlertidigIndkoebskurv)
                 {
-                    Indkoebskurv.Add(v);
+                    i.Indkøbskurv.Add(v);                    
+                }
+                foreach (Vare v in i.Indkøbskurv)
+                {
                     ListBoxIndkoeb.Items.Add(v._Navn);
                 }
             }
@@ -228,6 +247,36 @@ namespace MadspildGUI
         private void ListBoxIndkoeb_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ListBoxVarerIHus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tilføj_Opskrifts_Ingredienser_Til_Inkoebskurv_Click(object sender, EventArgs e)
+        {            
+            i.UdfraOpskrift(o.Opskrifter[listBoxOpskrifter.SelectedIndex], h);
+            IndlaesIndkoebskurv();           
+        }
+
+        private void funktionsKnapperOpskrifter_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Opskriften_Er_Lavet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                h.SletVareUdFraOpskrift(o.Opskrifter[listBoxOpskrifter.SelectedIndex], "Husholdning.txt");
+                IndlaesVarerIHus();
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Du har ikke nok varer til at lave denne ret!");  
+            }
+            
         }
     }
 }

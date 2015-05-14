@@ -49,6 +49,8 @@
             this.funktionsKnapperOpskrifter = new System.Windows.Forms.FlowLayoutPanel();
             this.tilfoejOpskriftKnap = new System.Windows.Forms.Button();
             this.foreslaaOpskrifterEfterBeholdningKnap = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.navBar.SuspendLayout();
             this.husbeholdning.SuspendLayout();
             this.husholdningTablePanel.SuspendLayout();
@@ -139,6 +141,7 @@
             this.ListBoxVarerIHus.Name = "ListBoxVarerIHus";
             this.ListBoxVarerIHus.Size = new System.Drawing.Size(388, 257);
             this.ListBoxVarerIHus.TabIndex = 0;
+            this.ListBoxVarerIHus.SelectedIndexChanged += new System.EventHandler(this.ListBoxVarerIHus_SelectedIndexChanged);
             this.ListBoxVarerIHus.DoubleClick += new System.EventHandler(this.ListBoxVarerIHus_DoubleClick);
             // 
             // indkoeb
@@ -273,11 +276,14 @@
             // 
             this.funktionsKnapperOpskrifter.Controls.Add(this.tilfoejOpskriftKnap);
             this.funktionsKnapperOpskrifter.Controls.Add(this.foreslaaOpskrifterEfterBeholdningKnap);
+            this.funktionsKnapperOpskrifter.Controls.Add(this.button1);
+            this.funktionsKnapperOpskrifter.Controls.Add(this.button2);
             this.funktionsKnapperOpskrifter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.funktionsKnapperOpskrifter.Location = new System.Drawing.Point(3, 265);
             this.funktionsKnapperOpskrifter.Name = "funktionsKnapperOpskrifter";
             this.funktionsKnapperOpskrifter.Size = new System.Drawing.Size(388, 29);
             this.funktionsKnapperOpskrifter.TabIndex = 1;
+            this.funktionsKnapperOpskrifter.Paint += new System.Windows.Forms.PaintEventHandler(this.funktionsKnapperOpskrifter_Paint);
             // 
             // tilfoejOpskriftKnap
             // 
@@ -293,11 +299,31 @@
             // 
             this.foreslaaOpskrifterEfterBeholdningKnap.Location = new System.Drawing.Point(84, 3);
             this.foreslaaOpskrifterEfterBeholdningKnap.Name = "foreslaaOpskrifterEfterBeholdningKnap";
-            this.foreslaaOpskrifterEfterBeholdningKnap.Size = new System.Drawing.Size(133, 23);
+            this.foreslaaOpskrifterEfterBeholdningKnap.Size = new System.Drawing.Size(109, 23);
             this.foreslaaOpskrifterEfterBeholdningKnap.TabIndex = 1;
             this.foreslaaOpskrifterEfterBeholdningKnap.Text = "Foreslå efter husholdning";
             this.foreslaaOpskrifterEfterBeholdningKnap.UseVisualStyleBackColor = true;
             this.foreslaaOpskrifterEfterBeholdningKnap.Click += new System.EventHandler(this.foreslaaOpskrifterEfterBeholdningKnap_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(199, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Tilføj til Inkøbskurv";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Tilføj_Opskrifts_Ingredienser_Til_Inkoebskurv_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(309, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Opskrift Udført";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Opskriften_Er_Lavet_Click);
             // 
             // MadspildGUI
             // 
@@ -345,6 +371,8 @@
         private System.Windows.Forms.Button tilfoejOpskriftKnap;
         private System.Windows.Forms.TableLayoutPanel husholdningTablePanel;
         private System.Windows.Forms.Button foreslaaOpskrifterEfterBeholdningKnap;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

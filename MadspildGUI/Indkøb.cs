@@ -56,6 +56,7 @@ namespace MadspildGUI
 
         public void TilføjTilHjemmeBeholdning(List<Vare> liste, List<Vare> Produktkatalog)
         {
+            List<Vare> Templist = new List<Vare>();
             foreach (Vare v in Indkøbskurv)
             {
                 foreach (Vare Produkt in Produktkatalog)
@@ -63,14 +64,13 @@ namespace MadspildGUI
                     if (v._Navn == Produkt._Navn)
                     {
                         decimal Antal = Math.Ceiling(v.VolumenTjek() / Produkt.VolumenTjek());
-                        Indkøbskurv.Remove(v);
+                        //Indkøbskurv.Remove(v);
                         for (int i = 0; i < Antal; i++)
                         {
-                            Indkøbskurv.Add(Produkt);
+                            TilføjVare(Produkt, liste);
                         }
                     }
                 }
-                TilføjVare(v, liste);
             }
             Indkøbskurv = new List<Vare>();
         }
