@@ -56,16 +56,15 @@ namespace MadspildGUI
             }
             return false;
         }
-<<<<<<< HEAD
-        /* 
-         * Metoden "VolumenTjek" returnerer vægt fra en instans
-         */
-=======
+
         public override DateTime GetDate()
         {
             return SidsteAnvendelse;
         }
->>>>>>> origin/master
+        /* 
+         * Metoden "VolumenTjek" returnerer vægt fra en instans
+         */
+
         public override decimal VolumenTjek()
         {
             return this._Vægt;

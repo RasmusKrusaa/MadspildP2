@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1032]MadspildprojektTests</TopNode>
-  <SelectedNode>[0-1007]MadspildprojektTests.HusholdningTest.SletVareUdFraOpskriftTest</SelectedNode>
+  <TopNode>[0-1031]C:\Users\Lasse Buechek\Desktop\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll</TopNode>
+  <SelectedNode>[0-1032]MadspildprojektTests</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
     <Node UniqueName="[0-1031]C:\Users\Lasse Buechek\Desktop\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll" Expanded="true" />
