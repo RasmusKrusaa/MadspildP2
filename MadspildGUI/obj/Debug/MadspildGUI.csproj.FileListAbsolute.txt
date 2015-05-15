@@ -11,7 +11,6 @@ C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Tilfo
 C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
 C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
 C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-<<<<<<< HEAD
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
 C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
@@ -43,7 +42,6 @@ C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Fore
 C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
 C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
 C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-=======
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
@@ -57,4 +55,3 @@ C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Tilf
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
->>>>>>> origin/master

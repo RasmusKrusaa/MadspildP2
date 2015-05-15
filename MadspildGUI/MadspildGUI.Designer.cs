@@ -310,7 +310,7 @@
             this.foreslaaOpskrifterEfterBeholdningKnap.Name = "foreslaaOpskrifterEfterBeholdningKnap";
             this.foreslaaOpskrifterEfterBeholdningKnap.Size = new System.Drawing.Size(109, 30);
             this.foreslaaOpskrifterEfterBeholdningKnap.TabIndex = 1;
-            this.foreslaaOpskrifterEfterBeholdningKnap.Text = "Foreslå efter husholdning";
+            this.foreslaaOpskrifterEfterBeholdningKnap.Text = "Foreslå husholdning";
             this.foreslaaOpskrifterEfterBeholdningKnap.UseVisualStyleBackColor = true;
             this.foreslaaOpskrifterEfterBeholdningKnap.Click += new System.EventHandler(this.foreslaaOpskrifterEfterBeholdningKnap_Click);
             // 
@@ -340,7 +340,7 @@
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Name = "TilføjOpskriftsIngredienserTilInkoebskurvClick";
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Size = new System.Drawing.Size(75, 30);
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick.TabIndex = 4;
-            this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Text = "Inkøbskurv";
+            this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Text = "Indkøbskurv";
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick.UseVisualStyleBackColor = true;
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Click += new System.EventHandler(this.Tilføj_Opskrifts_Ingredienser_Til_Inkoebskurv_Click);
             // 
@@ -350,7 +350,7 @@
             this.Opskriften_er_Lavet.Name = "Opskriften_er_Lavet";
             this.Opskriften_er_Lavet.Size = new System.Drawing.Size(75, 30);
             this.Opskriften_er_Lavet.TabIndex = 5;
-            this.Opskriften_er_Lavet.Text = "Lavet";
+            this.Opskriften_er_Lavet.Text = "Lav ret";
             this.Opskriften_er_Lavet.UseVisualStyleBackColor = true;
             this.Opskriften_er_Lavet.Click += new System.EventHandler(this.Opskriften_Er_Lavet_Click);
             // 

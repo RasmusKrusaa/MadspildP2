@@ -7,18 +7,23 @@ using System.IO;
 namespace MadspildGUI
 {
     /*
-     * Klassen Producent producerer de varer som kan handles, ud fra en fil
-     * og på den måde laver den et produktkatalog.
+     * Klassen Producent producerer de varer som kan handles, ud fra en .txt fil
+     * og på den måde opretter den et produktkatalog.
      */
     public class Producent
     {
+        /*
+         * Konstanterne repræsentere pladser på linje i .txt filen.      
+         */
         private const int navnIndex = 0, stkIndex = 1, vægtIndex = 2,
             mindstHoldbarIndex = 3, sidsteAnvendelseIndex = 4;
         List<Vare> produktKatalog = new List<Vare>();
 
         /*
-         * Metoden "setDato" får en string, og hvis det er på formen "dd/mm/yy" konvertere den stringen til en Datetime.
-         * Derudover kan den også returnerer en DateTime, hvis den får antallet af dage en vare kan holde sig som parameter.
+         * Metoden "setDato" får en string, og hvis det er på formen "dd/mm/yy" konvertere  -
+         * den stringen til en Datetime.
+         * Derudover kan den også returnerer en DateTime, hvis den får antallet af dage -
+         * en vare kan holde sig som parameter.
          */
         public DateTime setDato(string dato)
         {
@@ -36,7 +41,8 @@ namespace MadspildGUI
             }
         }
         /*
-        * Metoden "Varedannelse" Indlæser fra en fil og instansiere varer over i en liste.
+        * Metoden "Varedannelse" Indlæser fra en .txt fil og instansiere linjerne til varer og smider dem  -
+         * over i en liste.
         */
         private List<Vare> Varedannelse(string filnavn, List<Vare> liste)
         {
@@ -80,23 +86,13 @@ namespace MadspildGUI
                         v.Vægt = decimal.Parse(str[vægtIndex]);
                         liste.Add(v);
                     }
-                    else
-                    {
-                        try
-                        {
-                            throw new VareTypeNotFoundException("Varetype ikke fundet.");
-                        }
-                        catch (VareTypeNotFoundException ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                    }
                 }
             }
             return liste;
         }
         /*
-         * Metoden "indlaesProdukter" kalder på Varedannelse metoden, med filnavn som parameter, og returnerer produktliste. 
+         * Hjælpemetoden "indlaesProdukter" kalder på Varedannelse metoden, med filnavn som parameter,
+         * og returnerer produktliste. 
          */
         public List<Vare> indlaesProdukter(string filnavn)
         {

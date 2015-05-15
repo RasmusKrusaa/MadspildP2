@@ -6,7 +6,8 @@ using System.Text;
 namespace MadspildGUI
 {
     /*
-     * Vare er superklassen til VareStkMH, VareStkSA, VareVægtMH og VareVægtSA. Derudover indeholder Vare også de virtuelle metoder.
+     * Vare er superklassen til VareStkMH, VareStkSA, VareVægtMH og VareVægtSA. '
+     * Derudover indeholder Vare også nogle virtuelle metoder.
      */
     public abstract class Vare
     {
