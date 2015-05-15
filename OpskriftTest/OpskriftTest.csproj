@@ -50,10 +50,6 @@
       <Project>{27a56269-ac9e-4cb8-8c73-189ed7f0eb96}</Project>
       <Name>MadspildGUI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Madspildprojekt\Madspildprojekt.csproj">
-      <Project>{279aa0fc-80c4-4269-b931-8f08323d2673}</Project>
-      <Name>Madspildprojekt</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

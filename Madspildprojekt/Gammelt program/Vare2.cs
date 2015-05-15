@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MadspildGUI
+namespace Madspildprojekt
 {
     /*
      * Vare er superklassen til VareStkMH, VareStkSA, VareVægtMH og VareVægtSA. Derudover indeholder Vare også de virtuelle metoder.
      */
-    public abstract class Vare
+    public abstract class Vare2
     {
         public string _Navn;
 
-        public virtual bool ForGammelDatoTjek(DateTime dato) { return false; }
+        public virtual void ForGammelDatoTjek(DateTime dato) { }
 
-        public virtual bool SletVareFraListeHvisGammel(DateTime dato, List<Vare> liste)
+        public virtual bool SletVareFraListeHvisGammel(DateTime dato, List<Vare2> liste)
         {
             return false;
         }
@@ -29,15 +29,6 @@ namespace MadspildGUI
         public virtual string skrivInfoTilFil()
         {
             return "";
-        }
-
-        public virtual string VareNavnOgVolumen()
-        {
-            return "";
-        }
-        public virtual DateTime GetDate()
-        {
-            return DateTime.Now;
         }
     }
 }
