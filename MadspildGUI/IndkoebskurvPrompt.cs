@@ -45,8 +45,16 @@ namespace MadspildGUI
         {
             Producent p = new Producent();
             List<Vare> produktkatalogindkoeb = p.indlaesProdukter("Produktkatalog.txt");
-            PropMidlertidigIndkoebskurv.Add(listBoxIndkoebProduktKatalog.SelectedItem as Vare);
-            listBoxIndkoebIndkoebskurv.Items.Add(PropMidlertidigIndkoebskurv[listBoxIndkoebProduktKatalog.SelectedIndex]._Navn);
+            if (produktkatalogindkoeb.Count == listBoxIndkoebProduktKatalog.Items.Count)
+            {
+                PropMidlertidigIndkoebskurv.Add(produktkatalogindkoeb[listBoxIndkoebProduktKatalog.SelectedIndex] as Vare);
+                listBoxIndkoebIndkoebskurv.Items.Add(produktkatalogindkoeb[listBoxIndkoebProduktKatalog.SelectedIndex]._Navn);  
+            }
+            else
+            {
+                listBoxIndkoebIndkoebskurv.Items.Add(PropMidlertidigIndkoebskurv[listBoxIndkoebProduktKatalog.SelectedIndex]._Navn);
+            }
+            
         }
 
         private void listBoxIndkoebIndkoebskurv_SelectedIndexChanged(object sender, EventArgs e)

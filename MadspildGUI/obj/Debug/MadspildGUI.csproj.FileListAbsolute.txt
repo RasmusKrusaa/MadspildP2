@@ -39,3 +39,6 @@ C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Tilf
 C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
 >>>>>>> origin/master
 C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
