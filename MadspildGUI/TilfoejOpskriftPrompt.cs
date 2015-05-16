@@ -12,6 +12,7 @@ namespace MadspildGUI
 {
     public partial class TilfoejOpskriftPrompt : Form
     {
+        // Constructor
         public TilfoejOpskriftPrompt()
         {
             InitializeComponent();
@@ -22,6 +23,8 @@ namespace MadspildGUI
             get { return retNavnBox.Text; }
         }
 
+        // Event der sker, når man klikker på "Tilføj opskrift"-knappen
+        // Tilføjer indtastede opskrift til tekstfil og listen over opskrifter
         private void tilfoejKnap_Click(object sender, EventArgs e)
         {
             string filnavn = "Opskrifter.txt";
@@ -67,6 +70,7 @@ namespace MadspildGUI
             }
         }
 
+        // Metode til at tjekke om volumen er indtastet korrekt
         private bool isValidIngrediensVolumen()
         {
             for (int linje = 0; linje < ingrediensVolumenBox.Lines.Length; linje++)
@@ -98,6 +102,7 @@ namespace MadspildGUI
             return true;
         }
 
+        // Metode til at tjekke om ingrediensnavn findes i produktkatalog
         private bool isValidIngrediensNavn()
         {
             Producent p = new Producent();
@@ -122,6 +127,7 @@ namespace MadspildGUI
             return true;
         }
 
+        // Metode til at tjekke om alle tekstfelter er ændret
         private bool isChangedAlleBokse()
         {
             if (retNavnBox.Text == "Indtast rettens navn" ||

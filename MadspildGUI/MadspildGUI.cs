@@ -17,17 +17,12 @@ namespace MadspildGUI
         public Opskrift o = new Opskrift();
         public List<Opskrift> opskrifterIGUI = new List<Opskrift>();
         public Indkøb i = new Indkøb();
+       
+        // Constructor
         public MadspildGUI()
         {
             InitializeComponent();
-
-
-            if (ListBoxVarerIHus.Items.Count == 0)
-            {
-                IndlaesVarerIHus();
-            }
-
-            IndlaesIndkoebskurv();
+            
             // husholdning tab
             IndlaesVarerIHus();
             SletGamleVarerFraHus();
@@ -37,9 +32,19 @@ namespace MadspildGUI
             {
                 IndlaesOpskrifter();
             }
+
+            // indkøb tab
+            IndlaesIndkoebskurv();
         }
 
-        // husholdningtab
+        private void MadspildGUI_Shown(object sender, EventArgs e)
+        {
+            OenskerBrugerAtSletteVare();
+        }
+
+        // Alle events og metoder, der omhandler husholdning tab
+        #region Husholdningtab
+        // Metode der indlæser varer i husholdningen fra tekstfil
         public void IndlaesVarerIHus()
         {
             h.HusBeholdning = h.IndlæsVarer("Husholdning.txt");
@@ -50,6 +55,8 @@ namespace MadspildGUI
             }
         }
 
+        // Event der sker, når man dobbeltklikker på en vare i husholdningen
+        // Viser information om den valgte varer
         private void ListBoxVarerIHus_DoubleClick(object sender, EventArgs e)
         {
             int antalVarer = h.HusBeholdning.Count;
@@ -62,6 +69,8 @@ namespace MadspildGUI
 
         }
 
+        // Event der sker, når man klikker på "Tilføj vare"-knappen
+        // Åbner et nyt vindue, hvor man kan indtaste informationer om sin vare
         private void tilfoejVareKnap_Click(object sender, EventArgs e)
         {
             TilfoejVarePrompt tilfoejVare = new TilfoejVarePrompt();
@@ -71,6 +80,8 @@ namespace MadspildGUI
             }
         }
 
+        // Event der sker, når man klikker på "Slet vare"-knappen
+        // Fjerner valgte vare fra listen af varer
         private void sletVareKnap_Click(object sender, EventArgs e)
         {
             if (ListBoxVarerIHus.SelectedIndex >= 0 && 
@@ -86,6 +97,7 @@ namespace MadspildGUI
             }
         }
 
+        // Metode der spørger brugeren, om han vil slette mulige gamle varer
         private void OenskerBrugerAtSletteVare()
         {
             h.DatoAdvarsel(DateTime.Today);
@@ -93,12 +105,16 @@ namespace MadspildGUI
             IndlaesVarerIHus();
         }
 
+        // Metode der sletter 30 dage gamle varer fra husholdningen
         private void SletGamleVarerFraHus()
         {
             h.SletGammelVare(DateTime.Today.AddDays(-30));
         }
+        #endregion
 
-        // opskriftertab
+        // Alle events og metoder, der omhandler opskrifter tab
+        #region Opskriftertab
+        // Metode der indlæser opskrifter fra tekstfiler
         private void IndlaesOpskrifter()
         {
             o.Indlæs("Opskrifter.txt");
@@ -109,12 +125,9 @@ namespace MadspildGUI
             }
             opskrifterIGUI = o.Opskrifter;
         }
-
-        private void MadspildGUI_Shown(object sender, EventArgs e)
-        {
-            OenskerBrugerAtSletteVare();
-        }
-
+        
+        // Event der sker, når man dobbeltklikker på en opskrift i listen
+        // Viser information om valgt opskrift
         private void listBoxOpskrifter_DoubleClick(object sender, EventArgs e)
         {
             listBoxOpskriftInfo.Items.Clear();
@@ -135,6 +148,8 @@ namespace MadspildGUI
             }
         }
 
+        // Event der sker, når man klikker på "Foreslå husholdning"-knappen
+        // Giver forslag ud fra hvad der er i husholdningen
         private void foreslaaOpskrifterEfterBeholdningKnap_Click(object sender, EventArgs e)
         {
             List<Opskrift> forslag = o.ForeslåEfterListe(h.HusBeholdning);
@@ -146,79 +161,9 @@ namespace MadspildGUI
             }
             opskrifterIGUI = forslag;
         }
-        public void IndlaesIndkoebskurv() // public da den skal kaldes fra den anden klasse
-        {
-            ListBoxIndkoeb.Items.Clear();
-            foreach (Vare v in i.Indkøbskurv)
-            {
-                ListBoxIndkoeb.Items.Add(v._Navn);
-            }
-        }
 
-        private void ListBoxIndkoeb_Doubleclick(object sender, EventArgs e)
-        {
-            int antalVarer = i.Indkøbskurv.Count;
-            if (ListBoxIndkoeb.SelectedIndex >= 0 &&
-                ListBoxIndkoeb.SelectedIndex <= antalVarer)
-            {
-                if (i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareStkMH || i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareStkSA)
-                {
-                    MessageBox.Show("Stk: " + i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex].VolumenTjek().ToString(),
-                    i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex]._Navn);
-                }
-                else if (i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareVægtMH || i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareVægtSA)
-                {
-                    MessageBox.Show("Vægt: " + i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex].VolumenTjek().ToString() + "g",
-                    i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex]._Navn);
-                }
-                
-            }
-        }
-
-        private void TiljoejTilBeholdningKnap_Click(object sender, EventArgs e)
-        {
-            bool temp = false;
-            temp = ValidTilfoejTilHusbeholdning();
-            Producent P = new Producent();
-            List<Vare> Produktkatalog = P.indlaesProdukter("Produktkatalog.txt");
-            if (temp == true)
-            {
-                i.TilføjTilHjemmeBeholdning(h.HusBeholdning,Produktkatalog);
-                ListBoxIndkoeb.Items.Clear();
-                h.SkrivListeAfVarerTilFil("Husholdning.txt", h.HusBeholdning);
-                IndlaesVarerIHus();
-                //foreach (Vare v in i.Indkøbskurv)
-                //{
-                //    h.HusBeholdning.Add(v);
-                //    ListBoxVarerIHus.Items.Add(v._Navn);
-                //    ListBoxIndkoeb.Items.Clear();
-                //}
-            }
-        }
-        private bool ValidTilfoejTilHusbeholdning()
-        {
-            if(MessageBox.Show("Er du sikker på at du ønsker at tilføje din indkøbskurv til husbeholdningen?", "Tilføj til husbeholdning" , MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                return false;
-            }
-            return true;
-        }
-
-        private void SletVareKnapIndkoeb_Click(object sender, EventArgs e)
-        {
-            if (ListBoxIndkoeb.SelectedIndex >= 0 &&
-                ListBoxIndkoeb.SelectedIndex <= i.Indkøbskurv.Count)
-            {
-                ListBoxIndkoeb.Items.Remove(ListBoxIndkoeb.SelectedIndex);
-                i.Indkøbskurv.Remove(i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex]);
-                IndlaesIndkoebskurv();
-            }
-            else
-            {
-                MessageBox.Show("Markér venligst den vare, du ønsker at slette.", "Markér en vare");
-            }
-        }
-
+        // Event der sker, når man klikker på "Tilføj opskrift"-knappen
+        // Åbner vindue, hvor man kan indtaste sin opskrift
         private void tilfoejOpskriftKnap_Click(object sender, EventArgs e)
         {
             TilfoejOpskriftPrompt tilfoejOpskrift = new TilfoejOpskriftPrompt();
@@ -228,52 +173,25 @@ namespace MadspildGUI
             }
         }
 
-        private void TilfoejVareKnapIndkoeb_Click(object sender, EventArgs e)
-        {
-            IndkoebskurvPrompt indkoebskurvPrompt = new IndkoebskurvPrompt();
-            if (indkoebskurvPrompt.ShowDialog() == DialogResult.OK)
-            {
-                ListBoxIndkoeb.Items.Clear();
-                foreach (Vare v in indkoebskurvPrompt.PropMidlertidigIndkoebskurv)
-                {
-                    i.Indkøbskurv.Add(v);                    
-                }
-                foreach (Vare v in i.Indkøbskurv)
-                {
-                    ListBoxIndkoeb.Items.Add(v._Navn);
-                }
-            }
-        }
-
-        private void ListBoxIndkoeb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void ListBoxVarerIHus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Tilføj_Opskrifts_Ingredienser_Til_Inkoebskurv_Click(object sender, EventArgs e)
+        // Event der sker, når man klikker på "Indkøb"-knappen
+        // Tilføjer manglende varer til valgte opskrift til indkøbskurv
+        private void TilføjOpskriftIngredienserTilIndkoebskurv_Click(object sender, EventArgs e)
         {
             if (listBoxOpskrifter.SelectedIndex == -1)
             {
                 MessageBox.Show("Du skal markere en opskrift!");
             }
             else
-	        {
+            {
                 i.UdfraOpskrift(o.Opskrifter[listBoxOpskrifter.SelectedIndex], h);
                 IndlaesIndkoebskurv();
                 MessageBox.Show("De manglende varer er blevet tilføjet til inkøbskurven");
             }
         }
 
-        private void funktionsKnapperOpskrifter_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Opskriften_Er_Lavet_Click(object sender, EventArgs e)
+        // Event der sker, når man klikker på "Lav opskrift"-knappen
+        // Fjerner en opskrifts varer fra husholdningen
+        private void OpskriftenErLavet_Click(object sender, EventArgs e)
         {
             if (listBoxOpskrifter.SelectedIndex == -1)
             {
@@ -294,13 +212,18 @@ namespace MadspildGUI
                 }
                 IndlaesOpskrifter();
             }
+        }
 
-        }    
+        // Event der sker, når man klikker på "Vis opskrifter"-knappen
+        // Viser alle opskrifter fra tekstfil i listen
         private void visOpskrifterKnap_Click(object sender, EventArgs e)
         {
             IndlaesOpskrifter();
         }
 
+        // Event der sker, når man klikker på "Foreslå efter varer"-knappen
+        // Åbner nyt vindue, hvor man kan indtaste varer man vil have med i sin opskrift
+        // Giver forslag ud fra indtastede varer
         private void foreslaaEfterVarerKnap_Click(object sender, EventArgs e)
         {
             ForeslaaEfterVarerPrompt foreslaaPrompt = new ForeslaaEfterVarerPrompt();
@@ -315,16 +238,102 @@ namespace MadspildGUI
                 }
             }
         }
+        #endregion
 
-        private void MadspildGUI_Load(object sender, EventArgs e)
+        // Alle events og metoder, der omhandler indkøbskurv tab
+        #region Indkøbtab
+        // Metode der indlæser indkøbskurven
+        public void IndlaesIndkoebskurv() // public da den skal kaldes fra den anden klasse
         {
-
+            ListBoxIndkoeb.Items.Clear();
+            foreach (Vare v in i.Indkøbskurv)
+            {
+                ListBoxIndkoeb.Items.Add(v._Navn);
+            }
         }
 
-        private void listBoxOpskrifter_SelectedIndexChanged(object sender, EventArgs e)
+        // Event der sker, når man dobbeltklikker på en vare i indkøbskurven
+        // Viser volumen af valgte vare
+        private void ListBoxIndkoeb_Doubleclick(object sender, EventArgs e)
         {
-
+            int antalVarer = i.Indkøbskurv.Count;
+            if (ListBoxIndkoeb.SelectedIndex >= 0 &&
+                ListBoxIndkoeb.SelectedIndex <= antalVarer)
+            {
+                if (i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareStkMH || i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareStkSA)
+                {
+                    MessageBox.Show("Stk: " + i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex].VolumenTjek().ToString(),
+                    i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex]._Navn);
+                }
+                else if (i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareVægtMH || i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex] is VareVægtSA)
+                {
+                    MessageBox.Show("Vægt: " + i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex].VolumenTjek().ToString() + "g",
+                    i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex]._Navn);
+                }
+                
+            }
         }
 
+        // Event der sker, når man klikker på "Tilføj til husbeholdning"-knappen
+        // Tilføjer varer i indkøbskurven til husholdningen
+        private void TiljoejTilBeholdningKnap_Click(object sender, EventArgs e)
+        {
+            Producent P = new Producent();
+            List<Vare> Produktkatalog = P.indlaesProdukter("Produktkatalog.txt");
+            if (ValidTilfoejTilHusbeholdning() == true)
+            {
+                i.TilføjTilHjemmeBeholdning(h.HusBeholdning, Produktkatalog);
+                ListBoxIndkoeb.Items.Clear();
+                h.SkrivListeAfVarerTilFil("Husholdning.txt", h.HusBeholdning);
+                IndlaesVarerIHus();
+            }
+        }
+
+        // Metode til at tjekke om brugeren ønsker at tilføje varer i indkøbskurven til husholdning
+        private bool ValidTilfoejTilHusbeholdning()
+        {
+            if (MessageBox.Show("Er du sikker på at du ønsker at tilføje din indkøbskurv til husbeholdningen?", "Tilføj til husbeholdning", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        // Event der sker, når man trykker på "Slet vare"-knappen
+        // Sletter valgte vare fra indkøbskurven
+        private void SletVareKnapIndkoeb_Click(object sender, EventArgs e)
+        {
+            if (ListBoxIndkoeb.SelectedIndex >= 0 &&
+                ListBoxIndkoeb.SelectedIndex <= i.Indkøbskurv.Count)
+            {
+                ListBoxIndkoeb.Items.Remove(ListBoxIndkoeb.SelectedIndex);
+                i.Indkøbskurv.Remove(i.Indkøbskurv[ListBoxIndkoeb.SelectedIndex]);
+                IndlaesIndkoebskurv();
+            }
+            else
+            {
+                MessageBox.Show("Markér venligst den vare, du ønsker at slette.", "Markér en vare");
+            }
+        }
+
+        // Event der sker, når man klikker på "Tilføj vare"-knappen
+        // Åbner nyt vindue, hvor man kan vælge varer fra produktkataloget
+        private void TilfoejVareKnapIndkoeb_Click(object sender, EventArgs e)
+        {
+            IndkoebskurvPrompt indkoebskurvPrompt = new IndkoebskurvPrompt();
+            if (indkoebskurvPrompt.ShowDialog() == DialogResult.OK)
+            {
+                ListBoxIndkoeb.Items.Clear();
+                foreach (Vare v in indkoebskurvPrompt.MidlertidigIndkoebskurv)
+                {
+                    i.Indkøbskurv.Add(v);
+                }
+                foreach (Vare v in i.Indkøbskurv)
+                {
+                    ListBoxIndkoeb.Items.Add(v._Navn);
+                }
+            }
+        }
+        #endregion
     }
 }
