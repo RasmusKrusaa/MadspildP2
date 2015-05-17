@@ -12,7 +12,6 @@ namespace MadspildGUI
 {
     public partial class TilfoejVarePrompt : Form
     {
-        // Constructor
         public TilfoejVarePrompt()
         {
             InitializeComponent();
@@ -25,8 +24,6 @@ namespace MadspildGUI
             get { return nyListboxVarerIHusItem; }
         }
 
-        // Event der sker, når man klikker på "Tilføj vare"-knappen
-        // Tilføjer indtastede varer til husholdning - tekstfilen og listen
         public void tilfoejKnap_Click(object sender, EventArgs e)
         {
             Beholdning b = new Beholdning();
@@ -73,7 +70,6 @@ namespace MadspildGUI
             }
         }
         
-        // Metode til at tjekke om vareinformationer er udfyldt korrekt
         private bool isValidVare()
         {
             Producent p = new Producent();
