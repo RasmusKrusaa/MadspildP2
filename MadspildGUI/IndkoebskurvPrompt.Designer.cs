@@ -68,7 +68,6 @@
             this.listBoxIndkoebProduktKatalog.Name = "listBoxIndkoebProduktKatalog";
             this.listBoxIndkoebProduktKatalog.Size = new System.Drawing.Size(139, 200);
             this.listBoxIndkoebProduktKatalog.TabIndex = 0;
-            this.listBoxIndkoebProduktKatalog.SelectedIndexChanged += new System.EventHandler(this.listBoxIndkoebProduktKatalog_SelectedIndexChanged);
             // 
             // listBoxIndkoebIndkoebskurv
             // 
@@ -78,7 +77,6 @@
             this.listBoxIndkoebIndkoebskurv.Name = "listBoxIndkoebIndkoebskurv";
             this.listBoxIndkoebIndkoebskurv.Size = new System.Drawing.Size(140, 200);
             this.listBoxIndkoebIndkoebskurv.TabIndex = 1;
-            this.listBoxIndkoebIndkoebskurv.SelectedIndexChanged += new System.EventHandler(this.listBoxIndkoebIndkoebskurv_SelectedIndexChanged);
             // 
             // IndkoebskurvTilfoejtilMidlertidigIndkoebskurv
             // 
@@ -101,7 +99,6 @@
             this.textBox1.Text = "Søg";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_TextEnter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_TextLeave);
             // 
             // button1
             // 
@@ -112,7 +109,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Slet Vare";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.InkoebskurvSletVareMidlertidigIndkoebskurv_Click);
+            this.button1.Click += new System.EventHandler(this.IndkoebskurvSletVareMidlertidigIndkoebskurv_Click);
             // 
             // button2
             // 
@@ -122,7 +119,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Tilføj til Indkøbskurv";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.TilføjTilInkoebskruv_Click);
+            this.button2.Click += new System.EventHandler(this.TilføjTilIndkoebskurv_Click);
             // 
             // IndkoebskurvPrompt
             // 

@@ -13,10 +13,11 @@ namespace MadspildGUI
     */
     public class Husholdning : Beholdning
     {
-        public List<Vare> HusBeholdning = new List<Vare>(); // skal være private
+        public List<Vare> HusBeholdning = new List<Vare>();
 
         /*
-         *Metoden "DatoAdvarsel" informerer brugeren om udløbelende varer, baseret på sidsteanvendelses- eller mindstholdbarhedsdato.
+         *Metoden "DatoAdvarsel" informerer brugeren om udløbelende varer, baseret -
+         * på sidsteanvendelses- eller mindstholdbarhedsdato.
         */
         public void DatoAdvarsel(DateTime dato)
         {
@@ -35,7 +36,8 @@ namespace MadspildGUI
             }
         }
         /*
-         * Metoden "SletGammelVare" Tjekker og sletter alle de varer i husholdningslisten, som har overskrevet deres holdbarhed med 30 dage.
+         * Metoden "SletGammelVare" Tjekker og sletter alle de varer i husholdningslisten, 
+         * som har overskrevet deres holdbarhed med 30 dage.
         */
         public void SletGammelVare(DateTime dato)
         {
@@ -48,6 +50,13 @@ namespace MadspildGUI
                 }
             }
         }
+        /*
+         * Metoden "SletVareUdFraOpskrift" tager en specifik vare ind  og tjekker 
+         * hvorvidt alle varene befinder sig i beholdningen. Findes alle varene i beholdningen -
+         * vil metoden returnere true og fjerne den mængde vare opskriften kræver. 
+         * Findes varene ikke i beholdningen eller er volumen ikke tilstrækkelig returnere metoden false -
+         * og varene vil ikke blive slettet.
+         */
 
         public bool SletVareUdFraOpskrift(Opskrift o, string filnavn)
         {

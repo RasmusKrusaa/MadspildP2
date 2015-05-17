@@ -56,7 +56,9 @@ namespace MadspildGUI
             }
             return false;
         }
-
+        /*
+         * Metoden "GetDate" returnere dato for mindstholdbarhed- eller sidsteanvendelses-dato
+         */
         public override DateTime GetDate()
         {
             return _SidsteAnvendelse;
@@ -82,13 +84,18 @@ namespace MadspildGUI
         {
             return _Navn + "_" + _Stk + "_0_0_" + _SidsteAnvendelse.ToShortDateString(); 
         }
-
+        /*
+         * Metoden "ToString" overrider den oprindelige ToString og returnere 
+         * varens- navn stk og sidsteanvendelsesdato
+         */
         public override string ToString()
         {
             return "Navn: " + _Navn + "\nStk: " + _Stk +
                 "\nSidste anvendelsesdato: " + _SidsteAnvendelse.ToShortDateString();
         }
-
+        /*
+         * Metoden "VareNavnOgVolumen" returnere en string med ens vares navn og volumen
+         */
         public override string VareNavnOgVolumen()
         {
             return _Stk + " " + _Navn;

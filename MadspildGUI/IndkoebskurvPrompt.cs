@@ -13,21 +13,23 @@ namespace MadspildGUI
     public partial class IndkoebskurvPrompt : Form
     {
         Producent p = new Producent();
-        private List<Vare> MidlertidigIndkoebskurv = new List<Vare>();
+        private List<Vare> _midlertidigIndkoebskurv = new List<Vare>();
+        private List<Vare> _produkter = new List<Vare>();
         
-        public List<Vare> PropMidlertidigIndkoebskurv
+        public List<Vare> MidlertidigIndkoebskurv
         {
-            get { return MidlertidigIndkoebskurv; }
-            set { MidlertidigIndkoebskurv = value; }
+            get { return _midlertidigIndkoebskurv; }
         }
         
+        // Constructor
         public IndkoebskurvPrompt()
         {
             InitializeComponent();
-            indlaesproduktkatalogIindkoeb();
+            IndlaesProduktkatalogIndkoeb();
         }
 
-        private void indlaesproduktkatalogIindkoeb()
+        // Metode til at indlæse alle produkter fra produktkataloget
+        private void IndlaesProduktkatalogIndkoeb()
         {  
             List<Vare> produktkatalogindkoeb = p.indlaesProdukter("Produktkatalog.txt");         
             foreach (Vare v in produktkatalogindkoeb)
@@ -35,76 +37,66 @@ namespace MadspildGUI
                 listBoxIndkoebProduktKatalog.Items.Add(v._Navn);
             }
         }
-            //        Beholdning b = new Beholdning(); 
-        // Produktkatalog
-            //Husholdning h = new Husholdning();
-        //list
-            //h.HusBeholdning = h.IndlæsVarer("Husholdning.txt");
         
+        // Event der sker, når man trykker på "Tilføj Vare"-knappen
+        // Tilføjer til den midlertidige indkøbskurv
         private void IndkoebskurvTilfoejtilMidlertidigIndkoebskurv_Click(object sender, EventArgs e)
         {
             Producent p = new Producent();
-            List<Vare> produktkatalogindkoeb = p.indlaesProdukter("Produktkatalog.txt");
-            if (produktkatalogindkoeb.Count == listBoxIndkoebProduktKatalog.Items.Count)
+            List<Vare> produktkatalog = p.indlaesProdukter("Produktkatalog.txt");
+            if (textBox1.Text == "Søg")
             {
-                PropMidlertidigIndkoebskurv.Add(produktkatalogindkoeb[listBoxIndkoebProduktKatalog.SelectedIndex] as Vare);
-                listBoxIndkoebIndkoebskurv.Items.Add(produktkatalogindkoeb[listBoxIndkoebProduktKatalog.SelectedIndex]._Navn);  
+                _midlertidigIndkoebskurv.Add(produktkatalog[listBoxIndkoebProduktKatalog.SelectedIndex] as Vare);
+                listBoxIndkoebIndkoebskurv.Items.Add(produktkatalog[listBoxIndkoebProduktKatalog.SelectedIndex]._Navn);  
             }
             else
             {
-                listBoxIndkoebIndkoebskurv.Items.Add(PropMidlertidigIndkoebskurv[listBoxIndkoebProduktKatalog.SelectedIndex]._Navn);
-            }
-            
+                _midlertidigIndkoebskurv.Add(_produkter[listBoxIndkoebProduktKatalog.SelectedIndex]);
+                listBoxIndkoebIndkoebskurv.Items.Add(_produkter[listBoxIndkoebProduktKatalog.SelectedIndex]._Navn);
+            } 
         }
 
-        private void listBoxIndkoebIndkoebskurv_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void InkoebskurvSletVareMidlertidigIndkoebskurv_Click(object sender, EventArgs e)
+        // Event der sker, når man trykker på "Slet Vare"-knappen
+        // Sletter vare fra den midlertidige indkøbskurv
+        private void IndkoebskurvSletVareMidlertidigIndkoebskurv_Click(object sender, EventArgs e)
         {
             if (listBoxIndkoebIndkoebskurv.SelectedIndex != -1)
             {
-                PropMidlertidigIndkoebskurv.Remove(PropMidlertidigIndkoebskurv[listBoxIndkoebIndkoebskurv.SelectedIndex]);
+                MidlertidigIndkoebskurv.Remove(MidlertidigIndkoebskurv[listBoxIndkoebIndkoebskurv.SelectedIndex]);
                 listBoxIndkoebIndkoebskurv.Items.RemoveAt(listBoxIndkoebIndkoebskurv.SelectedIndex);
             }
         }
 
-        private void TilføjTilInkoebskruv_Click(object sender, EventArgs e)
+        // Event der sker, når man trykker på "Tilføj til husholdning"-knappen
+        // Lukker vinduet og sætter DialogResult til OK
+        private void TilføjTilIndkoebskurv_Click(object sender, EventArgs e)
         {               
             DialogResult = DialogResult.OK;
             Close();
         }
-
-        private void listBoxIndkoebProduktKatalog_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         
+        // Event der sker, når man ændrer teksten i søgefeltet
+        // Opdaterer listen til alle de varer der indeholder søgeordet
         private void textBox1_TextChanged(object sender, EventArgs e)
         {    
             List<Vare> produktkatalogindkoeb = p.indlaesProdukter("Produktkatalog.txt");
             textBox1.ForeColor = Color.Black;
             listBoxIndkoebProduktKatalog.Items.Clear();
-            PropMidlertidigIndkoebskurv.Clear();
-            foreach (Vare V in produktkatalogindkoeb)
+            _produkter.Clear();
+            foreach (Vare v in produktkatalogindkoeb)
             {
-                if (V._Navn.Contains(textBox1.Text))
+                if (v._Navn.Contains(textBox1.Text))
                 {
-                    PropMidlertidigIndkoebskurv.Add(V);
-                    listBoxIndkoebProduktKatalog.Items.Add(V._Navn);
+                    _produkter.Add(v);
+                    listBoxIndkoebProduktKatalog.Items.Add(v._Navn);
                 }
             }
         }
+        
+        // Event der sker, når man sætter cursoren i søgefeltet
         private void textBox1_TextEnter(object sender, EventArgs e)
         {
             textBox1.Text = string.Empty;
-
-        }
-        private void textBox1_TextLeave(object sender, EventArgs e)
-        {
-            //indlaesproduktkatalogIindkoeb();
         }
     }
 }

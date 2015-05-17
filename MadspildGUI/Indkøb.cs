@@ -10,7 +10,7 @@ namespace MadspildGUI
      /*
      * Klassen indkøb er en underklasse af beholdning.
      * indkøb har ansvar for at administrere en indkøbskurv, som kan tilføjes til husbeholdning.
-     * administration af indkøbskurv dækker over at lave listen baseret på en opskrift.
+     * administration af indkøbskurv dækker over at lave listen baseret på en opskrift eller ud fra en vare.
      */
         public List<Vare> Indkøbskurv = new List<Vare>();
 
@@ -53,24 +53,20 @@ namespace MadspildGUI
             return Indkøbskurv;
         }
         /*
-        *  Metoden "MauelSlet" giver brugeren mulighed for at slette elementer fra indkøbskurv, manuelt.
-        * 
-        */
+         *  Metoden "MauelSlet" giver brugeren mulighed for at slette elementer fra indkøbskurv, manuelt.
+         */
+
         public List<Vare> ManuelSlet(Vare v)
         {
             if (Indkøbskurv.Contains(v))
             {
                 SletVare(v, Indkøbskurv);
             }
-            else
-            {
-                throw new VareTypeNotFoundException(); //Indeholder ikke vare exception
-            }
             return Indkøbskurv;
         }
         /*
-        *  Metoden "TilføjTilHjemmeBeholdning" tilføjer indkøbskurven til husbeholdningen.
-        */
+         *  Metoden "TilføjTilHjemmeBeholdning" tilføjer indkøbskurven til husbeholdningen.
+         */
         public void TilføjTilHjemmeBeholdning(List<Vare> liste, List<Vare> Produktkatalog)
         {
             List<Vare> Templist = new List<Vare>();
@@ -81,7 +77,6 @@ namespace MadspildGUI
                     if (v._Navn == Produkt._Navn)
                     {
                         decimal Antal = Math.Ceiling(v.VolumenTjek() / Produkt.VolumenTjek());
-                        //Indkøbskurv.Remove(v);
                         for (int i = 0; i < Antal; i++)
                         {
                             TilføjVare(Produkt, liste);

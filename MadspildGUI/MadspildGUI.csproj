@@ -85,7 +85,6 @@
     <Compile Include="Vare.cs" />
     <Compile Include="VareStkMH.cs" />
     <Compile Include="VareStkSA.cs" />
-    <Compile Include="VareTypeNotFoundException.cs" />
     <Compile Include="VareVægtMH.cs" />
     <Compile Include="VareVægtSA.cs" />
     <EmbeddedResource Include="ForeslaaEfterVarerPrompt.resx">

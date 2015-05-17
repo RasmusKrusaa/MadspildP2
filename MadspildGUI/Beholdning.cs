@@ -35,7 +35,7 @@ namespace MadspildGUI
         {
             string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(
                 Directory.GetCurrentDirectory()).ToString()).ToString()).ToString() + @"\" + filnavn;
-            using(System.IO.StreamWriter file = new System.IO.StreamWriter(filsti)) // muligvis , true
+            using(System.IO.StreamWriter file = new System.IO.StreamWriter(filsti))
             {
                 foreach (Vare v in liste)
                 {
@@ -55,7 +55,10 @@ namespace MadspildGUI
             husholdning = p.indlaesProdukter(filnavn);
             return husholdning;
         }
-
+        /* 
+         * Metoden "SletVareFraFil" sletter al tekst i en fil og kalder på metoden "SkrivListeAfVareTilFil"
+         * som skriver den nye liste til filen.
+         */
         public void SletVareFraFil(string filnavn, List<Vare> Husbeholdning)
         {
             string filsti = Directory.GetParent(Directory.GetParent(Directory.GetParent(

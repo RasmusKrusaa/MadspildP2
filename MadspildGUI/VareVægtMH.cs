@@ -57,7 +57,9 @@ namespace MadspildGUI
             }
             return false;
         }
-
+        /*
+         * Metoden "GetDate" returnere dato for mindstholdbarhed- eller sidsteanvendelses-dato
+         */
         public override DateTime GetDate()
         {
             return _MindstHoldbar;
@@ -83,13 +85,18 @@ namespace MadspildGUI
         {
             return _Navn + "_0_" + _Vægt + "_" + _MindstHoldbar.ToShortDateString() + "_0"; 
         }
-
+        /*
+         * Metoden "ToString" overrider den oprindelige ToString og returnere 
+         * varens- navn vægt og mindstholdbarhedsdato
+         */
         public override string ToString()
         {
             return "Navn: " + _Navn + "\nVægt: " + _Vægt + "g" +
                 "\nMindst holdbarhedsdato: " + _MindstHoldbar.ToShortDateString();
         }
-
+        /*
+        * Metoden "VareNavnOgVolumen" returnere en string med ens vares navn og volumen
+        */
         public override string VareNavnOgVolumen()
         {
             return _Vægt + "g " + _Navn;

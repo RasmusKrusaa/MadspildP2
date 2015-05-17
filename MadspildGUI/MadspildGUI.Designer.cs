@@ -145,7 +145,6 @@
             this.ListBoxVarerIHus.Name = "ListBoxVarerIHus";
             this.ListBoxVarerIHus.Size = new System.Drawing.Size(553, 295);
             this.ListBoxVarerIHus.TabIndex = 0;
-            this.ListBoxVarerIHus.SelectedIndexChanged += new System.EventHandler(this.ListBoxVarerIHus_SelectedIndexChanged);
             this.ListBoxVarerIHus.DoubleClick += new System.EventHandler(this.ListBoxVarerIHus_DoubleClick);
             // 
             // indkoeb
@@ -169,8 +168,6 @@
             this.ListBoxIndkoeb.Name = "ListBoxIndkoeb";
             this.ListBoxIndkoeb.Size = new System.Drawing.Size(559, 313);
             this.ListBoxIndkoeb.TabIndex = 3;
-            this.ListBoxIndkoeb.SelectedIndexChanged += new System.EventHandler(this.ListBoxIndkoeb_SelectedIndexChanged);
-            this.ListBoxIndkoeb.DoubleClick += new System.EventHandler(this.ListBoxIndkoeb_Doubleclick);
             // 
             // FunktionsKnapperIndKoeb
             // 
@@ -266,7 +263,6 @@
             this.listBoxOpskrifter.Name = "listBoxOpskrifter";
             this.listBoxOpskrifter.Size = new System.Drawing.Size(218, 293);
             this.listBoxOpskrifter.TabIndex = 0;
-            this.listBoxOpskrifter.SelectedIndexChanged += new System.EventHandler(this.listBoxOpskrifter_SelectedIndexChanged);
             this.listBoxOpskrifter.DoubleClick += new System.EventHandler(this.listBoxOpskrifter_DoubleClick);
             // 
             // listBoxOpskriftInfo
@@ -292,7 +288,6 @@
             this.funktionsKnapperOpskrifter.Name = "funktionsKnapperOpskrifter";
             this.funktionsKnapperOpskrifter.Size = new System.Drawing.Size(553, 35);
             this.funktionsKnapperOpskrifter.TabIndex = 1;
-            this.funktionsKnapperOpskrifter.Paint += new System.Windows.Forms.PaintEventHandler(this.funktionsKnapperOpskrifter_Paint);
             // 
             // tilfoejOpskriftKnap
             // 
@@ -310,7 +305,7 @@
             this.foreslaaOpskrifterEfterBeholdningKnap.Name = "foreslaaOpskrifterEfterBeholdningKnap";
             this.foreslaaOpskrifterEfterBeholdningKnap.Size = new System.Drawing.Size(109, 30);
             this.foreslaaOpskrifterEfterBeholdningKnap.TabIndex = 1;
-            this.foreslaaOpskrifterEfterBeholdningKnap.Text = "Foreslå efter husholdning";
+            this.foreslaaOpskrifterEfterBeholdningKnap.Text = "Foreslå husholdning";
             this.foreslaaOpskrifterEfterBeholdningKnap.UseVisualStyleBackColor = true;
             this.foreslaaOpskrifterEfterBeholdningKnap.Click += new System.EventHandler(this.foreslaaOpskrifterEfterBeholdningKnap_Click);
             // 
@@ -340,9 +335,9 @@
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Name = "TilføjOpskriftsIngredienserTilInkoebskurvClick";
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Size = new System.Drawing.Size(75, 30);
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick.TabIndex = 4;
-            this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Text = "Inkøbskurv";
+            this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Text = "Indkøbskurv";
             this.TilføjOpskriftsIngredienserTilInkoebskurvClick.UseVisualStyleBackColor = true;
-            this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Click += new System.EventHandler(this.Tilføj_Opskrifts_Ingredienser_Til_Inkoebskurv_Click);
+            this.TilføjOpskriftsIngredienserTilInkoebskurvClick.Click += new System.EventHandler(this.TilføjOpskriftIngredienserTilIndkoebskurv_Click);
             // 
             // Opskriften_er_Lavet
             // 
@@ -350,9 +345,9 @@
             this.Opskriften_er_Lavet.Name = "Opskriften_er_Lavet";
             this.Opskriften_er_Lavet.Size = new System.Drawing.Size(75, 30);
             this.Opskriften_er_Lavet.TabIndex = 5;
-            this.Opskriften_er_Lavet.Text = "Lavet";
+            this.Opskriften_er_Lavet.Text = "Lav ret";
             this.Opskriften_er_Lavet.UseVisualStyleBackColor = true;
-            this.Opskriften_er_Lavet.Click += new System.EventHandler(this.Opskriften_Er_Lavet_Click);
+            this.Opskriften_er_Lavet.Click += new System.EventHandler(this.OpskriftenErLavet_Click);
             // 
             // button1
             // 
@@ -362,7 +357,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Tilføj til Inkøbskurv";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Tilføj_Opskrifts_Ingredienser_Til_Inkoebskurv_Click);
+            this.button1.Click += new System.EventHandler(this.TilføjOpskriftIngredienserTilIndkoebskurv_Click);
             // 
             // button2
             // 
@@ -372,14 +367,13 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Opskrift Udført";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Opskriften_Er_Lavet_Click);
+            this.button2.Click += new System.EventHandler(this.OpskriftenErLavet_Click);
             // 
             // MadspildGUI
             // 
             this.ClientSize = new System.Drawing.Size(573, 372);
             this.Controls.Add(this.navBar);
             this.Name = "MadspildGUI";
-            this.Load += new System.EventHandler(this.MadspildGUI_Load);
             this.Shown += new System.EventHandler(this.MadspildGUI_Shown);
             this.navBar.ResumeLayout(false);
             this.husbeholdning.ResumeLayout(false);
