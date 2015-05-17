@@ -35,5 +35,10 @@ namespace MadspildGUI
         {
             return DateTime.Now;
         }
+
+        public virtual decimal VolumenTjek()
+        {
+            return 0;
+        }
     }
 }

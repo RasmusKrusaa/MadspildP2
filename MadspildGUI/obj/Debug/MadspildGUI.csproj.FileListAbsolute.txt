@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
 C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
 C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
@@ -59,7 +58,6 @@ C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
 C:\Users\Timian\Dropbox\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
 C:\Users\Timian\Dropbox\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
 C:\Users\Timian\Dropbox\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-=======
 C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
 C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
 C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
@@ -73,4 +71,13 @@ C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Ti
 C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
 C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
 C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
->>>>>>> origin/master
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.IndkoebskurvPrompt.resources
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejOpskriftPrompt.resources
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
+C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
