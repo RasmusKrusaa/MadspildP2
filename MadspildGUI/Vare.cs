@@ -19,11 +19,6 @@ namespace MadspildGUI
             return false;
         }
 
-        public virtual decimal VolumenTjek()
-        {
-            return 0;
-        }
-
         public virtual void setVolumen(decimal volumen) { }
 
         public virtual string skrivInfoTilFil()
