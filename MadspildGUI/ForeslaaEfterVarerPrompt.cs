@@ -19,11 +19,14 @@ namespace MadspildGUI
             get { return _forslag; }
         }
         
+        // Constructor
         public ForeslaaEfterVarerPrompt()
         {
             InitializeComponent();
         }
 
+        // Event der sker, når man trykker på Giv Forslag knappen
+        // Giver forslag ud fra indtastede varenavne
         private void givForslagKnap_Click(object sender, EventArgs e)
         {
             string[] vareNavne = vareBox.Lines;
@@ -40,6 +43,7 @@ namespace MadspildGUI
             }
         }
 
+        // Metode til at tjekke om varenavn findes i produktkatalog
         private bool findesVarenavniProduktkatalog()
         {
             List<Vare> produktkatalog = new List<Vare>();

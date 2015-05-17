@@ -55,7 +55,6 @@ C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Tilf
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
 C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-<<<<<<< HEAD
 C:\Users\Timian\Dropbox\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
 C:\Users\Timian\Dropbox\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
 C:\Users\Timian\Dropbox\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
@@ -82,5 +81,3 @@ C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\Mad
 C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
 C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
 C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
-=======
->>>>>>> parent of af6f162... Kommentarer plus et lille fiks
