@@ -81,3 +81,16 @@ C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\Mad
 C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
 C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
 C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.IndkoebskurvPrompt.resources
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejOpskriftPrompt.resources
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
+C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
