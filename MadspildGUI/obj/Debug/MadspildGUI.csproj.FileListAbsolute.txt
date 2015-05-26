@@ -1,96 +1,13 @@
-<<<<<<< HEAD
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.IndkoebskurvPrompt.resources
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejOpskriftPrompt.resources
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
-C:\Users\mads\Desktop\program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.IndkoebskurvPrompt.resources
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejOpskriftPrompt.resources
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
-C:\Users\Rasmus Krusaa\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
-=======
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.IndkoebskurvPrompt.resources
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejOpskriftPrompt.resources
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
->>>>>>> origin/master
-C:\Users\Mark\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.IndkoebskurvPrompt.resources
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejOpskriftPrompt.resources
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
-C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-C:\Users\Timian\Dropbox\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
-C:\Users\Timian\Dropbox\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
-C:\Users\Timian\Dropbox\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.IndkoebskurvPrompt.resources
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejOpskriftPrompt.resources
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
-C:\Users\Rasmus\Documents\GitHub\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.IndkoebskurvPrompt.resources
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejOpskriftPrompt.resources
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
-C:\Users\Rasmus Krusaa\Dropbox\AAU\P2\P2\C#\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.IndkoebskurvPrompt.resources
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejOpskriftPrompt.resources
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
-C:\Users\Victor Kamp\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.pdb
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csprojResolveAssemblyReference.cache
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.ForeslaaEfterVarerPrompt.resources
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.IndkoebskurvPrompt.resources
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.MadspildGUI.resources
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Properties.Resources.resources
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejOpskriftPrompt.resources
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.TilfoejVarePrompt.resources
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
+C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb

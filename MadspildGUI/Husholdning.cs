@@ -77,9 +77,9 @@ namespace MadspildGUI
                         HusbeholdningVolumen = HusbeholdningVolumen - OpskriftVolumen;
                         if (HusbeholdningVolumen == 0 && !VarerSlettetFraOpskrift.Contains(v._Navn))
                         {
-                            SletVare(HusBeholdning[i], HusBeholdning);
-                            i--;
-                            VarerSlettetFraOpskrift.Add(HusBeholdning[i]._Navn);
+                                VarerSlettetFraOpskrift.Add(HusBeholdning[i]._Navn);
+                                SletVare(HusBeholdning[i], HusBeholdning);
+                                i--;                                
                         }
                         else if (HusbeholdningVolumen > 0 && !VarerSlettetFraOpskrift.Contains(v._Navn))
                         {

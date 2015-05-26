@@ -152,6 +152,7 @@ namespace MadspildGUI
         // Giver forslag ud fra hvad der er i husholdningen
         private void foreslaaOpskrifterEfterBeholdningKnap_Click(object sender, EventArgs e)
         {
+            listBoxOpskriftInfo.Items.Clear();
             List<Opskrift> forslag = o.ForeslåEfterListe(h.HusBeholdning);
             o.Opskrifter = forslag;
             listBoxOpskrifter.Items.Clear();
@@ -185,7 +186,7 @@ namespace MadspildGUI
             {
                 i.UdfraOpskrift(o.Opskrifter[listBoxOpskrifter.SelectedIndex], h);
                 IndlaesIndkoebskurv();
-                MessageBox.Show("De manglende varer er blevet tilføjet til inkøbskurven");
+                MessageBox.Show("De manglende varer er blevet tilføjet til indkøbskurven");
             }
         }
 
@@ -210,7 +211,6 @@ namespace MadspildGUI
                 {
                     MessageBox.Show("Du har ikke nok varer til at lave " + o.Opskrifter[listBoxOpskrifter.SelectedIndex].retNavn);
                 }
-                IndlaesOpskrifter();
             }
         }
 
@@ -218,6 +218,7 @@ namespace MadspildGUI
         // Viser alle opskrifter fra tekstfil i listen
         private void visOpskrifterKnap_Click(object sender, EventArgs e)
         {
+            listBoxOpskriftInfo.Items.Clear();
             IndlaesOpskrifter();
         }
 
@@ -236,6 +237,7 @@ namespace MadspildGUI
                 {
                     listBoxOpskrifter.Items.Add(op.retNavn);
                 }
+                listBoxOpskriftInfo.Items.Clear();
             }
         }
         #endregion

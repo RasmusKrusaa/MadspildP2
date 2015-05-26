@@ -168,6 +168,7 @@
             this.ListBoxIndkoeb.Name = "ListBoxIndkoeb";
             this.ListBoxIndkoeb.Size = new System.Drawing.Size(559, 313);
             this.ListBoxIndkoeb.TabIndex = 3;
+            this.ListBoxIndkoeb.DoubleClick += new System.EventHandler(this.ListBoxIndkoeb_Doubleclick);
             // 
             // FunktionsKnapperIndKoeb
             // 
@@ -374,6 +375,7 @@
             this.ClientSize = new System.Drawing.Size(573, 372);
             this.Controls.Add(this.navBar);
             this.Name = "MadspildGUI";
+            this.Text = "Få styr på dit madspild";
             this.Shown += new System.EventHandler(this.MadspildGUI_Shown);
             this.navBar.ResumeLayout(false);
             this.husbeholdning.ResumeLayout(false);
