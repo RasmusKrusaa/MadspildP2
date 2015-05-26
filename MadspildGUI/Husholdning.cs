@@ -68,8 +68,7 @@ namespace MadspildGUI
             {
                 Templiste.Clear();
                 for (int i = 0; i < HusBeholdning.Count; i++)
-                {
-                    
+                {              
                     if (v._Navn == HusBeholdning[i]._Navn)
                     {
                         Varematch++;
@@ -114,7 +113,6 @@ namespace MadspildGUI
                                     }
                                
                             }
-
                         } 
                     }
                 }              

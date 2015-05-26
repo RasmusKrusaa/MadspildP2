@@ -23,13 +23,13 @@ namespace MadspildprojektTests
         DateTime NæstenGammel = DateTime.Today.AddDays(-29);
         DateTime MegetGammel = DateTime.Today.AddDays(-123);
         VareStkMH v1 = new VareStkMH("æg");
-        VareStkSA v2 = new VareStkSA("bacon");
+        VareVægtSA v2 = new VareVægtSA("bacon");
         VareVægtMH v3 = new VareVægtMH("humus");
         VareVægtSA v4 = new VareVægtSA("banan");
         VareStkMH v5 = new VareStkMH("tomat");
 
         [Test]
-        public void DatoAdvarselOjectTest()
+        public void DatoAdvarselTest()
         {
             //Arrange
             v1.MindstHoldbar = Imorgen;
@@ -114,9 +114,10 @@ namespace MadspildprojektTests
         }
 
         [TestCase(0, Result = 8)]
-        [TestCase(1, Result = 200)]
-        [TestCase(2, Result = 150)]
-        [TestCase(3, Result = 5)]
+        [TestCase(1, Result = 50)]
+        [TestCase(2, Result = 200)]
+        [TestCase(3, Result = 150)]
+        [TestCase(4, Result = 5)]
         public decimal SletVareUdFraOpskriftTest(int i)
         {
             //Arrange
@@ -125,7 +126,7 @@ namespace MadspildprojektTests
             Opskrift o = new Opskrift();
             o.Indlæs("Opskrifter.txt");
             v1.Stk = 16;
-            v2.Stk = 1;
+            v2.Vægt = 150;
             v3.Vægt = 200;
             v4.Vægt = 150;
             v5.Stk = 10;         
