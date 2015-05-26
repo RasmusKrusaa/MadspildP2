@@ -11,3 +11,6 @@ C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.Ti
 C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.csproj.GenerateResource.Cache
 C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
 C:\Users\Bilgram\Desktop\Program\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\bin\Debug\MadspildGUI.exe.config
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.exe
+C:\Users\Lasse Buechek\Desktop\MadspildP2\MadspildGUI\obj\Debug\MadspildGUI.pdb

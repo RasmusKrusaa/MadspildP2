@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1032]C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll</TopNode>
-  <SelectedNode>[0-1032]C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll</SelectedNode>
+  <TopNode>[0-1032]C:\Users\Lasse Buechek\Desktop\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll</TopNode>
+  <SelectedNode>[0-1002]MadspildprojektTests.HusholdningTest.DatoAdvarselAntalIListeTest</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1032]C:\Users\Victor Kamp\Desktop\Program\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll" Expanded="true" />
+    <Node UniqueName="[0-1032]C:\Users\Lasse Buechek\Desktop\MadspildP2\OpskriftTest\bin\Debug\OpskriftTest.dll" Expanded="true" />
     <Node UniqueName="[0-1033]MadspildprojektTests" Expanded="true" />
     <Node UniqueName="[0-1000]MadspildprojektTests.HusholdningTest" Expanded="true" />
     <Node UniqueName="[0-1003]MadspildprojektTests.HusholdningTest.SletGammelVareTestCases" Expanded="true" />
     <Node UniqueName="[0-1007]MadspildprojektTests.HusholdningTest.SletVareUdFraOpskriftTest" Expanded="true" />
+    <Node UniqueName="[0-1013]MadspildprojektTests.OpskriftTest" Expanded="true" />
+    <Node UniqueName="[0-1014]MadspildprojektTests.OpskriftTest.indlæsTest" Expanded="true" />
   </Nodes>
 </VisualState>

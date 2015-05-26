@@ -12,8 +12,6 @@ namespace MadspildprojektTests
     [TestFixture]
     class HusholdningTest
     {
-        //Jeg lavede Arrange heroppe i klassen for at slippe for dublering af kode. Synes I den skal sættes ned til hver metode eller er det her finno?
-        //Arrange
         Husholdning h = new Husholdning();
         DateTime Igaar = DateTime.Today.AddDays(-1);
         DateTime Imorgen = DateTime.Today.AddDays(1);
@@ -130,7 +128,6 @@ namespace MadspildprojektTests
             v3.Vægt = 200;
             v4.Vægt = 150;
             v5.Stk = 10;         
-    
             //Act & Assert
             if (h.HusBeholdning.Count == 0)
             {
@@ -142,12 +139,8 @@ namespace MadspildprojektTests
             }
             h.SkrivListeAfVarerTilFil("HusholdningTest.txt", h.HusBeholdning);
             h.SletVareUdFraOpskrift(o.Opskrifter[1], "HusholdningTest.txt");
-
-            
-			 TestVolume = h.HusBeholdning[i].VolumenTjek();
-             return TestVolume;
-
-
+            TestVolume = h.HusBeholdning[i].VolumenTjek();
+            return TestVolume;
         }
     }
 }
