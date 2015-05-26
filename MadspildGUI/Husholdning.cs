@@ -58,7 +58,7 @@ namespace MadspildGUI
          * og varene vil ikke blive slettet.
          */
 
-        public bool SletVarerUdFraOpskrift(Opskrift o, string filnavn)
+        public bool SletVareUdFraOpskrift(Opskrift o, string filnavn)
         {
             List<Vare> Templiste = new List<Vare>();
             List<string> VarerSlettetFraOpskrift = new List<string>();
